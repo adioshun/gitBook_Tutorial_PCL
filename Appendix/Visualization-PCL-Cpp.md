@@ -5,7 +5,22 @@
 - Pcl Viewer : playing normals, drawing shapes, multiple viewport의 기능 가짐 [[참고]](https://adioshun.gitbooks.io/pcl/content/visualization/pclvisualizer.html)
 
 
-Pcl Viewer를 이용한 PCD파일 시각화
+## Cloud Viewer를 활용한 코드내 시각화 기능 추가 
+
+```cpp 
+#include <pcl/visualization/cloud_viewer.h> 
+
+pcl::PointCloud<pcl::PointXYZ>::Ptr cloud1(new pcl::PointCloud<pcl::PointXYZ>);
+
+//...
+pcl::visualization::CloudViewer viewer("cloud viewer");
+viewer.showCloud(cloud1);
+
+system("pause");
+
+```
+
+## Pcl Viewer를 이용한 PCD파일 시각화
 
 ```
 $ sudo apt install pcl-tools 
