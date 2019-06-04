@@ -11,13 +11,12 @@
   * [Open3D-Python](Beginner/Part01-Chapter01-Open3D-Python.md)
 * [Downsampling](Beginner/Part01-Chapter02.md)
   * [PCL-Cpp](Beginner/Part01-Chapter02-PCL-Cpp.md)
-* [Downsampling](Beginner/Part01-Chapter03.md)
+* [PassThrough](Beginner/Part01-Chapter03.md)
   * [PCL-Cpp](Beginner/Part01-Chapter03-PCL-Cpp.md)
-* [Downsampling](Beginner/Part01-Chapter04.md)
+* [Outlier](Beginner/Part01-Chapter04.md)
   * [PCL-Cpp](Beginner/Part01-Chapter04-PCL-Cpp.md)
-* [Downsampling](Beginner/Part01-Chapter05.md)
+* [RANSAC](Beginner/Part01-Chapter05.md)
   * [PCL-Cpp](Beginner/Part01-Chapter05-PCL-Cpp.md)
-
 
 ## Part 2 \(중급\)
 
