@@ -21,10 +21,11 @@ PCL Tutorial 작성 중 :
 
 중급
 
-- Feature : Normal 
+- Octree Search
 - 군집화 : seed Clustering 
+- Feature : Normal 
 - 두 좌표계 통합 
-- Octree Search / compress
+- Octree compress
 - 포인트 합치기 : Concatenate the points of two Point Clouds
 - 학습/분류 : SVM 
 

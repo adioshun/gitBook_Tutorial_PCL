@@ -10,11 +10,11 @@
 ```cpp 
 #include <pcl/visualization/cloud_viewer.h> 
 
-pcl::PointCloud<pcl::PointXYZ>::Ptr cloud1(new pcl::PointCloud<pcl::PointXYZ>);
+pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
 
 //...
 pcl::visualization::CloudViewer viewer("cloud viewer");
-viewer.showCloud(cloud1);
+viewer.showCloud(cloud);
 
 system("pause");
 
