@@ -13,9 +13,8 @@ main (int argc, char** argv)
   pcl::PCLPointCloud2::Ptr cloud (new pcl::PCLPointCloud2 ());
   pcl::PCLPointCloud2::Ptr cloud_filtered (new pcl::PCLPointCloud2 ());
 
-  // Fill in the cloud data
+ 
   pcl::PCDReader reader;
-  // Replace the path below with the path where you saved your file
   reader.read ("table_scene_lms400.pcd", *cloud); // Remember to download the file first!
 
   std::cerr << "PointCloud before filtering: " << cloud->width * cloud->height 
