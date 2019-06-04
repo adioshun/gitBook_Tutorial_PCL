@@ -53,6 +53,9 @@ int
   }
 
   pcl::io::savePCDFileASCII ("test_pcd.pcd", cloud);
+  //pcl::io::savePCDFileBinary("test_pcd.pcd", *cloud); //바이너리 형태 저장으로 less 저장 공간 사용 
+  
+  
   std::cerr << "Saved " << cloud.points.size () << " data points to test_pcd.pcd." << std::endl;
 
 
