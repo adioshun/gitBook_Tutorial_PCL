@@ -16,7 +16,9 @@ pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>);
 pcl::visualization::CloudViewer viewer("cloud viewer");
 viewer.showCloud(cloud);
 
-system("pause");
+while (!viewer.wasStopped ())
+ {
+ }
 
 ```
 
