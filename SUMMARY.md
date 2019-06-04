@@ -6,7 +6,7 @@
 ## 초급
 
 * [README](Beginner/README.md)
-* [Chapter #1](Beginner/Chapter01-Article01.md)
+* [Chapter #1](Beginner/Part01-Chapter01.md)
 
 ## 중급 
 
