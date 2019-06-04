@@ -67,8 +67,7 @@ pcl::io::savePCDFile<pcl::PointXYZ>("test_pcd.pcd", cloud); //Default binary mod
 //2.1 writer.write<pcl::PointXYZ>("test_pcd.pcd", cloud); //Default binary mode save
 //2.2 writer.writeASCII<pcl::PointXYZ>("test_pcd_ASCII.pcd", cloud); //ASCII mode
 //2.3 writer.writeBinary<pcl::PointXYZ>("test_pcd_Binary.pcd", cloud); //binary mode 
-
-
+//options. writer.write("test.pcd", *cloud, Eigen::Vector4f::Zero (), Eigen::Quaternionf::Identity (), false);
 
 std::cerr << "Saved " << cloud.points.size () << " data points to test_pcd.pcd." << std::endl;
 

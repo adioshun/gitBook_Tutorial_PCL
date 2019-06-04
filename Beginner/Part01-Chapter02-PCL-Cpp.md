@@ -30,9 +30,7 @@ main (int argc, char** argv)
   std::cerr << "PointCloud after filtering: " << cloud_filtered->width * cloud_filtered->height 
        << " data points (" << pcl::getFieldsList (*cloud_filtered) << ").";
 
-  pcl::PCDWriter writer;
-  writer.write ("table_scene_lms400_downsampled.pcd", *cloud_filtered, 
-         Eigen::Vector4f::Zero (), Eigen::Quaternionf::Identity (), false);
+
 
   return (0);
 }
