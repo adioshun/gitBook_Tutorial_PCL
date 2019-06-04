@@ -20,6 +20,8 @@ main (int argc, char** argv)
 
 ```
 
+시각화 확인 :`pcl_viewer tabletop.pcd`
+
 ---
 
 
