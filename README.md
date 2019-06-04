@@ -21,12 +21,15 @@ PCL Tutorial 작성 중 :
 
 중급
 
-
-- 두 좌표계 통합 : 
+- Feature : Normal 
+- 군집화 : seed Clustering 
+- 두 좌표계 통합 
+- Octree Search / compress
 - 포인트 합치기 : Concatenate the points of two Point Clouds
-
-
+- 학습/분류 : SVM 
 
 고급 
 - Range image를 이용한 군집화 
 - BEV를 이용한 군집화 
+- PointGAN을 이용한 학습 데이터 생성 
+- VoxelNET을 이용한 분류 작업 
