@@ -19,7 +19,7 @@ main (int argc, char** argv)
   //2. pcl::PCDReader reader;
   //2. reader.read<pcl::PointXYZ>("tabletop.pcd", cloud);
 
-  std::cout << "Loaded " << cloud->width * cloud->height  << std::endl;
+  std::cout << "Loaded " << cloud->width * cloud->height  << std::endl; //cloud_filtered->points.size()
 
   return (0);
 }
