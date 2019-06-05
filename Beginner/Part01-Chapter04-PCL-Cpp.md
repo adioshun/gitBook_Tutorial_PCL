@@ -93,6 +93,8 @@ int
 
 # [Removing outliers using a Radius Outlier removal](http://pointclouds.org/documentation/tutorials/remove_outliers.php#remove-outliers)
 
+> 내부 코드 : [PCL Series 7 - Radius Filtering (outlier point culling)](https://blog.csdn.net/qq_22170875/article/details/89244371)
+
 ```cpp
 #include <iostream>
 #include <pcl/io/pcd_io.h>
@@ -125,3 +127,5 @@ int
 }
 
 ```
+
+
