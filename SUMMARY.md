@@ -17,6 +17,10 @@
   * [PCL-Cpp](Beginner/Part01-Chapter04-PCL-Cpp.md)
 * [RANSAC](Beginner/Part01-Chapter05.md)
   * [PCL-Cpp](Beginner/Part01-Chapter05-PCL-Cpp.md)
+* [clustering](Beginner/Part01-Chapter06.md)
+  * [PCL-Cpp](Beginner/Part01-Chapter06-PCL-Cpp.md)
+
+
 
 ## Part 2 \(중급\)
 
