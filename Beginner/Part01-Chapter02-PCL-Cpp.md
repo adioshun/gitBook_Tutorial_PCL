@@ -1,5 +1,8 @@
 # [Downsampling a PointCloud using a VoxelGrid filter](http://pointclouds.org/documentation/tutorials/voxel_grid.php#voxelgrid)
 
+
+
+
 ```cpp
 
 #include <iostream>
@@ -23,7 +26,7 @@ main (int argc, char** argv)
   // Create the filtering object
   pcl::VoxelGrid<pcl::PCLPointCloud2> sor;
   sor.setInputCloud (cloud);
-  sor.setLeafSize (0.01f, 0.01f, 0.01f);
+  sor.setLeafSize (0.3f, 0.3f, 0.3f); //The size of the body is 30 * 30 cm
   sor.filter (*cloud_filtered);
 
   std::cerr << "PointCloud after filtering: " << cloud_filtered->width * cloud_filtered->height 
