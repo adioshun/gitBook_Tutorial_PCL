@@ -1,6 +1,6 @@
 # [Downsampling a PointCloud using a VoxelGrid filter](http://pointclouds.org/documentation/tutorials/voxel_grid.php#voxelgrid)
 
-
+> 다운샘플링은 구조체(PCLPointCloud2)에서만 진행 하여야 하나??
 
 
 ```cpp
