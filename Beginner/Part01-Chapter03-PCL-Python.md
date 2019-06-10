@@ -3,6 +3,10 @@
 ## 1. passthrough Filter
 
 
+> Jupyter 버젼은 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Beginner/Part01-Chapter03-PCL-Python-.ipynb)에서 확인 가능 합니다. 
+
+
+
 ```python
 # 정의 
 def do_passthrough(pcl_data,filter_axis,axis_min,axis_max):
