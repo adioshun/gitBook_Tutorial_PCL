@@ -35,12 +35,15 @@
   * [PCL-Cpp](Beginner/Part01-Chapter05-PCL-Cpp.md)
   * [PCL-Python](Beginner/Part01-Chapter05-PCL-Python.md)
   * [ROS 실습](Beginner/Part01-Chapter05-Practice.md)
-* [clustering](Beginner/Part01-Chapter06.md)
-  * [PCL-Cpp](Beginner/Part01-Chapter06-PCL-Cpp.md)
+
 
 ## Part 2 \(중급\)
 
 * [README](Intermediate/README.md)
+* [clustering](Intermediate/Part02-Chapter01.md)
+  * [PCL-Cpp](Intermediate/Part02-Chapter01-PCL-Cpp.md)
+
+
 
 ## Part 3 \(고급\)
 
