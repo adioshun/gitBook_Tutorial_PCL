@@ -4,17 +4,12 @@
 * [개요](Intro.md)
 * [References](references.md)
 
-
-## Part 0 (개요)
+## Part 0 \(개요\)
 
 * [README](Introduction/README.md)
-* [chapter01](Introduction/Part00-Chapter01.md)
+* [chapter01 : PCL이란](Introduction/Part00-Chapter01.md)
 * [chapter02](Introduction/Part00-Chapter02.md)
 * [chapter03](Introduction/Part00-Chapter03.md)
-
-
-
-
 
 ## Part 1 \(초급\)
 

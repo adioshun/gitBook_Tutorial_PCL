@@ -26,7 +26,21 @@
 
 고급에서는 PCL 딥러닝을 연계 하여 학습 데이터 생성등에 쓰이는 PointGAN, 분류에 쓰이는 SECOND 등을 다루고 있습니다. 
 
-각 이론별 코드에서는 PCL C++, PCL-Python, Open3D-Python별 샘플 코드를 포함하고 있습니다. 또한, 이해 돕기를 위해 설명 하기 편한 PCD파일들을 사용하고 있습니다. 
+각 이론별 코드에서는 PCL C++, PCL-Python, Open3D-Python별 샘플 코드를 포함하고 있습니다. 
+
+
+또한, 이해 돕기를 위해 여러 공개 PCD파일들을 사용하고 있습니다. 
+
+|![image](https://user-images.githubusercontent.com/17797922/41080489-9d804f18-69db-11e8-8a8b-9422c2e13132.png)||
+|-|-|
+|[RoboND-Perception-Exercises](https://github.com/udacity/RoboND-Perception-Exercises/raw/master/Exercise-1/tabletop.pcd)|L-CAS People |
+
+
+
+
+
+
+
 
 좀더 자세한 구성은 아래와 같습니다. 
 
