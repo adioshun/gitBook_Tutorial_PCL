@@ -20,6 +20,7 @@
   * [Open3D-Python](Beginner/Part01-Chapter01-Open3D-Python.md)
 * [Downsampling](Beginner/Part01-Chapter02.md)
   * [PCL-Cpp](Beginner/Part01-Chapter02-PCL-Cpp.md)
+  * [PCL-Python](Beginner/Part01-Chapter02-PCL-Python.md)
 * [PassThrough](Beginner/Part01-Chapter03.md)
   * [PCL-Cpp](Beginner/Part01-Chapter03-PCL-Cpp.md)
 * [Outlier](Beginner/Part01-Chapter04.md)
