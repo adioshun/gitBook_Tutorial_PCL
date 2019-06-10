@@ -37,20 +37,30 @@ Point Cloud는 기본적으로는 x,y,z로 표현 되지만 센서에서 제공�
 ## PCL종류 
 
 
-Point cloud를 처리를 위한 라이브러리로는 PCL[[^1]](#1), PCL-python, Open3D, pyPCD, Laspy, PCLpy 등이 있습니다. 
+Point cloud를 처리를 위한 라이브러리로는 PCL, PCL-python, Open3D, pyPCD, Laspy, PCLpy 등이 있습니다. 
 
 
-일반적으로 PCL하면 2011년 Radu Bogdan Rusu, Steve Cousins에 의해 공개된 Library를 나타내기도 합니다. 
+일반적으로 PCL하면 2011년 Radu Bogdan Rusu, Steve Cousins에 의해 공개된 [Library](http://pointclouds.org/)를 나타내기도 합니다. 
 
 
-여기서는 PCL, PCL-Python과 일부 Open3D를 활용합니다.
+여기서는 PCL[[^1]](#1), PCL-Python[[^2]](#2), Open3D[[^3]](#3)를 활용합니다.
 
 
 
 
 
 ---
-<a name="1">[1]</a> Radu Bogdan Rusu and Steve Cousins, "3D is here: Point Cloud Library (PCL)", IEEE International Conference on Robotics and Automation (ICRA), 2011 <br/>
+<a name="1">[1]</a> Radu Bogdan Rusu and Steve Cousins, "3D is here: Point Cloud Library (PCL)", IEEE International Conference on Robotics and Automation (ICRA), 2011 
+
+<a name="1">[1]</a> Andrew Straw가 개발한 PCL[1] 의 Python버젼 라이브러리입니다.[[홈페이지]](http://strawlab.github.io/python-pcl/)
+
+<a name="1">[1]</a> Qian-Yi Zhou와 박재신 교수가 Intel Lab재직 시절 개발한 Point Cloud 라이브러리 입니다. C++와 Python을 지원합니다. [[홈페이지]](http://www.open3d.org/)
+
+
+
+
+
+
 
 
 
