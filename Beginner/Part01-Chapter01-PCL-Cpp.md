@@ -1,6 +1,6 @@
 # PCL-Cpp 기반 I/O
 
-## 1. 파일 읽기 
+## 1. 읽기 
 
 > [Reading Point Cloud data from PCD files](http://pointclouds.org/documentation/tutorials/reading_pcd.php#reading-pcd)
 
@@ -35,7 +35,7 @@ main (int argc, char** argv)
 ---
 
 
-## 2. 생성 & 파일 쓰기 
+## 2. 생성 & 쓰기 
 
 > [Writing Point Cloud data to PCD files](http://pointclouds.org/documentation/tutorials/writing_pcd.php#writing-pcd)
 
