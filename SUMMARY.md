@@ -23,7 +23,7 @@
   * [PCL-Cpp](Beginner/Part01-Chapter02-PCL-Cpp.md)
   * [PCL-Python](Beginner/Part01-Chapter02-PCL-Python.md)
   * [ROS 실습](Beginner/Part01-Chapter02-Practice.md)
-* [PassThrough](Beginner/Part01-Chapter03.md)
+* [RoI Filter](Beginner/Part01-Chapter03.md)
   * [PCL-Cpp](Beginner/Part01-Chapter03-PCL-Cpp.md)
   * [PCL-Python](Beginner/Part01-Chapter03-PCL-Python.md)
   * [ROS 실습](Beginner/Part01-Chapter03-Practice.md)
