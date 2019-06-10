@@ -56,6 +56,43 @@ Point cloud Library란 Point cloud 처리를 위한 라이브러리입니다.
 Point Cloud은 `*. asc` , `*. cl3` , `*. clr` , `*. fls` , `*. fws` , `*. las` , `*. ptg` , `*. pts` , `*. ptx` , `*. txt` , `*. pcd` , `*. xyz` 등의 여러 데이터 포맷을 사용 가능합니다. 
 
 
+단순히 x,y,z정보만을 가진 `*.txt` 포맷을 이용하여도 되고, 여러 헤더 정보와 x,y,z를 가진 `*. pcd`포맷을 이용하여도 3D 물체 표현에는 영향을 미치지 않습니다. 
+
+일반적으로 사용된는 `*. pcd`포맷은 아래와 같은 형식으로 이루어져 있습니다. 
+
+
+```
+# .PCD v.7 - Point Cloud Data file format
+VERSION .7
+FIELDS x y z rgb
+SIZE 4 4 4 4
+TYPE F F F F
+COUNT 1 1 1 1
+WIDTH 213
+HEIGHT 1
+VIEWPOINT 0 0 0 1 0 0 0
+POINTS 213
+DATA ascii
+0.93773 0.33763 0 4.2108e+06
+0.90805 0.35641 0 4.2108e+06
+0.81915 0.32 0 4.2108e+06
+0.97192 0.278 0 4.2108e+06
+0.944 0.29474 0 4.2108e+06
+0.98111 0.24247 0 4.2108e+06
+0.93655 0.26143 0 4.2108e+06
+0.91631 0.27442 0 4.2108e+06
+0.81921 0.29315 0 4.2108e+06
+0.90701 0.24109 0 4.2108e+06
+0.83239 0.23398 0 4.2108e+06
+0.99185 0.2116 0 4.2108e+06
+0.89264 0.21174 0 4.2108e+06
+```
+
+주위깊게 보아야 할부분은 FIELDS가 `x,y,z,rgb`로 데이터 역시 `N x 4`Numpy 색상 정보를 포함하고 있습니다. 다른 `*.pcd`는 rgb가 없이 사용될수 있습니다. 
+
+
+> 차세한 `*.pcd`파일 포맷에 대한 정보는 [[여기]](http://pointclouds.org/documentation/tutorials/pcd_file_format.php)에서 얻을수 있습니다. 
+
 
 ---
 <a name="1">[1]</a> Radu Bogdan Rusu and Steve Cousins, "3D is here: Point Cloud Library (PCL)", IEEE International Conference on Robotics and Automation (ICRA), 2011 
