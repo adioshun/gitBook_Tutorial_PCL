@@ -1,3 +1,5 @@
+# PCL, PCD 란 
+
 ## Point cloud 란? 
 
 점군(Point cloud)은 Lidar 센나 RGB-D센서, Stereo camera 등으로 수집되는 데이터를 의미 합니다. 여기서 점군이란 3차원 공간상에 퍼져 있는 여러 점(Point)의 집합(set=cloud)을 의미 합니다. 
