@@ -5,5 +5,8 @@
 
 PCL에서는 Conditional Filter, PassThrough filter란 이름으로 해당 기능을 제공 하고 있습니다.
 
+- PassThrough Filter는 입력값으로 관심 영역의 x,y,z의 최대/최소값을 받아 crop하는 방식으로, 직관적이지만 정교한 부분을 제거하지는 못하는 단점이 있습니다.
+- 
+
 > PCL-Tutorial에서는 Conditional Filter를 Noise제거용으로 소개 하고 있지만, RoI추출에 좀더 유용한것 같아 RoI 추출 기법으로 분류 하였습니다.
 > Conditional filter는 PassThrough 대비 필터링 조건을 좀더 풍부하게 지정 할 수 있습니다.
