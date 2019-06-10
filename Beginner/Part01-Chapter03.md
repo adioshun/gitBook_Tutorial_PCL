@@ -25,14 +25,16 @@ PCL에서는 PassThrough filter, Conditional Filter[[^1]](#1)란 이름으로 �
 
 |![](https://i.imgur.com/ESXyPtq.png)|![](https://i.imgur.com/oSzk5Kb.png)|![](https://i.imgur.com/7jbrH33.png)|
 |-|-|-|
-|원본|관심영역 설정 | 관심영역 필터링 결과|
+|원본|관심영역 설정 | 관심영역 필터링 결과(x,y)|
 
 위 그림은 어느 건물의 내부 포인트 클라우드 데이터입니다. 중앙 Hall부분(사각형)의 사람만 탐지 하고자 할경우 x는 1.0~20.0, y는 -7.0~5.5영역을  설정한것입니다. 
 
+|![](https://i.imgur.com/OFoOiVA.png) |![](https://i.imgur.com/Oxt0KJr.png)|
+|-|-|
+|원본|관심영역 필터링 결과(z)
 
-https://i.imgur.com/OFoOiVA.png
+위 그림은 바닥제거를 위해 ROI Filter를 사용한 것입니다. y좌표 -2.0 부분에 타원형 선들은 센서가 바닥을 탐지 하여 표시한 것입니다. 
 
-https://i.imgur.com/Oxt0KJr.png
 ---
 
 
