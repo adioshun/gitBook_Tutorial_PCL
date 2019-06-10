@@ -1,25 +1,25 @@
-# Noise Filtering
+# 노이즈 제거 
 
-Lidar는 센서 특성상 물체가 존재 하지 않아도 먼지등으로 인해 point가 생성 됩니다. 이렇게 생성된 point들을 Noise로 간주 하고 제거 하는 작업을 진행 해야 합니다.
+모든 센서는 특성상 측정시 에러가 존재 합니다. Lidar의 경우 탐지 물체가 존재 하지 않아도 먼지나 오류 등으로 인해 point가 생성 됩니다. 이렇게 생성된 point들은 Noise또는 Outlier라 하고 제거 하는 작업을 진행 해야 합니다. 이를 Noise filtering또는 Outlier Removal이라고 합니다. 
 
-다행히 이러한 노이즈들은 정상적인 point 대비 빈 공간에 소수의 점들만 탐지 되므로 이러한 특성을 이용하여 제거 할수 있습니다.
+다행히 이러한 노이즈들은 정상적인 point 대비 고유의 특징을 가지고 있어 이를 활용하여 제거 할수 있습니다.
 
-- Statistical based
+- Statistical based : 통계적 방법 활용 
 
-- Radius based
+- Radius based : 거리 정보 활용 
 
 
 > **[중요]** 현재 Radius based 방식은 정상 동작 하지 않는다고 합니다. 파라미터를 바꾸어도 결과가 '0'이라고 하네요. [[참고]](https://github.com/strawlab/python-pcl/issues/211) - 2018.06.11
 
 
+## StatisticalOutlierRemoval filter
 
-The StatisticalOutlierRemoval filter can be used primarily to eliminate outliers or to measure the gross errors caused by errors . 
-The filtering idea is: perform a statistical analysis on the neighborhood of each point and calculate its average distance to all adjacent points. Assume that the result is a Gaussian distribution whose shape is determined by the mean and standard deviation, then the point beyond the standard range (defined by the global distance mean and variance) can be defined as the outlier and from the data. Removed.
---------------------- 
-作者：chd_ayj 
-来源：CSDN 
-原文：https://blog.csdn.net/qq_22170875/article/details/84994029 
-版权声明：本文为博主原创文章，转载请附上博文链接！
+
+통계학적 정보를 이용하여 Noise를 탐지 하는 방법 입니다. 
+
+동작 과정
+- 이웃 근접 point 들과의 평균 거리 정보를 계산 합니다. 
+- 이 분포가 Gaussian distribution따른다는 가정하에 나머지는 잡음으로 간주 제거 합니다. 
 
 
 
