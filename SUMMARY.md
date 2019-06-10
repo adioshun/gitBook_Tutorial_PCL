@@ -31,7 +31,7 @@
   * [PCL-Cpp](Beginner/Part01-Chapter04-PCL-Cpp.md)
   * [PCL-Python](Beginner/Part01-Chapter04-PCL-Python.md)
   * [ROS 실습](Beginner/Part01-Chapter04-Practice.md)
-* [RANSAC](Beginner/Part01-Chapter05.md)
+* [바닥제거 \(RANSAC\)](Beginner/Part01-Chapter05.md)
   * [PCL-Cpp](Beginner/Part01-Chapter05-PCL-Cpp.md)
   * [PCL-Python](Beginner/Part01-Chapter05-PCL-Python.md)
   * [ROS 실습](Beginner/Part01-Chapter05-Practice.md)
