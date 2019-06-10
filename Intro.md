@@ -1,10 +1,12 @@
 # 개요 
 
 
-새로운 프로젝트를 진행 하면서 Point cloud Library(PCL)를 처음 접하게 되었습니다. 3D 데이터의 처리를 위해서는 필수적인 Library인데 개발자 홈페이지를 제외 하고는 정리 되어 있는 문서나 질문/의견을 교류 할 수 있는 곳 적어 개념을 이해하거나 적용 하는데 많은 어려움이 있었습니다. 프로젝트 1년차가 종료 되어 가는 시점에서 그동안 익혔던 내용 및 코드를 정리하고, 이 분야를 시작하시려는 분들에게 조금이나마 도움이 되고자 Tutorial을 작성 하게 되었습니다. 
+새로운 프로젝트를 진행 하면서 Point cloud Library(PCL)를 처음 접하게 되었습니다. 3D 데이터의 처리를 위해서는 필수적인 Library인데 개발자 홈페이지를 제외 하고는 정리 되어 있는 문서나 질문/의견을 교류 할 수 있는 곳 적어 개념을 이해하거나 적용 하는데 많은 어려움이 있었습니다. 
+
+프로젝트 1년차가 종료 되어 가는 시점에서 그동안 익혔던 내용 및 코드를 정리하고, 이 분야를 시작하시려는 분들에게 조금이나마 도움이 되고자 Tutorial을 작성 하게 되었습니다. 
 
 
-- 기본 내용은 PCL 홈페이지의 [[Documentation-Tutorials]](http://pointclouds.org/documentation/tutorials/)와 Eugen Cicvarić의 [[3D Object Recognition and Pose Estimation using Point Cloud Library]](https://drive.google.com/file/d/1QtQTlm3_FiOdBslbtMAubVMyd2Bjofl1/view?fbclid=IwAR0NZfTAvfSwg_X_Flx5Uhg5GMLRaNFdgKU6PZRsHuskc95Sd2ErAKLg4LM), [[wikipedia]](https://www.wikipedia.org/)를 중심으로 하였습니다. 
+- 기본 내용은 PCL 홈페이지의 [[Tutorials]](http://pointclouds.org/documentation/tutorials/)와 Eugen Cicvarić의 [[3D Object Recognition and Pose Estimation using Point Cloud Library]](https://drive.google.com/file/d/1QtQTlm3_FiOdBslbtMAubVMyd2Bjofl1/view?fbclid=IwAR0NZfTAvfSwg_X_Flx5Uhg5GMLRaNFdgKU6PZRsHuskc95Sd2ErAKLg4LM), [[wikipedia]](https://www.wikipedia.org/)를 중심으로 하였습니다. 
 
 - 그 외 참고한 여러 자료들은 *[References]*페이지에 별도 업데이트 하도록 하겠습니다. 
 
@@ -20,9 +22,9 @@
 
 ### 이론 
 
-초급에서는 PCL에서 제공하는 기능들을 기반으로 3D 데이터 전처리, 필터링, 군집화를 다루고 있습니다. 
+초급에서는 PCL에서 제공하는 기능들을 기반으로 3D 데이터 전처리, 필터링를 다루고 있습니다. 
 
-중급에서는 PCL에서 제공하는 기능들을 기반으로 Octree, Classification, Registration를 다루고 있습니다. 
+중급에서는 PCL에서 제공하는 기능들을 기반으로 Clustering, Classification, Octree, Registration를 다루고 있습니다. 
 
 고급에서는 PCL 딥러닝을 연계 하여 학습 데이터 생성등에 쓰이는 PointGAN, 분류에 쓰이는 SECOND 등을 다루고 있습니다. 
 
@@ -40,8 +42,6 @@
 
 
 
-
-
 좀더 자세한 구성은 아래와 같습니다. 
 
 ```
@@ -51,13 +51,12 @@
 - 대상 영역 선정을 위한 RoI 설정 : PassThrough filter
 - 센서 잡음 제거를 위한 Outlier제거 : Statistical/Conditional/Radius Outlier removal
 - 바닦 세그멘테이션 및 제거 : RANSAC 
-- 물체 군집화 : DBSCAN 
 
 
 중급
 
 - Octree Search
-- 군집화 : seed Clustering 
+- 군집화 : DBSCAN, seed Clustering 
 - Feature : Normal 
 - 두 좌표계 통합 
 - Octree compress
