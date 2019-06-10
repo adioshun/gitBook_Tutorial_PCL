@@ -1,7 +1,7 @@
-# 
+# ROS 실습 - 노이즈 제거 
 
 
-## PCL-Python Statistical 
+## 1. PCL-Python Statistical 
 
 ```python 
 #!/usr/bin/env python3

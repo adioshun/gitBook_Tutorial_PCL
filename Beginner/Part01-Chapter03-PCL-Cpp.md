@@ -41,3 +41,55 @@ int
 ```
 
 ---
+
+
+## 2. Conditional Outlier removal
+
+>  [Removing outliers using a Conditional Outlier removal](http://pointclouds.org/documentation/tutorials/remove_outliers.php#remove-outliers)
+
+
+```cpp
+#include <iostream>
+#include <pcl/io/pcd_io.h>
+#include <pcl/point_types.h>
+#include <pcl/filters/conditional_removal.h>
+
+
+int
+ main (int argc, char** argv)
+{
+
+  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
+  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered (new pcl::PointCloud<pcl::PointXYZ>);
+
+  pcl::io::loadPCDFile<pcl::PointXYZ> ("tabletop.pcd", *cloud);
+  std::cout << "Loaded " << cloud->width * cloud->height  << std::endl;
+
+
+  // build the condition
+  pcl::ConditionAnd<pcl::PointXYZ>::Ptr range_cond (new
+    pcl::ConditionAnd<pcl::PointXYZ> ());
+
+  range_cond->addComparison (pcl::FieldComparison<pcl::PointXYZ>::ConstPtr (new
+    pcl::FieldComparison<pcl::PointXYZ> ("z", pcl::ComparisonOps::GT, 0.0)));
+
+  range_cond->addComparison (pcl::FieldComparison<pcl::PointXYZ>::ConstPtr (new
+    pcl::FieldComparison<pcl::PointXYZ> ("z", pcl::ComparisonOps::LT, 0.8)));
+
+  // build the filter
+  pcl::ConditionalRemoval<pcl::PointXYZ> condrem;
+  condrem.setCondition (range_cond);
+  condrem.setInputCloud (cloud);
+  condrem.setKeepOrganized(true);
+  // apply filter
+  condrem.filter (*cloud_filtered);
+  
+ 
+  std::cout << "Filtered " << cloud_filtered->width * cloud_filtered->height  << std::endl;
+
+  return (0);
+}
+```
+
+
+

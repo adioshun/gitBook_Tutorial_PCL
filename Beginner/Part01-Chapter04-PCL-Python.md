@@ -1,6 +1,12 @@
 # PCL-Python 기반 노이즈 제거 
 
 
+## 1. Statistical Outlier Removal
+
+> Jupyter 버젼은 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Beginner/Part01-Chapter04-PCL-Python.ipynb)에서 확인 가능 합니다. 
+
+
+
 ```python 
 
 def do_statistical_outlier_filtering(pcl_data,mean_k,tresh):
