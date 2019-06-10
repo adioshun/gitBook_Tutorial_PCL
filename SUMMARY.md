@@ -7,7 +7,7 @@
 ## Part 0 \(개요\)
 
 * [README](Introduction/README.md)
-* [chapter01 : PCL이란](Introduction/Part00-Chapter01.md)
+* [chapter01 : PCL & PCD란](Introduction/Part00-Chapter01.md)
 * [chapter02](Introduction/Part00-Chapter02.md)
 * [chapter03](Introduction/Part00-Chapter03.md)
 
@@ -43,3 +43,4 @@
 * [시각화](Appendix/Visualization.md)
   * [PCL-Cpp](Appendix/Visualization-PCL-Cpp.md)
 
+* [Point Cloud Libraries](Appendix/Libraries.md)
