@@ -1,6 +1,6 @@
 ## Point cloud 란? 
 
-Point cloud 은 Lidar 센나 RGB-D센서, Stereo camera 등으로 수집되는 점군(Point cloud)입니다. 여기서 점군이란 3차원 공간상에 퍼져 있는 여러 점(Point)의 집합(set=cloud)을 의미 합니다. 
+점군(Point cloud)은 Lidar 센나 RGB-D센서, Stereo camera 등으로 수집되는 데이터를 의미 합니다. 여기서 점군이란 3차원 공간상에 퍼져 있는 여러 점(Point)의 집합(set=cloud)을 의미 합니다. 
 
 |![](https://i.imgur.com/8kEIXdA.png)|![](https://i.imgur.com/fQrysOa.png)|![](https://c1.staticflickr.com/6/5310/5880903905_ed581013b0.jpg)|
 |-|-|-|
