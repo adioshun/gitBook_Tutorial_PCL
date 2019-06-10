@@ -2,7 +2,7 @@
 
 * [Contents](README.md)
 * [개요](Intro.md)
-* References
+* [References](references.md)
 
 ## Part 1 \(초급\)
 
