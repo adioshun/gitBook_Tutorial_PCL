@@ -34,3 +34,9 @@ cloud = do_statistical_outlier_filtering(cloud,10,0.001)
 
 
 
+---
+## 2. Radious Outlier Removal
+
+
+
+> [추후 추가](https://github.com/strawlab/python-pcl/blob/master/examples/official/Filtering/remove_outliers.py)
