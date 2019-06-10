@@ -1,6 +1,6 @@
-# PCL-Cpp 기반 ROI Filter
+# PCL-Cpp 기반 ROI 추출 
 
-## 1. PassThrough
+## 1. PassThrough 
 
 > [Filtering a PointCloud using a PassThrough filter](http://pointclouds.org/documentation/tutorials/passthrough.php#passthrough)
 
