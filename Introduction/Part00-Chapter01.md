@@ -40,15 +40,13 @@ Point Cloud는 기본적으로는 x,y,z로 표현 되지만 센서에서 제공�
 
 Point cloud Library란 Point cloud 처리를 위한 라이브러리입니다. 
 
-현재 PCL, PCL-python, Open3D, pyPCD, Laspy, PCLpy 등의 라이브러리들이 사용되고 있습니다. 일반적으로 PCL하면 2011년 Radu Bogdan Rusu, Steve Cousins에 의해 공개된 [Library](http://pointclouds.org/)를 나타내기도 합니다. 
-
 일반적으로 Point cloud 라이브러리들은 Point cloud의 파일 저장, 읽기, 잡음제거, 정합, 군집화, 분류, Feature계산 등의 기능을 제공합니다. 
+
+현재 PCL, PCL-python, Open3D, pyPCD, Laspy, PCLpy 등의 라이브러리들이 사용되고 있습니다. 일반적으로 PCL하면 2011년 Radu Bogdan Rusu, Steve Cousins에 의해 공개된 [Library](http://pointclouds.org/)를 나타내기도 합니다. 
 
 추후 각 라이블러리들의 특징점에 대하여 정리 하도록 하겠습니다. `Appendix-Libraries`
 
-
 여기서는 PCL[[^1]](#1), PCL-Python[[^2]](#2), Open3D[[^3]](#3)를 활용합니다.
-
 
 
 ## Point Cloud Data(PCD) Format 
