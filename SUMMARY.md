@@ -1,6 +1,7 @@
 # Summary
 
-* [README](README.md)
+* [Contents](README.md)
+* [개요](Intro.md)
 
 ## Part 1 \(초급\)
 
