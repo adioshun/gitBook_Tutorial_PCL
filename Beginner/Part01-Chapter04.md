@@ -25,5 +25,6 @@
 
 
 
-|![](https://img-blog.csdnimg.cn/20190412162257278.JPG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIyMTcwODc1,size_16,color_FFFFFF,t_70)|![](https://img-blog.csdnimg.cn/20190412162346938.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIyMTcwODc1,size_16,color_FFFFFF,t_70)|
+|![](https://i.imgur.com/R4GPZI7.png)|![](https://i.imgur.com/IM34sRA.png)|
 |-|-|
+|원본|노이즈 제거 후|
