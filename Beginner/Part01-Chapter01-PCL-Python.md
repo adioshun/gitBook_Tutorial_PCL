@@ -64,6 +64,7 @@ import numpy as np
 # PC to Numpy
 pc_array = pc.to_array()
 
+print("pc_array size : {}".format(pc_array.size))
 print("pc Type : {}".format(type(pc)))
 print("pc_array Type : {}".format(type(pc_array)))
 
@@ -73,3 +74,25 @@ pc_new.from_array(pc_array) # 2.생성 방법과 동일
 
 ```
 
+---
+
+## 5. 정보 출력 
+
+
+```python 
+import pcl
+pc = pcl.load("./sample/lobby.pcd") 
+
+
+print("포인트 수 : {}".format(pc)) 
+print("포인트 수 : {}".format(pc.size)) 
+
+
+
+# 포인트 값 
+print ('Loaded ' + str(pc.width * pc.height) + ' data points from test_pcd.pcd with the following fields: ')
+
+for i in range(0, 10):#pc.size):
+    print ('x: ' + str(pc[i][0]) + ', y : ' + str(pc[i][1]) + ', z : ' + str(pc[i][2]))
+
+```
