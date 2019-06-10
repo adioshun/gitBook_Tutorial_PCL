@@ -1,4 +1,4 @@
-# RoI Filter
+# ROI Filter
 
 
 본 챕터에서는 point cloud 필터링 기법 중 관심 영역(RoI:Region of Interesting)을 추출하는 RoI Filtering에 대하여 다루고 있습니다.
@@ -21,10 +21,18 @@ PCL에서는 PassThrough filter, Conditional Filter[[^1]](#1)란 이름으로 �
 2. 제한 영역 정보외 지역을 삭제 합니다. 
 
 
+## ROI Filter 적용 
+
+|![](https://i.imgur.com/ESXyPtq.png)|![](https://i.imgur.com/oSzk5Kb.png)|![](https://i.imgur.com/7jbrH33.png)|
+|-|-|-|
+|원본|관심영역 설정 | 관심영역 필터링 결과|
+
+위 그림은 어느 건물의 내부 포인트 클라우드 데이터입니다. 중앙 Hall부분(사각형)의 사람만 탐지 하고자 할경우 x는 1.0~20.0, y는 -7.0~5.5영역을  설정한것입니다. 
 
 
+https://i.imgur.com/OFoOiVA.png
 
-
+https://i.imgur.com/Oxt0KJr.png
 ---
 
 
