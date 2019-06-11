@@ -9,11 +9,10 @@
 > 일부 문서에서는 바닥(floor)제거를 배경(background)제거라고도 표현 하고 있습니다. 본 문서에서는 [중급-배경제거]와 구분하기 위하여 바닥제거라고 표기 하고 있습니다. 
 
 
-RANSAC (Random Sample Consensus) is an iterative method / algorithm that has the ability to detect parameters belonging to a particular mathematical model
 
 ## RANSAC이란. 
 
-RANSAC은 `Random Sample Consensus`의 약어로 1981년 Martin A에 의해 제안된 방법입니다[[^1]](#1). 선, 원통, 평면 등과 같은 특정 Model을 알고 있다는 가정하에 특정 cloud point가 이 model에 속하는지 아닌지를 무작위(Random)로 point들을 선별(sample)하여 일치(Consensus)하는지 테스트 하는 방법을 이야기 합니다.  평면모델을 사용하여 바닥제거를 수행 할수 있습니다. 
+RANSAC은 `Random Sample Consensus`의 약어로 1981년 Martin A에 의해 제안된 방법입니다[[^1]](#1). 점군 안에 선, 원통, 평면 등과 같은 특정 Model이 있다는 가정하에 해당 모델의 파라미터를 추정 하고 이 후 cloud point가 이 model에 속하는지 아닌지를 무작위(Random)로 point들을 선별(sample)하여 일치(Consensus)하는지 테스트 하는 방법을 이야기 합니다.  평면모델을 사용하여 바닥제거를 수행 할수 있습니다. 
 
 |![](http://pointclouds.org/documentation/tutorials/_images/random_sample_example1.png)|![](http://pointclouds.org/documentation/tutorials/_images/random_sample_example2.png)|
 |-|-|
