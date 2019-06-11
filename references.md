@@ -1,1 +1,1 @@
-- [PCL/OpenNI tutorial](http://robotica.unileon.es/index.php/PhD-3D-Object-Tracking)
+- [PCL/OpenNI tutorial](http://robotica.unileon.es/index.php/PhD-3D-Object-Tracking) : 추천, 많은 부분을 참고 번역 하였습니다. 
