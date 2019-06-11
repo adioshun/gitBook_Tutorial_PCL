@@ -64,6 +64,10 @@ $ pcl_viewer StatisticalOutlierRemoval_Neg.pcd
 |-|-|-|
 |원본|결과|결과(SetNegarive)|
 
+|![](https://i.imgur.com/R4GPZI7.png)|![](https://i.imgur.com/IM34sRA.png)|
+|-|-|
+|원본(확대)|결과(확대)|
+
 ---
 
 

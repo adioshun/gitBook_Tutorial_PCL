@@ -32,6 +32,3 @@
 
 
 
-|![](https://i.imgur.com/R4GPZI7.png)|![](https://i.imgur.com/IM34sRA.png)|
-|-|-|
-|원본|노이즈 제거 후|
