@@ -1,7 +1,9 @@
 # PCL-Cpp 기반 Voxelization
 
-> [Downsampling a PointCloud using a VoxelGrid filter](http://pointclouds.org/documentation/tutorials/voxel_grid.php#voxelgrid)
+> Jupyter 버젼은 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Beginner/Part01-Chapter01-PCL-Python.ipynb)에서 확인 가능 합니다. 
 
+
+> 코드는 [[이곳]](Part01-Chapter02-PCL-Cpp.cpp)에서 다운로드 가능합니다. 샘플파일은 [[table_scene_lms400.pcd]]()을 사용하였습니다. 
 
 
 ```cpp
@@ -70,6 +72,14 @@ $ pcl_viewer table_scene_lms400_downsampled.pcd
 
 
 ---
+
+- [Downsampling a PointCloud using a VoxelGrid filter](http://pointclouds.org/documentation/tutorials/voxel_grid.php#voxelgrid)
+
+
+
+
+
+
 > 다운샘플링은 구조체(PCLPointCloud2)에서만 진행 하여야 하나??
 
 Convert 
