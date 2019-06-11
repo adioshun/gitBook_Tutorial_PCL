@@ -27,7 +27,7 @@ main (int argc, char** argv)
   // Create the filtering object
   pcl::VoxelGrid<pcl::PCLPointCloud2> sor;
   sor.setInputCloud (cloud);
-  sor.setLeafSize (0.3f, 0.3f, 0.3f); //The size of the body is 30 * 30 cm
+  sor.setLeafSize (0.01f, 0.01f, 0.01f); //The size of the body is 1 * 1 cm 
   sor.filter (*cloud_filtered);
 
   std::cerr << "PointCloud after filtering: " << cloud_filtered->width * cloud_filtered->height 
@@ -44,12 +44,27 @@ main (int argc, char** argv)
 ```
 
 
-실행 결과 
+실행 $ 결과 
 ```
+cmake CMakeLists.txt && make && ./Part01-Chapter01 
 $ PointCloud before filtering: 460400 data points (x y z intensity distance sid).
-$ PointCloud after filtering: 89 data points (x y z intensity distance sid).
+$ PointCloud after filtering: 41049 data points (x y z intensity distance sid).
+
 ```
 
+
+시각화 & 결과 
+
+```
+$ pcl_viewer table_scene_lms400.pcd 
+$ pcl_viewer table_scene_lms400_downsampled.pcd 
+```
+
+|![](https://i.imgur.com/yG5GYmm.png)|![](https://i.imgur.com/l8urRKc.png)|
+|-|-|
+|원본 |원본 확대 |
+|![](https://i.imgur.com/OB02KJu.png)|![](https://i.imgur.com/RRGXu4O.png)|
+|결과 |결과 확대 |
 
 
 
