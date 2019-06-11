@@ -1,10 +1,3 @@
-# [Plane model segmentation](http://pointclouds.org/documentation/tutorials/planar_segmentation.php#planar-segmentation)
-
-> 추후 정리 
-
----
-
-
 
 
 # [Projecting points using a parametric model](http://pointclouds.org/documentation/tutorials/project_inliers.php#project-inliers)
