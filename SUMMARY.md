@@ -47,6 +47,7 @@
 ## Part 3 \(고급\)
 
 * [README](Advanced/README.md)
+* [개요](Advanced/INTRO.md)
 
 ## Appendix
 
