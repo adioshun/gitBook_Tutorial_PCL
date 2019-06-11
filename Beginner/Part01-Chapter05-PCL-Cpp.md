@@ -58,7 +58,6 @@ main (int argc, char** argv)
 }
 ```
 
-```
 
 실행 $ 결과
 ```
