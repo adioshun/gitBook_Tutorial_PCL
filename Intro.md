@@ -6,7 +6,7 @@
 프로젝트 1년차가 종료 되어 가는 시점에서 그동안 익혔던 내용 및 코드를 정리하고, 이 분야를 시작하시려는 분들에게 조금이나마 도움이 되고자 Tutorial을 작성 하게 되었습니다. 
 
 
-- 기본 내용은 PCL 홈페이지의 [[Tutorials]](http://pointclouds.org/documentation/tutorials/)와 Eugen Cicvarić의 [[3D Object Recognition and Pose Estimation using Point Cloud Library]](https://drive.google.com/file/d/1QtQTlm3_FiOdBslbtMAubVMyd2Bjofl1/view?fbclid=IwAR0NZfTAvfSwg_X_Flx5Uhg5GMLRaNFdgKU6PZRsHuskc95Sd2ErAKLg4LM), [[wikipedia]](https://www.wikipedia.org/)를 중심으로 하였습니다. 
+- 기본 내용은 PCL 홈페이지의 [[Tutorials]](http://pointclouds.org/documentation/tutorials/)와 [[wikipedia]](https://www.wikipedia.org/)를 중심으로 하였습니다. 
 
 - 그 외 참고한 여러 자료들은 *[References]*페이지에 별도 업데이트 하도록 하겠습니다. 
 
