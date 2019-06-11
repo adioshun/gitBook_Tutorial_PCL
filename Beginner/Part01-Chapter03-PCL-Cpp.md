@@ -2,7 +2,7 @@
 
 ## 1. PassThrough 
 
-> 코드는 [[이곳]](Part01-Chapter03-PCL-Cpp.cpp)에서 다운로드 가능합니다. 샘플파일은 [[tabletop.pcd]](https://raw.githubusercontent.com/udacity/RoboND-Perception-Exercises/master/Exercise-1/tabletop.pcd)을 사용하였습니다. 
+> 코드는 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Beginner/Part01-Chapter03-PCL-Cpp.cpp)에서 다운로드 가능합니다. 샘플파일은 [[tabletop.pcd]](https://raw.githubusercontent.com/adioshun/gitBook_Tutorial_PCL/master/Beginner/sample/tabletop.pcd)을 사용하였습니다. 
 
 ```cpp
 
