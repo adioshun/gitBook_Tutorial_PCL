@@ -1,9 +1,5 @@
 # Summary
 
-* [Contents](README.md)
-* [개요](Intro.md)
-* [References](references.md)
-
 ## Part 0 \(개요\)
 
 * [README](Introduction/README.md)
@@ -54,4 +50,7 @@
 * [시각화](Appendix/Visualization.md)
   * [PCL-Cpp](Appendix/Visualization-PCL-Cpp.md)
 * [Point Cloud Libraries](Appendix/Libraries.md)
+* [참고 자료](references.md)
+
+
 
