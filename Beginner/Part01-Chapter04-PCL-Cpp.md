@@ -42,8 +42,26 @@ main (int argc, char** argv)
 
 ```
 
+실행 $ 결과
+```
+$ Loaded 460400
+$ Filtered 451410
+```
 
 
+시각화 & 결과
+
+```
+$ pcl_viewer table_scene_lms400.pcd 
+$ pcl_viewer StatisticalOutlierRemoval.pcd 
+$ pcl_viewer StatisticalOutlierRemoval_Neg.pcd 
+```
+
+
+
+|![](https://i.imgur.com/yn4JEuH.png)|![](https://i.imgur.com/eSJIQlT.png)|![](https://i.imgur.com/92kPpnC.png)|
+|-|-|-|
+|원본|결과|결과(SetNegarive)|
 
 ---
 
