@@ -60,7 +60,7 @@ main (int argc, char** argv)
 ```
 
 
-실행 $ 결과
+실행 & 결과
 ```
 $ Loaded : 72823
 $ Filtered : 49493 

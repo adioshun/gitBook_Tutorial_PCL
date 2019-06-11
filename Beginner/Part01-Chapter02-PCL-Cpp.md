@@ -43,7 +43,7 @@ main (int argc, char** argv)
 ```
 
 
-실행 $ 결과 
+실행 & 결과 
 ```
 cmake CMakeLists.txt && make && ./Part01-Chapter01 
 $ PointCloud before filtering: 460400 data points (x y z intensity distance sid).
