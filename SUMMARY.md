@@ -9,7 +9,7 @@
 * [README](Introduction/README.md)
 * [chapter01 : PCL & PCD란](Introduction/Part00-Chapter01.md)
 * [chapter02 : PCL 설치](Introduction/Part00-Chapter02.md)
-* [chapter03](Introduction/Part00-Chapter03.md)
+* [chapter03 : 실습 ](Introduction/Part00-Chapter03.md)
 
 ## Part 1 \(초급\)
 
