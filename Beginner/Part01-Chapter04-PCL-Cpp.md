@@ -2,9 +2,7 @@
 
 ## 1. Statistical Outlier Removal
 
-> [Removing outliers using a StatisticalOutlierRemoval filter](http://pointclouds.org/documentation/tutorials/statistical_outlier.php#statistical-outlier-removal)
-
-> 내부 코드 설명 :[PCL Series 6 - Statistical Filtering (outlier point culling)](https://blog.csdn.net/qq_22170875/article/details/84994029)
+> 코드는 [[이곳]](Part01-Chapter04-PCL-Cpp.cpp)에서 다운로드 가능합니다. 샘플파일은 [[table_scene_lms400.pcd]](ttps://raw.github.com/PointCloudLibrary/data/master/tutorials/table_scene_lms400.pcd )을 사용하였습니다. 
 
 
 ```cpp
@@ -73,9 +71,7 @@ $ pcl_viewer StatisticalOutlierRemoval_Neg.pcd
 
 ## 2. Radius Outlier removal
 
-> [Removing outliers using a Radius Outlier removal](http://pointclouds.org/documentation/tutorials/remove_outliers.php#remove-outliers)
 
-> 내부 코드 : [PCL Series 7 - Radius Filtering (outlier point culling)](https://blog.csdn.net/qq_22170875/article/details/89244371)
 
 ```cpp
 #include <iostream>
@@ -109,5 +105,16 @@ int
 }
 
 ```
+
+---
+
+> [Removing outliers using a StatisticalOutlierRemoval filter](http://pointclouds.org/documentation/tutorials/statistical_outlier.php#statistical-outlier-removal)
+
+> 내부 코드 설명 :[PCL Series 6 - Statistical Filtering (outlier point culling)](https://blog.csdn.net/qq_22170875/article/details/84994029)
+
+> [Removing outliers using a Radius Outlier removal](http://pointclouds.org/documentation/tutorials/remove_outliers.php#remove-outliers)
+
+> 내부 코드 : [PCL Series 7 - Radius Filtering (outlier point culling)](https://blog.csdn.net/qq_22170875/article/details/89244371)
+
 
 

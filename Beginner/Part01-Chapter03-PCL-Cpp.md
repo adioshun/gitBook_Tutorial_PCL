@@ -2,7 +2,7 @@
 
 ## 1. PassThrough 
 
-> [Filtering a PointCloud using a PassThrough filter](http://pointclouds.org/documentation/tutorials/passthrough.php#passthrough)
+> 코드는 [[이곳]](Part01-Chapter03-PCL-Cpp.cpp)에서 다운로드 가능합니다. 샘플파일은 [[tabletop.pcd]](https://raw.githubusercontent.com/udacity/RoboND-Perception-Exercises/master/Exercise-1/tabletop.pcd)을 사용하였습니다. 
 
 ```cpp
 
@@ -63,7 +63,7 @@ $ pcl_viewer tabletop_passthrough.pcd
 
 ## 2. Conditional Outlier removal
 
->  [Removing outliers using a Conditional Outlier removal](http://pointclouds.org/documentation/tutorials/remove_outliers.php#remove-outliers)
+
 
 
 ```cpp
@@ -108,6 +108,13 @@ int
   return (0);
 }
 ```
+
+---
+
+- [Filtering a PointCloud using a PassThrough filter](http://pointclouds.org/documentation/tutorials/passthrough.php#passthrough)
+
+
+- [Removing outliers using a Conditional Outlier removal](http://pointclouds.org/documentation/tutorials/remove_outliers.php#remove-outliers)
 
 
 
