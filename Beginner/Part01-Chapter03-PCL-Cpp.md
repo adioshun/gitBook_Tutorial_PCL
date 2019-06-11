@@ -14,31 +14,49 @@
 int
  main (int argc, char** argv)
 {
-  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
-  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered (new pcl::PointCloud<pcl::PointXYZ>);
+  pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZRGB>);
+  pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud_filtered (new pcl::PointCloud<pcl::PointXYZRGB>);
 
-  
-  pcl::io::loadPCDFile<pcl::PointXYZ> ("tabletop.pcd", *cloud);
 
-  std::cout << "Loaded " << cloud->width * cloud->height  << std::endl;
+  pcl::io::loadPCDFile<pcl::PointXYZRGB> ("tabletop.pcd", *cloud);
+
+  std::cout << "Loaded :" << cloud->width * cloud->height  << std::endl;
 
   // Create the filtering object
-  pcl::PassThrough<pcl::PointXYZ> pass;
+  pcl::PassThrough<pcl::PointXYZRGB> pass;
   pass.setInputCloud (cloud);
   pass.setFilterFieldName ("z");
-  pass.setFilterLimits (0.0, 1.0);
+  pass.setFilterLimits (0.70, 1.5);
   //pass.setFilterLimitsNegative (true);
   pass.filter (*cloud_filtered);
 
-  std::cout << "Filtered " << cloud_filtered->width * cloud_filtered->height  << std::endl;
+  std::cout << "Filtered :" << cloud_filtered->width * cloud_filtered->height  << std::endl;  
 
-  pcl::io::savePCDFile<pcl::PointXYZ>("passthrough_tabletop.pcd", *cloud_filtered); //Default binary mode save
+  pcl::io::savePCDFile<pcl::PointXYZRGB>("tabletop_passthrough.pcd", *cloud_filtered); //Default binary mode save
 
   return (0);
 }
 
+```
+
+
+실행 $ 결과
+```
+$ Loaded :202627
+$ Filtered :72823
+```
+
+시각화 & 결과
 
 ```
+$ pcl_viewer tabletop.pcd 
+$ pcl_viewer tabletop_passthrough.pcd 
+```
+
+|![](https://i.imgur.com/tZzHIRS.png)|![](https://i.imgur.com/hpfXFql.png)|
+|-|-|
+|원본|결과|
+
 
 ---
 
