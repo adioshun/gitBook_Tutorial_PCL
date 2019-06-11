@@ -15,7 +15,7 @@
 
 * [README](Beginner/README.md)
 * [개요](Beginner/INTRO.md)
-* [Input/Output](Beginner/Part01-Chapter01.md)
+* [파일 생성 및 입출력](Beginner/Part01-Chapter01.md)
   * [PCL-Cpp](Beginner/Part01-Chapter01-PCL-Cpp.md)
   * [PCL-Python](Beginner/Part01-Chapter01-PCL-Python.md)
   * [Open3D-Python](Beginner/Part01-Chapter01-Open3D-Python.md)
@@ -37,15 +37,12 @@
   * [PCL-Python](Beginner/Part01-Chapter05-PCL-Python.md)
   * [ROS 실습](Beginner/Part01-Chapter05-Practice.md)
 
-
 ## Part 2 \(중급\)
 
 * [README](Intermediate/README.md)
 * [개요](Intermediate/INTRO.md)
 * [clustering](Intermediate/Part02-Chapter01.md)
   * [PCL-Cpp](Intermediate/Part02-Chapter01-PCL-Cpp.md)
-
-
 
 ## Part 3 \(고급\)
 
