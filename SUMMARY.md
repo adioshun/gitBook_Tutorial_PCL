@@ -40,7 +40,11 @@
 * [군집화](Intermediate/Part02-Chapter01.md)
   * [Euclidean-PCL-Cpp](Intermediate/Part02-Chapter01-Euclidean-PCL-Cpp.md)
   * [DBSCAN-PCL-Python](Intermediate/Part02-Chapter01-DBSCAN-PCL-Python.md)
-* [Octree](Intermediate/Part02-Chapter02.md)
+* [배경제거](Intermediate/Part02-Chapter02.md)
+  * [Search-PCL-Cpp](Intermediate/Part02-Chapter02-Search-PCL-Cpp.md)
+  * [Compression-PCL-Cpp](Intermediate/Part02-Chapter02-Compression-PCL-Cpp.md)
+  * [DetectChanges-PCL-Cpp](Intermediate/Part02-Chapter02-DetectChanges-PCL-Cpp.md)
+
 
 ## Part 3 \(고급\)
 
