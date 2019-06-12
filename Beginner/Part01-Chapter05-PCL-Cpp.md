@@ -44,12 +44,12 @@ main (int argc, char** argv)
  // Extract the inliers
  extract.setInputCloud (cloud);
  extract.setIndices (inliers);
- extract.setNegative (false);//true
+ extract.setNegative (true);//false
  extract.filter (*cloud_p);
  std::cerr << "Filtered : " << cloud_p->width * cloud_p->height << " data points." << std::endl;
 
  std::stringstream ss;
- ss << "RANSAC_plane.pcd"; //RANSAC_plane_true.pcd
+ ss << "RANSAC_plane_true.pcd"; //RANSAC_plane_false.pcd
  pcl::PCDWriter writer2;
  writer2.write<pcl::PointXYZRGB> (ss.str (), *cloud_p, false);
 
