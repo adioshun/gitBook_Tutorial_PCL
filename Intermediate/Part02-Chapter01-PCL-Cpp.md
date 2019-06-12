@@ -62,3 +62,28 @@ main (int argc, char** argv)
   return (0);
 }
 ```
+
+실행 & 결과
+```
+$ PointCloud before filtering has: 23330 data points.
+$ PointCloud representing the Cluster: 5981 data points.
+$ PointCloud representing the Cluster: 5111 data points.
+$ PointCloud representing the Cluster: 4431 data points.
+$ PointCloud representing the Cluster: 2768 data points.
+$ PointCloud representing the Cluster: 2513 data points.
+$ PointCloud representing the Cluster: 1552 data points.
+$ PointCloud representing the Cluster: 934 data points.
+```
+
+
+시각화 & 결과
+
+```
+$ pcl_viewer cloud_cluster_0.pcd 
+$ pcl_viewer cloud_cluster_6.pcd 
+```
+
+
+|![](https://i.imgur.com/j6HoJBy.png)|![](https://i.imgur.com/4ZXd2eu.png)|![](https://i.imgur.com/6WVsQwo.png)|
+|-|-|-|
+|원본(입력)|결과(`cloud_cluster_0.pcd)|결과(`cloud_cluster_6.pcd`)|
