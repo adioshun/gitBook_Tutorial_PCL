@@ -1,6 +1,6 @@
 # Summary
 
-* [Intro](INTRO.md)
+* [Intro](README.md)
 
 ## Part 0 \(개요\)
 
