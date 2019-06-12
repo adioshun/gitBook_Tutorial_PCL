@@ -12,7 +12,6 @@
 ## Part 1 \(초급\)
 
 * [README](Beginner/README.md)
-* [개요](Beginner/INTRO.md)
 * [파일 생성 및 입출력](Beginner/Part01-Chapter01.md)
   * [PCL-Cpp](Beginner/Part01-Chapter01-PCL-Cpp.md)
   * [PCL-Python](Beginner/Part01-Chapter01-PCL-Python.md)
@@ -38,7 +37,6 @@
 ## Part 2 \(중급\)
 
 * [README](Intermediate/README.md)
-* [개요](Intermediate/INTRO.md)
 * [군집화](Intermediate/Part02-Chapter01.md)
   * [Euclidean-PCL-Cpp](Intermediate/Part02-Chapter01-Euclidean-PCL-Cpp.md)
   * [DBSCAN-PCL-Python](Intermediate/Part02-Chapter01-DBSCAN-PCL-Python.md)
