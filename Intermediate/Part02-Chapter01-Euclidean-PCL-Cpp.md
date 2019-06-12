@@ -86,4 +86,4 @@ $ pcl_viewer cloud_cluster_6.pcd
 
 |![](https://i.imgur.com/j6HoJBy.png)|![](https://i.imgur.com/4ZXd2eu.png)|![](https://i.imgur.com/6WVsQwo.png)|
 |-|-|-|
-|원본(입력)|결과(`cloud_cluster_0.pcd)|결과(`cloud_cluster_6.pcd`)|
+|원본(`RANSAC_plane_true.pcd`)|결과(`cloud_cluster_0.pcd`)|결과(`cloud_cluster_6.pcd`)|
