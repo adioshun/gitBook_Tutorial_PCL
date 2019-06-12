@@ -40,9 +40,10 @@
 * [README](Intermediate/README.md)
 * [개요](Intermediate/INTRO.md)
 * [군집화](Intermediate/Part02-Chapter01.md)
-  * [PCL-Cpp](Intermediate/Part02-Chapter01-PCL-Cpp.md)
-  * [Euclidean-PCL-Cpp](Intermediate/euclidean-pcl-cpp.md)
-  * [DBSCAN-PCL-Python](Intermediate/dbscan-pcl-python.md)
+  * [Euclidean-PCL-Cpp](Intermediate/Part02-Chapter01-Euclidean-PCL-Cpp.md)
+  * [DBSCAN-PCL-Python](Intermediate/Part02-Chapter01-DBSCAN-PCL-Python.md)
+  * [1Euclidean-PCL-Cpp](Intermediate/euclidean-pcl-cpp.md)
+  * [1DBSCAN-PCL-Python](Intermediate/dbscan-pcl-python.md)
 
 ## Part 3 \(고급\)
 
