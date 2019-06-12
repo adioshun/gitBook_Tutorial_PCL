@@ -40,6 +40,7 @@
 * [군집화](Intermediate/Part02-Chapter01.md)
   * [Euclidean-PCL-Cpp](Intermediate/Part02-Chapter01-Euclidean-PCL-Cpp.md)
   * [DBSCAN-PCL-Python](Intermediate/Part02-Chapter01-DBSCAN-PCL-Python.md)
+* [Octree](Intermediate/Part02-Chapter02.md)
 
 ## Part 3 \(고급\)
 
