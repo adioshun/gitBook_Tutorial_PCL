@@ -39,7 +39,7 @@
 
 * [README](Intermediate/README.md)
 * [개요](Intermediate/INTRO.md)
-* [clustering](Intermediate/Part02-Chapter01.md)
+* [군집화](Intermediate/Part02-Chapter01.md)
   * [PCL-Cpp](Intermediate/Part02-Chapter01-PCL-Cpp.md)
 
 ## Part 3 \(고급\)
@@ -54,5 +54,4 @@
 * [Point Cloud Libraries](Appendix/Libraries.md)
 * [참고 자료](references.md)
 * [목차](README.md)
-
 
