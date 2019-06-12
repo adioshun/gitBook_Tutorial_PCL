@@ -41,6 +41,8 @@
 * [개요](Intermediate/INTRO.md)
 * [군집화](Intermediate/Part02-Chapter01.md)
   * [PCL-Cpp](Intermediate/Part02-Chapter01-PCL-Cpp.md)
+  * [Euclidean-PCL-Cpp](Intermediate/euclidean-pcl-cpp.md)
+  * [DBSCAN-PCL-Python](Intermediate/dbscan-pcl-python.md)
 
 ## Part 3 \(고급\)
 
