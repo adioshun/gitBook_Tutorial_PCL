@@ -45,6 +45,10 @@
   * [Compression-PCL-Cpp](Intermediate/Part02-Chapter02-Compression-PCL-Cpp.md)
   * [DetectChanges-PCL-Cpp](Intermediate/Part02-Chapter02-DetectChanges-PCL-Cpp.md)
   * [DetectChanges-PCL-Python](Intermediate/Part02-Chapter02-DetectChanges-PCL-Python.md)
+* [특징 찾기](Intermediate/Part02-Chapter03.md)
+  * [Normal](Intermediate/Part02-Chapter03-Normal.md)
+  * [Normal-PCL-Cpp](Intermediate/Part02-Chapter03-Normal-PCL-Cpp.md)
+  * [Normal-PCL-Python](Intermediate/Part02-Chapter03-Normal-PCL-Python.md)
 
 
 ## Part 3 \(고급\)
