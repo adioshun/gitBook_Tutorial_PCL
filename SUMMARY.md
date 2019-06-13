@@ -52,6 +52,10 @@
 * [README](Advanced/README.md)
 * [개요](Advanced/INTRO.md)
 
+## Snippets
+
+* [Concatenating two clouds](Snippets/Concatenating-two-clouds-PCL-Cpp.md)
+
 ## Appendix
 
 * [시각화](Appendix/Visualization.md)
