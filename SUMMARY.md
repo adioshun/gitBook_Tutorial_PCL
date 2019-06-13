@@ -44,6 +44,7 @@
   * [Search-PCL-Cpp](Intermediate/Part02-Chapter02-Search-PCL-Cpp.md)
   * [Compression-PCL-Cpp](Intermediate/Part02-Chapter02-Compression-PCL-Cpp.md)
   * [DetectChanges-PCL-Cpp](Intermediate/Part02-Chapter02-DetectChanges-PCL-Cpp.md)
+  * [DetectChanges-PCL-Python](Intermediate/Part02-Chapter02-DetectChanges-PCL-Python.md)
 
 
 ## Part 3 \(고급\)
