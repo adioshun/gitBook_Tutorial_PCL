@@ -9,6 +9,10 @@
 - [Ronny Restrepo](http://ronny.rest/tutorials/module/pointclouds_01/point_cloud_data/)
 
 
-
+- [Segmentation of point clouds](http://fgg-web.fgg.uni-lj.si/~/alisec/ISPRS_SS_2007/gradivo/ISPRS_SS2007/doc/PRESENTATIONS-LECTURES/5_Georg%20Vosselman/vosselman_01_segmentation.pdf): PPT
 
 - [[3D Object Recognition and Pose Estimation using Point Cloud Library]](https://drive.google.com/file/d/1QtQTlm3_FiOdBslbtMAubVMyd2Bjofl1/view?fbclid=IwAR0NZfTAvfSwg_X_Flx5Uhg5GMLRaNFdgKU6PZRsHuskc95Sd2ErAKLg4LM) : 이론적인 부분 참고 
+
+- [Play with PCL](http://robonchu.hatenablog.com/entry/2018/03/04/195535)
+
+
