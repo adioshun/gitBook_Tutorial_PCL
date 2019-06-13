@@ -58,6 +58,8 @@ int
 main (int argc, char** argv)
 {
   pcl::PointCloud<pcl::PointXYZ> cloud;
+  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_ptr(new pcl::PointCloud<pcl::PointXYZ>);
+
   
   // Fill in the cloud data
   cloud.width = 5;
@@ -77,8 +79,12 @@ main (int argc, char** argv)
   pcl::io::savePCDFile<pcl::PointXYZ>("test_pcd.pcd", cloud); //Default binary mode save
   //pcl::io::savePCDFileASCII<pcl::PointXYZ>("test_pcd_ASCII.pcd", cloud); //ASCII mode
   //pcl::io::savePCDFileBinary<pcl::PointXYZ>("test_pcd_Binary.pcd", cloud); //binary mode 
+  
+  //SAVE #2 
+  //pcl::io::savePCDFile<pcl::PointXYZ>("test_pcd.pcd", *cloud_ptr); //Default binary mode save
+
     
-  //SAVE #23
+  //SAVE #3
   //pcl::PCDWriter writer;
   //writer.write<pcl::PointXYZ>("test_pcd.pcd", cloud); //Default binary mode save
   //writer.writeASCII<pcl::PointXYZ>("test_pcd_ASCII.pcd", cloud); //ASCII mode
