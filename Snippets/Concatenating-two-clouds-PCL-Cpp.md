@@ -32,8 +32,6 @@ main(int argc, char** argv)
 	// Create cloud "C", with the points of both "A" and "B".
 	*cloudC = (*cloudA) + (*cloudB);
 	pcl::io::savePCDFile<pcl::PointXYZ>("cloud_C.pcd", *cloudC); 
-
-	
 }
 ```
 
@@ -41,7 +39,7 @@ main(int argc, char** argv)
 
 ## 2. Fileds Concatenating
 
-`pcl::concatenateFields`로 수행 가능 합니다. 
+`pcl::concatenateFields()`로 수행 가능 합니다. 
 
 
 ```cpp
