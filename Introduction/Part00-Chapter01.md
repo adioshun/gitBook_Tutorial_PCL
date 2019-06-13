@@ -9,9 +9,9 @@
 |-|-|-|
 |Lidar를 이용한 컵의 Point cloud|RGB-D센서를 이용한 Point Cloud|Stereo Camera를 이용한 Point Cloud|
 
-이러한 점군은 이미지와 다르게 깊이(z)정보를 가지고 있기 때문에 기본적으로 (x,y,z)`N x 3` Numpy 배열로 표현 됩니다. 여기서 각 N 줄은 하나의 점과 맵핑이 됩니다. 
+이러한 점군은 이미지와 다르게 깊이(z)정보를 가지고 있기 때문에 기본적으로 `N x 3` Numpy 배열로 표현 됩니다. 여기서 각 N 줄은 하나의 점과 맵핑이 되며 3(x,y,z) 정보를 가지고 있습니다. 
 
-Point Cloud는 기본적으로는 x,y,z로 표현 되지만 센서에서 제공되는 추가 정보가 있을경우 `N x 4`Numpy 배열로도 표현 가능 합니다. 예를 들어 Lidar 센서에서 수집한 정보의 경우는 `reflectance(반사도)`라는 정보가 추가될수 있으며, RGB-D에는 Color정보가 추가 될수 있습니다. 따라서 위에서 살펴볼 Point cloud data format에서는 여러 종류가 있습니다. 
+Point Cloud는 기본적으로는 x,y,z로 표현 되지만 센서에서 제공되는 추가 정보가 있을경우 `N x 4`Numpy 배열로도 표현 가능 합니다. 예를 들어 Lidar 센서에서 수집한 정보의 경우는 `reflectance(반사도/반사시간?)`라는 정보가 추가될수 있으며, RGB-D에는 Color정보가 추가 될수 있습니다. 따라서 위에서 살펴볼 Point cloud data format에서는 여러 종류가 있습니다. 
 
 
 
@@ -22,6 +22,7 @@ Point Cloud는 기본적으로는 x,y,z로 표현 되지만 센서에서 제공�
 |The Point Cloud Data|이미지 데이터와 비교 |
 |-|-|
 |![](http://i.imgur.com/Bc13san.png)|![](http://i.imgur.com/smzFU5N.png)|
+
 
 ```
 이미지 데이터
@@ -71,7 +72,9 @@ Point Cloud은 `*. asc` , `*. cl3` , `*. clr` , `*. fls` , `*. fws` , `*. las` ,
 
 단순히 x,y,z정보만을 가진 `*.txt` 포맷을 이용하여도 되고, 여러 헤더 정보와 x,y,z를 가진 `*. pcd`포맷을 이용하여도 3D 물체 표현에는 영향을 미치지 않습니다. 
 
-일반적으로 사용된는 `*. pcd`포맷은 아래와 같은 형식으로 이루어져 있습니다. 
+일반적으로 사용된는 `*. pcd`포맷은 Header와 Data 섹션을 가지고 있습니다. 
+- a human-readable header that defines the number, size, dimensionality and data type of the point cloud;
+- a data section which can be in ASCII or a binary, non-human-readable format.
 
 
 ```
@@ -91,14 +94,7 @@ DATA ascii
 0.81915 0.32 0 4.2108e+06
 0.97192 0.278 0 4.2108e+06
 0.944 0.29474 0 4.2108e+06
-0.98111 0.24247 0 4.2108e+06
-0.93655 0.26143 0 4.2108e+06
-0.91631 0.27442 0 4.2108e+06
-0.81921 0.29315 0 4.2108e+06
-0.90701 0.24109 0 4.2108e+06
-0.83239 0.23398 0 4.2108e+06
-0.99185 0.2116 0 4.2108e+06
-0.89264 0.21174 0 4.2108e+06
+...
 ```
 
 주위깊게 보아야 할부분은 FIELDS가 `x,y,z,rgb`로 데이터 역시 `N x 4`Numpy 색상 정보를 포함하고 있습니다. 다른 `*.pcd`는 rgb가 없이 사용될수 있습니다. 
