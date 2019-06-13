@@ -85,4 +85,4 @@ $ pcl_viewer RANSAC_plane_true.pcd
 
 |![](https://i.imgur.com/qhczRfW.png)|![](https://i.imgur.com/Upo7BZK.png)|![](https://i.imgur.com/j6HoJBy.png)|
 |-|-|-|
-|원본 | 결과`setNegative (false)` |결과 `setNegative (true)`|
+|원본`tabletop_passthrough.pcd` | 결과`setNegative (false)` |결과 `setNegative (true)`|
