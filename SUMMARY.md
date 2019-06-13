@@ -1,6 +1,6 @@
 # Summary
 
-* [Intro](README.md)
+* [INTRO](README.md)
 
 ## Part 0 \(개요\)
 
@@ -57,5 +57,4 @@
   * [PCL-Cpp](Appendix/Visualization-PCL-Cpp.md)
 * [Point Cloud Libraries](Appendix/Libraries.md)
 * [참고 자료](references.md)
-* [목차](README.md)
 
