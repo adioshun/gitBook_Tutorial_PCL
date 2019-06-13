@@ -1,4 +1,26 @@
-# Neighbors within voxel search
+
+
+
+
+Neighbors within voxel search at (0.0346006 -1.46636 0.975463)
+K nearest neighbor search at (0.0346006 -1.46636 0.975463) with K=50
+K = 50 nearest neighbors:50
+Neighbors within radius search at (0.0881522 -1.51977 1.05603) with radius=0.02
+Radius 0.02 nearest neighbors: 66
+
+
+
+
+|![](https://i.imgur.com/uFNQCP4.png)|![](https://i.imgur.com/xJ7kKer.png)|
+|-|-|
+
+
+
+---
+
+# 각 기능별 
+
+## 1. Neighbors within voxel search
 
 > 코드는 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Intermediate/Part02-Chapter02-Search-Voxel-PCL-Cpp.cpp)에서 다운로드 가능합니다. 샘플파일은 [[cloud_cluster_0.pcd]](https://raw.githubusercontent.com/adioshun/gitBook_Tutorial_PCL/master/Intermediate/sample/cloud_cluster_0.pcd)을 사용하였습니다. 
 
@@ -59,7 +81,7 @@ main (int argc, char** argv)
 ...
 ```
 
-# K nearest neighbor search
+## 2. K nearest neighbor search
 
 > 코드는 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Intermediate/Part02-Chapter02-Search-Knn-PCL-Cpp.cpp)에서 다운로드 가능합니다. 샘플파일은 [[cloud_cluster_0.pcd]](https://raw.githubusercontent.com/adioshun/gitBook_Tutorial_PCL/master/Intermediate/sample/cloud_cluster_0.pcd)을 사용하였습니다. 
 
@@ -137,7 +159,7 @@ K nearest neighbor search at (0.026256 -1.46474 0.929567) with K=10
 0.0205821 -1.46402 0.929919 (squared distance: 3.28378e-05)
 ```
 
-## Neighbors within radius search
+## 3. Neighbors within radius search
 
 > 코드는 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Intermediate/Part02-Chapter02-Search-Radius-PCL-Cpp.cpp)에서 다운로드 가능합니다. 샘플파일은 [[cloud_cluster_0.pcd]](https://raw.githubusercontent.com/adioshun/gitBook_Tutorial_PCL/master/Intermediate/sample/cloud_cluster_0.pcd)을 사용하였습니다. 
 
@@ -210,4 +232,3 @@ main (int argc, char** argv)
 
 
 
-![](https://i.imgur.com/uFNQCP4.png)
