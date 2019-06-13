@@ -129,7 +129,7 @@ Radius 0.02 nearest neighbors: 66
 
 ---
 
-# 각 기능별 
+# 각 기능별 코드 3개 
 
 ## 1. Neighbors within voxel search
 

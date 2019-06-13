@@ -6,9 +6,9 @@
 - 군집화 : DBSCAN, seed Clustering 
 - 배경제거 : Octree Search, Octree compress
 - Feature : Normal 
-- 두 좌표계 통합 
-
-- 포인트 합치기 : Concatenate the points of two Point Clouds
 - 학습/분류 : SVM 
+- ICP
+- Reconstruction 
+
 
 ---
