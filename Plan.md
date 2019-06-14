@@ -33,6 +33,20 @@
 %watermark -d -v -p pcl,numpy
 ```
 
+```python 
+import tensorflow as tf; print("TensorFLow Version:"+str(tf.__version__))
+import keras; print("Keras Version:"+str(keras.__version__))
+
+print "OS:     ", platform.platform()
+print "Python: ", sys.version.split("\n")[0]
+print "CUDA:   ", subprocess.Popen(["nvcc","--version"], stdout=subprocess.PIPE).communicate()[0].split("\n")[3]
+print "LMDB:   ", ".".join([str(i) for i in lmdb.version()])
+
+print caffe.__version__"
+!pip freeze | grep pcl 
+!printenv
+```
+
 > Jupyter 버젼은 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Beginner/Part01-Chapter01-PCL-Python.ipynb)에서 확인 가능 합니다. 
 
 
