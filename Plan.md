@@ -36,5 +36,7 @@
 > Jupyter 버젼은 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Beginner/Part01-Chapter01-PCL-Python.ipynb)에서 확인 가능 합니다. 
 
 
-Download `.md`로 본문 작성 
+Download `Part02-Chapter03-Normal-PCL-Python.md`로 본문 작성 
+
+주피터 파일명 : `Part02-Chapter03-Normal-PCL-Python.ipynb`
 
