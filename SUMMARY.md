@@ -52,6 +52,7 @@
   * [Normal-PCL-Python \(80%\)](Intermediate/Part02-Chapter03-Normal-PCL-Python.md)
 * [분류](Intermediate/Part02-Chapter04.md)
   * [SVM-PCL-Python](Intermediate/Part02-Chapter04-SVM-PCL-Python.md)
+  * [SVM-ROS](Intermediate/Part02-Chapter04-SVM-ROS.md)
 
 ## Part 3 \(고급\)
 
