@@ -1,6 +1,6 @@
 # PCL-Python 기반 Normal Estimation
 
-> Jupyter 버젼은 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Beginner/Part01-Chapter03-PCL-Python-a.ipynb)에서 확인 가능 합니다. 
+> Jupyter 버젼은 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/tree/master/Intermediate/Part02-Chapter03-Normal-PCL-Python.ipynb)에서 확인 가능 합니다. 
 
 
 
