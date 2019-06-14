@@ -16,4 +16,11 @@
 
 
 
+---
 
+- [Overview and Comparison of Features](https://github.com/PointCloudLibrary/pcl/wiki/Overview-and-Comparison-of-Features)
+
+
+- [3D object recognition (descriptors)](http://robotica.unileon.es/index.php/PCL/OpenNI_tutorial_4:_3D_object_recognition_\(descriptors\))
+
+- [Keypoints and Features](http://www.pointclouds.org/assets/uploads/cglibs13_features.pdf)
