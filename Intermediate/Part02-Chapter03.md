@@ -8,6 +8,12 @@
 
 특징 기술자는 특징점의 지역적 특성을 설명합니다. 따라서 특징점간 비교가 가능해 집니다. 대표적인 특징 기술자는 SIFT, HOG 등이 있습니다. 
 
-3D 포인트 클라우드 분석 역시 특정점과 기술자를 가지고 있습니다. Normal은 가장 간단한 특징이라고 볼수 있습니다. 
+3D 포인트 클라우드 분석시에도 이러한 특징(Feature)정보들을 활용 합니다. 다음 챕터에서 다룰 분류문제 해결을 위해서는 필수 적입니다. 
+
+![image](https://user-images.githubusercontent.com/17797922/47074467-68e8ff80-d235-11e8-9c5c-541cf31ac671.png)
+
+자세한 내용은 [[이곳]](http://robotica.unileon.es/index.php/PCL/OpenNI_tutorial_4:_3D_object_recognition_\(descriptors\))에 잘 기술 되어 있습니다. 
+
+
 
 
