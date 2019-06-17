@@ -16,16 +16,47 @@
 - 사람 분류(LIDAR-SVM)
 - 사람 분류(LIDAR-RandomForest)
 
+
+|![](https://github.com/camisatx/RoboticsND/raw/master/projects/perception/misc/test_3_object_recognition.png)|![](https://i.imgur.com/9R1smHJ.png)|
+|-|-|
+|물건 분류|사람 분류|
+
+
 ## 1. 물건 분류(RGBD-SVM)
 
-첫번째 예시에서는 RGB-D센서로 탐지된 물체를 분류 합니다. RGBD센서는 물체의 깊이 정보와 카메라와 같이 색상 정보를 얻을수 있는 장점이 있습니다. 따라서, 활용할 특징 정보도 Normal외 색상 정보를 같이 사용 합니다. 
+첫번째 예시에서는 RGB-D센서로 탐지된 물체를 분류 합니다. RGBD센서는 물체의 깊이 정보와 카메라와 같이 색상 정보를 얻을수 있는 장점이 있습니다. 따라서, 활용할 특징 정보도 Normal외 색상 정보를 같이 사용 합니다. 알고리즘으로는 SVM을 적용 하였습니다. 
+
+- 알고리즘 : SVM 
+- 특징 정보 
+    - Color Histograms
+    - Normal Histograms
+- Label : Soap, Biscuits, Snacks, ...
+- 출처 : [Udacity Robot Nano Degree Perception](https://github.com/hortovanyi/RoboND-Perception-Project/tree/master/output)
 
 
+## 2. 사람 분류(LIDAR-SVM)
 
 
+두번째 예시에서는 LIDAR 센서로 탐지된 사람을 분류 합니다. LIDAR센서는 위치(Geometry)정보말고는 다른 정보를 하지 않습니다[[^2]](#2). 따라서, Feature Engineering을 통해서 x,y,z에서 새로운 특징 정보를 추출 하여 사용 합니다. 알고리즘으로는 SVM을 적용 하였습니다. 
+
+- 알고리즘 : SVM 
+- 특징 정보 
+    - Surface Normal
+    - 3D covariance matrix
+    - 2D covariance matrix in each zone
+    - normalized 2D histogram in main plane
+    - normalized 2D histogram in secondary plane
+    - Slice feature 
+    - 3D box size 
+- Label : Human or Not
+- 출처 : [Online Learning for Human Classification in 3D LiDAR-based Tracking](http://webpages.lincoln.ac.uk/nbellotto/doc/Yan2017.pdf), IROS2017 
+
+## 3. 사람 분류(LIDAR-Random Forest)
+
+세번째 예시는 두번째 예시와 비슷합니다. 단지 알고리즘으로는 Random Forest을 적용 하였습니다. 
 
 
 ---
 
 <a name="1">[1]</a> 머신러닝과 딥러닝의 분류는 Neural Network기반 방식이냐 아니냐로 구분 하였습니다. 
-
+<a name="2">[2]</a> 일부 Lidar에서는 Intensity 값을 활용하여 분류 작업을 진행 하기도 하지만, 아직은 특정 제품에 한정되어 있어 제외 하였습니다. 
