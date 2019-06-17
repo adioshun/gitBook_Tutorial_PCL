@@ -6,7 +6,7 @@
 프로젝트 1년차가 종료 되어 가는 시점에서 그동안 익혔던 내용 및 코드를 정리하고, 이 분야를 시작하시려는 분들에게 조금이나마 도움이 되고자 Tutorial을 작성 하게 되었습니다. 
 
 
-- 기본 내용은 PCL 홈페이지의 [[Tutorials]](http://pointclouds.org/documentation/tutorials/)와 [[wikipedia]](https://www.wikipedia.org/)를 중심으로 하였습니다. 
+- 기본 내용은 PCL 홈페이지의 [[PCL문서]](http://pointclouds.org/documentation/tutorials/)와 [[Udacity강좌]](https://github.com/udacity/RoboND-Perception-Exercises)를 중심으로 하였습니다. 
 
 - 그 외 참고한 여러 자료들은 *[References]*페이지에 별도 업데이트 하도록 하겠습니다. 
 
