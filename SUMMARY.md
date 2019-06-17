@@ -50,6 +50,7 @@
   * [Normal Estimation \(50%\)](Intermediate/Part02-Chapter03-Normal.md)
   * [Normal-PCL-Cpp \(70%\)](Intermediate/Part02-Chapter03-Normal-PCL-Cpp.md)
   * [Normal-PCL-Python \(80%\)](Intermediate/Part02-Chapter03-Normal-PCL-Python.md)
+  * [PCA](Intermediate/Part02-Chapter03-PCA.md)
 * [분류](Intermediate/Part02-Chapter04.md)
   * [SVM-RGBD-PCL-Python](Intermediate/Part02-Chapter04-SVM-RGBD-PCL-Python.md)
   * [SVM-ROS](Intermediate/Part02-Chapter04-SVM-ROS.md)
