@@ -4,4 +4,7 @@
 
 
 
-![](https://i.imgur.com/vIx7vCo.png)
+![](https://github.com/camisatx/RoboticsND/raw/master/projects/perception/misc/test_3_object_recognition.png)
+
+
+https://github.com/hortovanyi/RoboND-Perception-Project/tree/master/output
