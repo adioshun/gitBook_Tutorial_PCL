@@ -151,7 +151,7 @@ sample_cloud = cloud.to_array()
 c_hists = compute_color_histograms_PCD(sample_cloud, using_hsv=True)
 
 # Generate normals and notmal histograms for the spawned model
-normals = get_normals("tabletop.pcd")
+normals = get_normals("table_scene_inliers_0.pcd")
 n_hists = compute_normal_histograms(normals)
 
 # Generate feature by concatenate of color and normals.
@@ -175,10 +175,10 @@ scaler = model['scaler']
 prediction = clf.predict(scaler.transform(feature.reshape(1,-1)))
 label = encoder.inverse_transform(prediction)[0]
 print("Predicted Result : ", label)
-#모든 결과를 Soap로 인식, 수정 필요 
+
 ```
 
-    ('Predicted Result : ', 'soap')
+    ('Predicted Result : ', 'snacks')
 
 
 
