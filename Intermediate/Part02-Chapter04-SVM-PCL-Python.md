@@ -1,6 +1,6 @@
 # PCL-Python을 이용한 분류 
 
-> Jupyter 버젼은 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Beginner/Part01-Chapter03-PCL-Python-a.ipynb)에서 확인 가능 합니다. 
+> Jupyter 버젼은 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Beginner/Part02-Chapter04-SVM-PCL-Python.ipynb), [[이곳-Pileline]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Beginner/Part02-Chapter04-SVM-PCL-Python-Full.ipynb)에서 확인 가능 합니다. 
 
 
 
