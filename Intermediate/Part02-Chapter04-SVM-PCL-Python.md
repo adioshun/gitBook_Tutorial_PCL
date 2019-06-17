@@ -1,7 +1,8 @@
 # PCL-Python을 이용한 분류 
 
-> Jupyter 버젼은 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Beginner/Part02-Chapter04-SVM-PCL-Python.ipynb), [[이곳-Pileline]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Beginner/Part02-Chapter04-SVM-PCL-Python-Full.ipynb)에서 확인 가능 합니다. 
+> Jupyter 버젼은 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Intermediate/Part02-Chapter04-SVM-PCL-Python.ipynb), [[이곳-Pileline]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Intermediate/Part02-Chapter04-SVM-PCL-Python-Full.ipynb)에서 확인 가능 합니다. 
 
+> 예측에 사용된 pcd샘플은 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/tree/master/Intermediate/sample)의 `table_scene_inliers_0.pcd` ~ `table_scene_inliers_6.pcd`를 사용 하였습니다. 
 
 
 
