@@ -55,6 +55,16 @@
 * [분류](Intermediate/Part02-Chapter04.md)
   * [SVM-RGBD-PCL-Python](Intermediate/Part02-Chapter04-SVM-RGBD-PCL-Python.md)
   * [SVM-ROS](Intermediate/Part02-Chapter04-SVM-ROS.md)
+* [정합](Intermediate/Part02-Chapter05.md)
+* [Surface](Intermediate/Part02-Chapter06.md)
+  * [Surface smoothing](Intermediate/Part02-Chapter06-Smoothing.md)
+  * [Surface smoothing-PCL-Cpp](Intermediate/Part02-Chapter06-Smoothing-PCL-Cpp.md)
+  * [Surface smoothing-PCL-Python](Intermediate/Part02-Chapter06-Smoothing-PCL-Python.md)
+  * [Triangulation](Intermediate/Part02-Chapter06-Triangulation.md)
+  * [Triangulation-PCL-Cpp](Intermediate/Part02-Chapter06-Triangulation-PCL-Cpp.md)
+
+
+
 
 ## Part 3 \(고급\)
 
