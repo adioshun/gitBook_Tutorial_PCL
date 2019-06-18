@@ -50,4 +50,8 @@
 
 ---
 
-## 업샘플
+## 업샘플링
+
+### Moving least squares 이란 
+
+https://en.wikipedia.org/wiki/Moving_least_squares
