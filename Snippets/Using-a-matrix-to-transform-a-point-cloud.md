@@ -5,7 +5,19 @@
 
 ## 1. using a Matrix4
 
+```
+  /* Reminder: how transformation matrices work :
 
+           |-------> This column is the translation
+    | 1 0 0 x |  \
+    | 0 1 0 y |   }-> The identity 3x3 matrix (no rotation) on the left
+    | 0 0 1 z |  /
+    | 0 0 0 1 |    -> We do not use this line (and it has to stay 0,0,0,1)
+
+    METHOD #1: Using a Matrix4f
+    This is the "manual" method, perfect to understand but error prone !
+  */
+```
 
 ```cpp
 
