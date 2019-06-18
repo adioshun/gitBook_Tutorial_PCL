@@ -43,7 +43,7 @@
   * [Euclidean-PCL-Cpp](Intermediate/Part02-Chapter01-Euclidean-PCL-Cpp.md)
   * [DBSCAN-PCL-Python](Intermediate/Part02-Chapter01-DBSCAN-PCL-Python.md)
 * [포인트 탐색과 배경제거](Intermediate/Part02-Chapter02.md)
-  * [Search-PCL-Cpp](Intermediate/Part02-Chapter02-Search-PCL-Cpp.md)
+  * [Search-Octree-PCL-Cpp](Intermediate/Part02-Chapter02-Search-Octree-PCL-Cpp.md)
   * [Search-Kdtree-PCL-Cpp](Intermediate/Part02-Chapter02-Search-Kdtree-PCL-Cpp.md)
   * [Compression-PCL-Cpp](Intermediate/Part02-Chapter02-Compression-PCL-Cpp.md)
   * [DetectChanges-PCL-Cpp](Intermediate/Part02-Chapter02-DetectChanges-PCL-Cpp.md)
