@@ -57,6 +57,7 @@
   * [SVM-ROS](Intermediate/Part02-Chapter04-SVM-ROS.md)
 * [정합](Intermediate/Part02-Chapter05.md)
   * [ICP-PCL-Cpp](Intermediate/Part02-Chapter05-ICP-PCL-Cpp.md)
+  * [ICP-ROS 실습](Intermediate/Part02-Chapter05-ICP-Practice.md)
 * [Surface](Intermediate/Part02-Chapter06.md)
   * [Surface smoothing](Intermediate/Part02-Chapter06-Smoothing.md)
   * [Surface smoothing-PCL-Cpp](Intermediate/Part02-Chapter06-Smoothing-PCL-Cpp.md)
