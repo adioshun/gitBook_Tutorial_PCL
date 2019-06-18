@@ -39,16 +39,18 @@ main (int argc, char** argv)
 
   Eigen::Matrix4f transform_1 = Eigen::Matrix4f::Identity();
 
-  // Define a rotation matrix 
-  float theta = M_PI/4; // The angle of rotation in radians
-  transform_1 (0,0) = cos (theta);
-  transform_1 (0,1) = -sin(theta);
-  transform_1 (1,0) = sin (theta);
-  transform_1 (1,1) = cos (theta);
-  //    (row, column)
+  /*
+  0.998086 0.0580758 -0.0212953 -0.0897905
+  -0.0579691 0.998303 0.00559049 0.043843
+  0.0215839 -0.00434538 0.999758 -0.0233652
+  0 0 0 1
+  */
 
   // Define a translation of 2.5 meters on the x axis.
-  transform_1 (0,3) = 2.5;
+  transform_1 (0,0) = 0.998086;transform_1 (0,1) = 0.0580758;transform_1 (0,2) = -0.0212953;transform_1 (0,3) = -0.0897905;
+  transform_1 (1,0) = -0.0579691;transform_1 (1,1) = 0.998303;transform_1 (1,2) = 0.00559049;transform_1 (1,3) = 0.043843;
+  transform_1 (2,0) = 0.0215839;transform_1 (2,1) = -0.00434538;transform_1 (2,2) = 0.999758;transform_1 (2,3) = -0.0233652;
+  transform_1 (3,0) = 0.0;transform_1 (3,1) = 0.0;transform_1 (3,2) = 0.0;transform_1 (3,3) = 1.0;
 
   // Print the transformation
   printf ("Method #1: using a Matrix4f\n");
@@ -64,12 +66,6 @@ main (int argc, char** argv)
 }
 
 ```
-
-
-
-
-
-
 
 
 ---
@@ -158,3 +154,13 @@ red  = transformed point cloud
   }
 
 ```
+
+```
+$ pcl_viewer room_scan1.pcd room_scan1_transformed_cloud.pcd
+$ pcl_viewer room_scan1.pcd room_scan2.pcd 
+```
+
+
+|![](https://i.imgur.com/BLX32n2.png)|![](https://i.imgur.com/u6uushL.png)|
+|-|-|
+|||
