@@ -75,6 +75,7 @@
 ## Snippets
 
 * [Concatenating two clouds](Snippets/Concatenating-two-clouds-PCL-Cpp.md)
+* [Using a matrix to transform a point cloud](Snippets/Using-a-matrix-to-transform-a-point-cloud.md)
 
 ## Appendix
 

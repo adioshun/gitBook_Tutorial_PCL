@@ -57,8 +57,9 @@ $ pcl_viewer tabletop.pcd
 int
 main (int argc, char** argv)
 {
-  pcl::PointCloud<pcl::PointXYZ> cloud;
-  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_ptr(new pcl::PointCloud<pcl::PointXYZ>);
+  
+  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZ>); //SAVE #1
+  #pcl::PointCloud<pcl::PointXYZ> cloud; //SAVE #2
 
   
   // Fill in the cloud data
@@ -74,14 +75,18 @@ main (int argc, char** argv)
   cloud.points[i].z = 1024 * rand () / (RAND_MAX + 1.0f);
   }
   
+  
   //SAVE #1
+  pcl::io::savePCDFile<pcl::PointXYZ>("test_pcd.pcd", *cloud); //Default binary mode save
+
+
+  //SAVE #2
   //내부적으로 writer.write 호출
-  pcl::io::savePCDFile<pcl::PointXYZ>("test_pcd.pcd", cloud); //Default binary mode save
+  //pcl::io::savePCDFile<pcl::PointXYZ>("test_pcd.pcd", cloud); //Default binary mode save
   //pcl::io::savePCDFileASCII<pcl::PointXYZ>("test_pcd_ASCII.pcd", cloud); //ASCII mode
   //pcl::io::savePCDFileBinary<pcl::PointXYZ>("test_pcd_Binary.pcd", cloud); //binary mode 
   
-  //SAVE #2 
-  //pcl::io::savePCDFile<pcl::PointXYZ>("test_pcd.pcd", *cloud_ptr); //Default binary mode save
+
 
     
   //SAVE #3
