@@ -106,7 +106,7 @@ DATA ascii
 ---
 <a name="1">[1]</a> Radu Bogdan Rusu and Steve Cousins, "3D is here: Point Cloud Library (PCL)", IEEE International Conference on Robotics and Automation (ICRA), 2011 
 
-<a name="2">[2]</a> Andrew Straw가 개발한 PCL[1] 의 Python버젼 라이브러리입니다.[[홈페이지]](http://strawlab.github.io/python-pcl/)
+<a name="2">[2]</a> Andrew Straw가 개발한 PCL[1] 의 Python버젼 라이브러리입니다.[[홈페이지]](http://strawlab.github.io/python-pcl/), [[메뉴얼]](https://python-pcl-fork.readthedocs.io/en/rc_patches4/index.html)
 
 <a name="3">[3]</a> Qian-Yi Zhou와 박재신 교수가 Intel Lab재직 시절 개발한 Point Cloud 라이브러리 입니다. C++와 Python을 지원합니다. [[홈페이지]](http://www.open3d.org/)
 
