@@ -86,6 +86,18 @@ print("pc_array Type : {}".format(type(pc_array)))
 pc_new = pcl.PointCloud()
 pc_new.from_array(pc_array) # 2.생성 방법과 동일 
 
+
+# Indices to PC
+cloud = pcl.load("tabletop_passthrough.pcd")
+
+inliers_cloud = pcl.PointCloud()
+inliers = np.zeros((len(indices), 3), dtype=np.float32)
+
+for i in range(len(indices)):
+    inliers[i] = cloud[indices[i]]
+inliers_cloud.from_array(inliers)
+
+
 ```
 
 ---
