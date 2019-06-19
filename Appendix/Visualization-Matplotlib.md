@@ -35,6 +35,9 @@ def visualization2D_xyz(new_cloud_data):
 
 ```python 
 from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.pyplot as plt
+
+
 
 # Create a figure with a subplot with three axes
 
@@ -55,6 +58,8 @@ def visualization3D_xyz(new_cloud_data):
 
 %matplotlib inline
 ```
+
+사용 : `visualization3D_xyz(cloud.to_array())`
 
 ---
 
