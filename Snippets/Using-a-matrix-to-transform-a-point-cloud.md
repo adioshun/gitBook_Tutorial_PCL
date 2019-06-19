@@ -164,3 +164,29 @@ $ pcl_viewer room_scan1.pcd room_scan2.pcd
 |![](https://i.imgur.com/BLX32n2.png)|![](https://i.imgur.com/u6uushL.png)|
 |-|-|
 |||
+
+
+# ROS 사용자용 
+
+ROS에서는 자체 명령어로 좌표계 변환을 지원 하고 있습니다. 
+
+```python
+rosrun tf static_transform_publisher 0 0 0 0 0 0 velodyne velodyne_201 10
+# rosrun tf static_transform_publisherx y z yaw pitch roll frame_id child_frame_id period_in_ms
+# static_transform_publisher x y z qx qy qz qw frame_id child_frame_id  period_in_ms
+```
+
+여기서 yaw, pitch, roll는 각 z,y,x의 Rotation 정도 입니다. qx, qy, qz, qw는 quaternion표기값입니다. 
+
+각 단위는 아래와 같습니다. 
+
+|x,y,z|Meter||
+|-|-|-|
+|yaw, pitch, roll|Radians||
+|period|ms.|100ms (10hz)추천|
+
+- Rotation matrix Vs. Euler angle 변환 [코드](https://www.learnopencv.com/rotation-matrix-to-euler-angles/), [웹사이트](https://www.andre-gaschler.com/rotationconverter/) ,[시각화검증](http://danceswithcode.net/engineeringnotes/rotations_in_3d/demo3D/rotations_in_3d_tool.html)
+
+
+
+
