@@ -13,10 +13,6 @@
 - [Ronny Restrepo](http://ronny.rest/tutorials/module/pointclouds_01/point_cloud_data/)
 
 
-
-
-- [[3D Object Recognition and Pose Estimation using Point Cloud Library]](https://drive.google.com/file/d/1QtQTlm3_FiOdBslbtMAubVMyd2Bjofl1/view?fbclid=IwAR0NZfTAvfSwg_X_Flx5Uhg5GMLRaNFdgKU6PZRsHuskc95Sd2ErAKLg4LM) : 이론적인 부분 참고 
-
 - [Play with PCL](http://robonchu.hatenablog.com/entry/2018/03/04/195535)
 
 
