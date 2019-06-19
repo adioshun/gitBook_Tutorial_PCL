@@ -73,7 +73,7 @@
 
 ## Snippets
 
-* [PCL-Python-Helper](Snippets/PCL-Python-helper.md)
+* [PCL-Python-Helper \(10%\)](Snippets/PCL-Python-helper.md)
 * [Concatenating two clouds \(90%\)](Snippets/Concatenating-two-clouds-PCL-Cpp.md)
 * [Using a matrix to transform a point cloud \(80%\)](Snippets/Using-a-matrix-to-transform-a-point-cloud.md)
 
@@ -82,6 +82,7 @@
 * [시각화](Appendix/Visualization.md)
   * [PCL-Cpp](Appendix/Visualization-PCL-Cpp.md)
   * [PCL-Python](Appendix/Visualization-PCL-Python.md)
+  * [matplotlib](Appendix/Visualization-Matplotlib.md)
 * [Point Cloud Libraries](Appendix/Libraries.md)
 * [참고 자료](references.md)
 
