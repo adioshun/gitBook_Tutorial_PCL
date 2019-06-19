@@ -13,6 +13,10 @@
 
 덧셈(`+`) 연산으로 쉽게 수행 가능 합니다. 
 
+```cpp
+cloud_c = cloud_a;
+cloud_c += cloud_b;
+```
 
 ```cpp 
 #include <pcl/io/pcd_io.h>
@@ -41,6 +45,9 @@ main(int argc, char** argv)
 
 `pcl::concatenateFields()`로 수행 가능 합니다. 
 
+```cpp
+concatenateFields (cloud_a, n_cloud_b, p_n_cloud_c)
+```
 
 ```cpp
 #include <pcl/io/pcd_io.h>
