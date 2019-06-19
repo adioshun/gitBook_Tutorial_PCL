@@ -12,7 +12,7 @@ int
 main (int argc, char** argv)
 {
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ> ());
-  pcl::io::loadPCDFile ("bun0.pcd", *cloud);
+  pcl::io::loadPCDFile ("bunny.pcd", *cloud);
 
   pcl::search::KdTree<pcl::PointXYZ>::Ptr tree (new pcl::search::KdTree<pcl::PointXYZ>);
 
@@ -32,7 +32,7 @@ main (int argc, char** argv)
   mls.process (*smoothedCloud);
 
   // Save output
-  pcl::io::savePCDFile ("bun0-mls.pcd",*smoothedCloud);
+  pcl::io::savePCDFile ("bunny-mls.pcd",*smoothedCloud);
 }
 
 
