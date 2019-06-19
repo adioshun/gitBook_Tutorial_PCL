@@ -1,6 +1,9 @@
 # PCL-Cpp 기반 Smoothing
 
 
+>  코드는 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Intermediate/Part02-Chapter06-Smoothig-PCL-Cpp.cpp)에서 다운로드 가능합니다. 샘플파일은 [[bunny.pcd]](https://raw.githubusercontent.com/adioshun/gitBook_Tutorial_PCL/master/Intermediate/sample/bunny.pcd)을 사용하였습니다.  
+
+
 ```cpp
 
 #include <pcl/point_types.h>
