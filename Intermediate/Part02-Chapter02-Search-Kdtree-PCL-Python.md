@@ -1,9 +1,7 @@
 
-# PCL-Python 기반  KdTree 검
+# PCL-Python 기반  KdTree 검색
 
 > C++ 코드는 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Intermediate/Part02-Chapter02-Search-Kdtree-PCL-Cpp.cpp)에서 다운로드 가능합니다. 원본 코드는 [[이곳]](https://github.com/strawlab/python-pcl/blob/master/examples/official/kdtree/kdtree_search.py)을 참고 하였습니다. 샘플파일은 [[cloud_cluster_0.pcd]](https://raw.githubusercontent.com/adioshun/gitBook_Tutorial_PCL/master/Intermediate/sample/cloud_cluster_0.pcd)을 사용하였습니다. Jupyter 버젼은 [[이곳]](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Intermediate/Part02-Chapter02-Search-Kdtree-PCL-Python.ipynb)에서 확인 가능 합니다. 
-
-
 
 
 
@@ -26,7 +24,7 @@ import pcl_helper
 
 
 ```python
-cloud = pcl.load_XYZRGB("cloud_cluster_0.pcd")
+cloud = pcl.load("cloud_cluster_0.pcd")
 ```
 
 
@@ -39,8 +37,8 @@ kdtree = cloud.make_kdtree_flann()
 
 
 ```python
-searchPoint = pcl.PointCloud_PointXYZRGB()
-searchPoints = np.zeros((1, 4), dtype=np.float32)
+searchPoint = pcl.PointCloud()
+searchPoints = np.zeros((1,3), dtype=np.float32)
 searchPoints[0][0] = cloud[3000][0]
 searchPoints[0][1] = cloud[3000][1]
 searchPoints[0][2] = cloud[3000][2]
@@ -84,29 +82,7 @@ for i in range(0, ind.size):
     (0.0289955306798 -1.4653942585 0.975902557373 (squared distance: 3.25436e-05)
 
 
-
-```python
-for i in range(0, ind.size):
-    cloud[ind[0][i]][0]
-    cloud[ind[0][i]][1]
-    cloud[ind[0][i]][2]
-```
-
-
-```python
-cloud
-```
-
-
-
-
-    <PointCloud of 5981 points>
-
-
-
-## ~~Neighbors within radius search~~
-
-> 샘플코드에는 `kdtree.radius_search_for_cloud()`가 있으나 아직 구현이 안되어 있음 
+## Neighbors within radius search
 
 
 ```python
@@ -122,18 +98,6 @@ print('Neighbors within radius search at (' + str(searchPoint[0][0]) + ' ' + str
 ```python
 [ind, sqdist] = kdtree.radius_search_for_cloud(searchPoint, radius)
 ```
-
-
-    ---------------------------------------------------------------------------
-
-    AttributeError                            Traceback (most recent call last)
-
-    <ipython-input-83-fd985add502c> in <module>()
-    ----> 1 [ind, sqdist] = kdtree.radius_search_for_cloud(searchPoint, radius)
-    
-
-    AttributeError: 'pcl._pcl.KdTreeFLANN_PointXYZRGB' object has no attribute 'radius_search_for_cloud'
-
 
 
 ```python
