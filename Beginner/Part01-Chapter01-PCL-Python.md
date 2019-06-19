@@ -22,7 +22,6 @@ import numpy as np
 pc_array = np.array([[1, 2, 3], [3, 4, 5]], dtype=np.float32)
 print(pc_array)
 
-
 #방법 1
 pc = pcl.PointCloud(pc_array)
 print(pc)
@@ -31,6 +30,20 @@ print(pc)
 pc = pcl.PointCloud()
 pc.from_array(pc_array)
 print(pc)
+
+
+#방법 3 
+
+searchPoint = pcl.PointCloud()
+searchPoints = np.zeros((1, 3), dtype=np.float32) #np.zeros((1, 4) for RGBD
+searchPoints[0][0] = 1024 * random.random() / (RAND_MAX + 1.0)
+searchPoints[0][1] = 1024 * random.random() / (RAND_MAX + 1.0)
+searchPoints[0][2] = 1024 * random.random() / (RAND_MAX + 1.0)
+
+
+
+
+
 ```
 
 ---
