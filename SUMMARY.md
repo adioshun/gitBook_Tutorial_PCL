@@ -44,6 +44,7 @@
   * [DBSCAN-PCL-Python](Intermediate/Part02-Chapter01-DBSCAN-PCL-Python.md)
 * [포인트 탐색과 배경제거](Intermediate/Part02-Chapter02.md)
   * [Search-Octree-PCL-Cpp](Intermediate/Part02-Chapter02-Search-Octree-PCL-Cpp.md)
+  * [Search-Octree-PCL-Python](Intermediate/Part02-Chapter02-Search-Octree-PCL-Python.md)
   * [Search-Kdtree-PCL-Cpp](Intermediate/Part02-Chapter02-Search-Kdtree-PCL-Cpp.md)
   * [Search-Kdtree-PCL-Python](Intermediate/Part02-Chapter02-Search-Kdtree-PCL-Python.md)
   * [Compression-PCL-Cpp](Intermediate/Part02-Chapter02-Compression-PCL-Cpp.md)
