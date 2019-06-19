@@ -6,9 +6,9 @@
 ## Part 0 \(개요\)
 
 * [README](Introduction/README.md)
-* [chapter01 : PCL & PCD란](Introduction/Part00-Chapter01.md)
-* [chapter02 : PCL 설치](Introduction/Part00-Chapter02.md)
-* [chapter03 : 실습 ](Introduction/Part00-Chapter03.md)
+* [chapter01 : PCL & PCD란 \(80%\)](Introduction/Part00-Chapter01.md)
+* [chapter02 : PCL 설치 \(90%\)](Introduction/Part00-Chapter02.md)
+* [chapter03 : ROS 실습 준비\(0%\)](Introduction/Part00-Chapter03.md)
 
 ## Part 1 \(초급\)
 
