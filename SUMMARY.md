@@ -81,7 +81,7 @@
 
 * [시각화](Appendix/Visualization.md)
   * [PCL-Cpp](Appendix/Visualization-PCL-Cpp.md)
-  * [PCL-Python](Appendix/Visualization-PCL-Python.md)
+  * [Open3D-Python](Appendix/Visualization-Open3D-Python.md)
   * [matplotlib](Appendix/Visualization-Matplotlib.md)
 * [Point Cloud Libraries](Appendix/Libraries.md)
 * [참고 자료](references.md)
