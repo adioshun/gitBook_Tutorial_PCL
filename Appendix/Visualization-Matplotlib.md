@@ -28,6 +28,7 @@ def visualization2D_xyz(new_cloud_data):
     print("(y) : {:2.1f}m".format(new_cloud_data[:,1:2].max() - new_cloud_data[:,1:2].min()))
     print("(z) : {:2.1f}m".format(new_cloud_data[:,2:3].max() - new_cloud_data[:,2:3].min()))
 
+%matplotlib inline
 ```
 
 ## 2. 3D 
@@ -51,6 +52,8 @@ def visualization3D_xyz(new_cloud_data):
     print("(x) : {:2.1f}m".format(new_cloud_data[:,0:1].max() - new_cloud_data[:,0:1].min()))
     print("(y) : {:2.1f}m".format(new_cloud_data[:,1:2].max() - new_cloud_data[:,1:2].min()))
     print("(z) : {:2.1f}m".format(new_cloud_data[:,2:3].max() - new_cloud_data[:,2:3].min()))
+
+%matplotlib inline
 ```
 
 ---
