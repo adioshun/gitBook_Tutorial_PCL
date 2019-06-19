@@ -58,6 +58,7 @@
   * [ICP-PCL-Cpp](Intermediate/Part02-Chapter05-ICP-PCL-Cpp.md)
   * [ICP-ROS 실습](Intermediate/Part02-Chapter05-ICP-Practice.md)
 * [재구성](Intermediate/Part02-Chapter06.md)
+  * [Smoothig-PCL-Cpp](Intermediate/Part02-Chapter06-Smoothig-PCL-Cpp.md)
   * [Triangulation-PCL-Cpp](Intermediate/Part02-Chapter06-Triangulation-PCL-Cpp.md)
 
 ## Part 3 \(고급\)
