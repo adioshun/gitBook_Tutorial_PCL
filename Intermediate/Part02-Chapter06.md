@@ -6,10 +6,10 @@
 
 
 
-## MovingLeastSquares
+## 1. MLS(`MovingLeastSquares`)를 이용한 Smoothing작업 
 
 
 
 
 
-## Mesh 
+## 2. Mesh 구조를 이용한 시각화 
