@@ -100,7 +100,7 @@ DATA ascii
 주위깊게 보아야 할부분은 FIELDS가 `x,y,z,rgb`로 데이터 역시 `N x 4`Numpy 색상 정보를 포함하고 있습니다. 다른 `*.pcd`는 rgb가 없이 사용될수 있습니다. 
 
 
-> 차세한 `*.pcd`파일 포맷에 대한 정보는 [[여기]](http://pointclouds.org/documentation/tutorials/pcd_file_format.php)에서 얻을수 있습니다. 
+> 자세한 `*.pcd`파일 포맷에 대한 정보는 [[여기]](http://pointclouds.org/documentation/tutorials/pcd_file_format.php)에서 얻을수 있습니다. 
 
 
 ---
