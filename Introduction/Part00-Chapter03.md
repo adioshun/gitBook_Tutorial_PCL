@@ -7,6 +7,8 @@
 
 그리고 rviz라는 ros에서 제공하는 툴을 이용하여 시각화 할수 있습니다. 본 챕터에서는 ROS설치, bag파일 재생, 시각화에 대하여 살펴 보도록 하겠습니다. 
 
+마지막으로 PCL-Python을 ROS와 연동해 보겠습니다. 
+
 ## 1. ROS 설치 
 
 
@@ -125,3 +127,7 @@ rviz -d lidar.rviz
 - Global Option - Fixed Frame : velodyne 
 - Pointcloud2 - Topic : /velodyne_points 
  - Pointcloud2가 없다면 : 하단 Add - By display type - pointcloud2 - Ok 
+
+---
+
+## 4. ROS연계 PCL-Python 코드 작성 
