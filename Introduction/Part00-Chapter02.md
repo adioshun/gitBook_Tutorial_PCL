@@ -119,10 +119,20 @@ sudo apt-get install -y libpng16-tools # libpng16-dev #libpng-dev
 sudo apt-get install -y libglu1-mesa-dev libgl1-mesa-glx libglew-dev libglfw3-dev libjsoncpp-dev libeigen3-dev libjpeg-dev python-dev python3-dev python-tk python3-tk
 
 sudo apt-get install -y python3-pip 
-pip3l
+pip3 install open3d-python
+# or
+pip install --user open3d-python
+# or
+python3 -m pip install --user open3d-python
 
 #sudo apt-get install pybind11-dev # ~/Open3D/src/External/pybind11/build 
 #sudo apt-get install xorg-dev 
+```
+
+### Conda 설치 
+
+```python 
+conda install -c open3d-admin open3d
 ```
 
 ### 소스 설치
