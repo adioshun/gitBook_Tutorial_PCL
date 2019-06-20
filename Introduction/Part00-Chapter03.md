@@ -133,6 +133,8 @@ rviz -d lidar.rviz
 ## 4. ROS연계 PCL-Python 코드 작성 
 
 
+실행을 위해서는 ROS, PCL-Cpp, PCL-Python이 모두 설치 되어 있어야 합니다. [PCL-To-All Docker](https://hub.docker.com/r/adioshun/pcl_to_all/) 사용 하면 바로 실습이 가능합니다. 
+
 ```python 
 #!/usr/bin/env python3
 # coding: utf-8
