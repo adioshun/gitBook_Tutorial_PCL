@@ -66,7 +66,27 @@ visualizer.show()
 ```
 ---
 
-# K3d를 이용한 동적 3D시각화 
+# K3D를 이용한 동적 3D시각화 
+
+Jupyter notebook extension for 3D visualization. [[홈페이지]](https://github.com/K3D-tools/K3D-jupyter)
+
+설치 
+```bash 
+#PyPi
+$ pip install k3d
+ 
+#Conda
+$ conda install -c conda-forge k3d
+
+#Souce
+$ pip install git+https://github.com/K3D-tools/K3D-jupyter
+
+#Source 
+$ git clone https://github.com/K3D-tools/K3D-jupyter.git
+$ cd K3D-jupyter
+$ pip install -e .
+
+```
 
 ```python 
 pa = cloud.to_array()
@@ -87,10 +107,10 @@ plot.display()
 
 # Matplot lib.를 이용한 시각화 
 
-> Jupyter 지원 
+> Jupyter 지원, 포인트수가 많을경우 느려지거나 에러 발생 
 
 
-##### 2D 
+##### 2D 시각화 
 ```python 
 import matplotlib.pyplot as plt
 
@@ -118,7 +138,7 @@ def visualization2D_xyz(new_cloud_data):
 %matplotlib inline
 ```
 
-##### 3D 
+##### 3D 시각화 
 
 ```python 
 from mpl_toolkits.mplot3d import Axes3D
