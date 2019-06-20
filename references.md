@@ -15,7 +15,7 @@
 
 - [Play with PCL](http://robonchu.hatenablog.com/entry/2018/03/04/195535)
 
-
+- [포인트 클라우드에 대하여](https://blog.naver.com/PostList.nhn?blogId=laonple&from=postList&categoryNo=41#): (주)라온피플 블로그 
 
 ## 슬라이드 
 
@@ -23,7 +23,7 @@
 
 - [Segmentation of point clouds](http://fgg-web.fgg.uni-lj.si/~/alisec/ISPRS_SS_2007/gradivo/ISPRS_SS2007/doc/PRESENTATIONS-LECTURES/5_Georg%20Vosselman/vosselman_01_segmentation.pdf)
 
-
+- [PCL-Media-Presentation](http://www.pointclouds.org/media/)
 
 ## 문서, 논문 
 
