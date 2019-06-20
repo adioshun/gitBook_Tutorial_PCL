@@ -33,7 +33,9 @@ Normal Estimation은 샘플링 된 값들로부터 방향 정보를 복원해 �
 
 > Integral images도 normal estimation방법 중 하나입니다. 하지만 RGB-D센서등에서 얻은 organized clouds를 대상으로 하고 있어 여기서는 다루지 않습니다. 
 
+## 2. 
 
+https://laonple.blog.me/221195959435
 
 
 ---
