@@ -72,7 +72,7 @@ $ rosbag play -l lobby_lidar.bag
 `-l` 옵션은 반복 재생으로 `--loop`를 사용 하셔도 됩니다. 
 
 
-아래와 같은 메시지가 출력 된다면 정상적으로 설치된 것입니다. 
+아래와 같은 메시지가 출력 된다면 정상적으로 실된 것입니다. 
 
 
 ```
@@ -113,3 +113,15 @@ roscore, rosbag이 실행된 터미널 창외에 새로운 터미널을 실행 �
 rviz
 rviz -d lidar.rviz
 ```
+- '-d`옵션은 설정 파일을 이용하여 rviz를 실행 한것입니다. 
+
+
+아래와 같은 창이 생성 된다면 정상적으로 실행된 것입니다. 
+
+![](https://i.imgur.com/grI2aLP.png)
+
+
+실행시 `rviz` 명령어로만 실행 하였다면 아무것도 보이지 않을것입니다. 어떤 메시지를 시각화 할지를 왼쪽 판넬에서 지정해 주어야 합니다. 
+- Global Option - Fixed Frame : velodyne 
+- Pointcloud2 - Topic : /velodyne_points 
+ - Pointcloud2가 없다면 : 하단 Add - By display type - pointcloud2 - Ok 
