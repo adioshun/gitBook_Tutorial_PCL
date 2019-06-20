@@ -176,3 +176,6 @@ $ rviz -d lidar_new_topic.rviz
 ```
 
 ![](https://i.imgur.com/XWfezjK.png)
+
+
+> 도커를 활용 하는 경우 `roscore`, `rviz`는 **Host PC**에서 실행하고, `python Part00-Chapter03.py`는 **Docker**에서 실행 하면 됩니다. `docker run -it --net=host`옵션으로 Host PC-Docker간 통신이 가능합니다. 
