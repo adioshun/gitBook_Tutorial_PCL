@@ -110,6 +110,6 @@ roscore, rosbag이 실행된 터미널 창외에 새로운 터미널을 실행 �
 
 
 ```
+rviz
 rviz -d lidar.rviz
-
 ```
