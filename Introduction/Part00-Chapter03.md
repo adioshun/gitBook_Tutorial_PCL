@@ -51,16 +51,64 @@ process[rosout-1]: started with pid [20464]
 started core service [/rosout]
 ```
 
+ROS에서 제공한는 기능을 사용하기 위해서는 roscore가 항상 동작 하고 있어야 합니다. 따라서, 다음에 살펴볼 rosbag과 rviz를 실습시에는 새 터미널 창을 실행하고 거기서 명령어를 입력 하시기 바랍니다. 
+
+> 창을 여러개 실행 시키는것이 싫으신 분은 터미널 창 분활을 지원하는 [Terminator] 터미널을 추천 합니다. `sudo apt-get install terminator`
+
 ## 2. ROSbag 실행 
 
+rosbag은 ROS에서 제공하는 로깅 툴입니다. rosbag을 이용하여서 센서에서 들어는 모든 메시지들은 시간 순서에 맞게 저장 하고 재생 할 수 있습니다. 저장시 확장자는 `*.bag`입니다. 자세한 내용은 [[여기]](http://wiki.ros.org/rosbag)에서 확인 가능 합니다. 
 
 
 
+실습을 위해서는 재생기능만 사용 할수 있으면 됩니다. roscore가 실행된 터미널 창외에 새로운 터미널을 실행 후 수행 하면 됩니다. 
+
+명령어는 아래와 같습니다. 
+
+```bash 
+$ rosbag play -l lobby_lidar.bag
+```
+`-l` 옵션은 반복 재생으로 `--loop`를 사용 하셔도 됩니다. 
 
 
-ROS파일에서 PCD파일 추출 하기
+아래와 같은 메시지가 출력 된다면 정상적으로 설치된 것입니다. 
 
-http://wiki.ros.org/pcl_ros
 
-rosrun pcl_ros bag_to_pcd <input_file.bag> / <output_directory> rosrun pcl_ros bag_to_pcd lobby_velodyne.bag /velodyne_points ./lobby_pcd
+```
+[ INFO] [1561011516.035810913]: Opening lobby_lidar.bag
 
+Waiting 0.2 seconds after advertising topics... done.
+
+Hit space to toggle paused, or 's' to step.
+ [RUNNING]  Bag Time: 1561011373.074575   Duration: 1.915948 / 59.119541 
+```
+
+스페이스키를 누루면 일시 정지가 되고, `Ctrl + c`를 누루면 실행 취소가 됩니다. 
+
+
+참고로 bag파일에서 pcd파일을 추출 하시려면 아래의 명령어를 이용 하면 됩니다. 
+```
+$ rosrun pcl_ros bag_to_pcd lobby_lidar.bag /velodyne_points ./lobby_pcd
+# rosrun pcl_ros bag_to_pcd <input_file.bag> / <output_directory> 
+```
+
+* [ROS bags-TO-Image.ipynb](https://gist.github.com/anonymous/4857f8920c9fc901121a429ead32a7db)
+* [ROS bags-TO-Point Clods.ipynb](https://gist.github.com/anonymous/e675ea14113252be321320be62248034)
+* [ROS bags-TO-Avi.ipynb](https://gist.github.com/anonymous/fb1e98efe187b2a35b6d91fb5df9e83b)
+
+
+
+## 3. rviz를 이용한 시각화 
+
+rviz는 ROS에서 제공하는 시각화 툴입니다. rviz를 이용하여서 센서에서 수집되는 값을 시각화 하거나, rosbag으로 재생하는 내용을 시각화 할 수 있습니다. 자세한 내용은 [[여기]](http://wiki.ros.org/rviz)에서 확인 가능 합니다. 
+
+roscore, rosbag이 실행된 터미널 창외에 새로운 터미널을 실행 후 수행 하면 됩니다. 
+
+명령어는 아래와 같습니다. 
+
+
+
+```
+rviz -d lidar.rviz
+
+```
