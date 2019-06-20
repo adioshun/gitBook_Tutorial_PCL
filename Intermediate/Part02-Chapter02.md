@@ -55,6 +55,6 @@ PCL에서는 Octree 구조체를 이용하여서 총 3가지의 포인트 검색
 
 ## Kdtree 구조체와 PCL 점군 검색 
 
-
+https://laonple.blog.me/221207919855
 
 
