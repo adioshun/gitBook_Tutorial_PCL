@@ -22,13 +22,6 @@ while (!viewer.wasStopped ())
 
 
 
-##### 프로그램 시각화 
-
-```
-$ sudo apt install pcl-tools 
-$ pcl_viewer [파일명.pcd]
-```
-
 ---
 
 # PCL-Python을 이용한 시각화 
@@ -86,6 +79,9 @@ $ git clone https://github.com/K3D-tools/K3D-jupyter.git
 $ cd K3D-jupyter
 $ pip install -e .
 
+#주피터 적용 (필수)
+$ jupyter nbextension install --py --sys-prefix k3d
+$ jupyter nbextension enable --py --sys-prefix k3d
 ```
 
 ```python 
@@ -249,13 +245,4 @@ def viz_mayavi(points, vals="distance"):
 
 ---
 
-- Paraview : [ParaView/PCL Plugin](https://www.paraview.org/Wiki/ParaView/PCL_Plugin), [YouTube데모](https://www.youtube.com/watch?v=BZBQXcBvHW0) , `apt-get install paraview`
 
-- [point cloud visualization with jupyter/pcl-python/and potree](https://www.youtube.com/watch?v=s2IvpYvB7Ew): YouTube데모 
-
-- https://www.slicer.org/ : medical images
-
-
-- http://www.sci.utah.edu/software/imagevis3d.html
-
-- http://www.danielgm.net/cc/
