@@ -1,13 +1,14 @@
-
 # 실습 
 
-실습에서는 ROS를 이용하여 직접 Velodyne Puck 16ch로 수집하고, Lidar 점군 데이터에 배운 내용을 적용해 보도록 하겠습니다. 
+실습에서는 ROS를 이용하여 직접 Velodyne Puck 16ch로 수집된 Lidar 점군 데이터에 배운 내용을 적용해 보도록 하겠습니다. 
 
 현재 라이다 장비가 연결되어 있지 않아도 상관 없습니다. ROS에서는 모든 센서 수집 정보 및 데이터를 `bag`이라는 파일에 압축 형태로 저장하여 쉽게 재생이 가능합니다. 
 
 그리고 rviz라는 ros에서 제공하는 툴을 이용하여 시각화 할수 있습니다. 본 챕터에서는 ROS설치, bag파일 재생, 시각화에 대하여 살펴 보도록 하겠습니다. 
 
 마지막으로 PCL-Python을 ROS와 연동해 보겠습니다. 
+
+---
 
 ## 1. ROS 설치 
 
@@ -58,6 +59,8 @@ ROS에서 제공한는 기능을 사용하기 위해서는 roscore가 항상 동
 
 > 창을 여러개 실행 시키는것이 싫으신 분은 터미널 창 분활을 지원하는 [Terminator] 터미널을 추천 합니다. `sudo apt-get install terminator`
 
+---
+
 ## 2. ROSbag 실행 
 
 rosbag은 ROS에서 제공하는 로깅 툴입니다. rosbag을 이용하여서 센서에서 들어는 모든 메시지들은 시간 순서에 맞게 저장 하고 재생 할 수 있습니다. 저장시 확장자는 `*.bag`입니다. 자세한 내용은 [[여기]](http://wiki.ros.org/rosbag)에서 확인 가능 합니다. 
@@ -99,6 +102,7 @@ $ rosrun pcl_ros bag_to_pcd lobby_lidar.bag /velodyne_points ./lobby_pcd
 * [ROS bags-TO-Point Clods.ipynb](https://gist.github.com/anonymous/e675ea14113252be321320be62248034)
 * [ROS bags-TO-Avi.ipynb](https://gist.github.com/anonymous/fb1e98efe187b2a35b6d91fb5df9e83b)
 
+---
 
 
 ## 3. rviz를 이용한 시각화 
