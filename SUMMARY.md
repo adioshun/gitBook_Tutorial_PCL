@@ -26,7 +26,7 @@
 * [관심 영역 설정  \(70%\)](Beginner/Part01-Chapter03.md)
   * [PCL-Cpp  \(70%\)](Beginner/Part01-Chapter03-PCL-Cpp.md)
   * [PCL-Python  \(70%\)](Beginner/Part01-Chapter03-PCL-Python.md)
-  * [ROS 실습 \(0%\)](Beginner/Part01-Chapter03-Practice.md)
+  * [ROS 실습 \(90%\)](Beginner/Part01-Chapter03-Practice.md)
 * [노이즈 제거  \(70%\)](Beginner/Part01-Chapter04.md)
   * [PCL-Cpp  \(70%\)](Beginner/Part01-Chapter04-PCL-Cpp.md)
   * [PCL-Python  \(50%\)](Beginner/Part01-Chapter04-PCL-Python.md)
