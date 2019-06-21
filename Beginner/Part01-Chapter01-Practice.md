@@ -2,7 +2,7 @@
 
 실행을 위해서는 ROS, PCL-Cpp, PCL-Python이 모두 설치 되어 있어야 합니다. [PCL-To-All Docker](https://hub.docker.com/r/adioshun/pcl_to_all/) 사용 하면 바로 실습이 가능합니다. 
 
-입력으로 rosbㅁ
+ROS에서는 메시지를 토픽(topic)이라고 지칭 합니다. 아래 예제에서는 라이다 센서에서 입력되는 값을 'velodyne_points'이라는 토픽으로 입력 받고, 이를 그대로 다시 `/velodyne_points_new`이라는 토픽으로 출력하는 예제를 작성해 보겠습니다. 
 
 ```python 
 #!/usr/bin/env python3
