@@ -34,7 +34,7 @@ cloud = do_statistical_outlier_filtering(cloud,10,0.001)
 
 First filter is the PCL’s Statistical Outlier Removal filter. in this filter for each point in the point cloud, it computes the distance to all of its neighbors, and then calculates a mean distance. By assuming a Gaussian distribution, all points whose mean distances are outside of an interval defined by the global distances mean+standard deviation are considered to be outliers and removed from the point cloud.
 
-Mean K = 3 was the best value I found to almost remove all noise pixels. any value higher than 3 was leaving some of the noise pixels behind. x was selected to be 0.00001.
+[RGB-D센서](https://github.com/mkhuthir/RoboND-Perception-Project/blob/master/README.md) : Mean K = 3, x = 0.00001
 
 ---
 ## 2. Radious Outlier Removal
