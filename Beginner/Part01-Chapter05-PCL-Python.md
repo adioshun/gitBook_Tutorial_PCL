@@ -26,7 +26,33 @@ print(cloud)
     <PointCloud of 72823 points>
 
 
-## Create the segmentation object
+## do_ransac_plane_segmentation
+
+
+```python
+def do_ransac_plane_segmentation(point_cloud, max_distance = 0.01):
+
+  segmenter = point_cloud.make_segmenter()
+
+  segmenter.set_model_type(pcl.SACMODEL_PLANE)
+  segmenter.set_method_type(pcl.SAC_RANSAC)
+  segmenter.set_distance_threshold(max_distance)
+
+  #obtain inlier indices and model coefficients
+  inlier_indices, coefficients = segmenter.segment()
+
+  inliers = point_cloud.extract(inlier_indices, negative = False)
+  outliers = point_cloud.extract(inlier_indices, negative = True)
+
+  return inliers, outliers
+```
+
+
+```python
+inliers, outliers = do_ransac_plane_segmentation(cloud, 0.01)
+```
+
+## do_ransac_plane_normal_segmentation
 
 
 ```python
