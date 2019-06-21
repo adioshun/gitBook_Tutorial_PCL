@@ -34,7 +34,7 @@
 * [바닥제거 \(RANSAC\)  \(70%\)](Beginner/Part01-Chapter05.md)
   * [PCL-Cpp  \(70%\)](Beginner/Part01-Chapter05-PCL-Cpp.md)
   * [PCL-Python  \(70%\)](Beginner/Part01-Chapter05-PCL-Python.md)
-  * [ROS 실습 \(10%\)](Beginner/Part01-Chapter05-Practice.md)
+  * [ROS 실습 \(90%\)](Beginner/Part01-Chapter05-Practice.md)
 
 ## Part 2 \(중급\)
 
