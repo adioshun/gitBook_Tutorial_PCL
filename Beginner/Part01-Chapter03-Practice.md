@@ -38,12 +38,12 @@ def callback(input_ros_msg):
     filter_axis = 'x'
     axis_min = 1.0
     axis_max = 20.0
-    cloud = filter.do_passthrough(cloud, filter_axis, axis_min, axis_max)
+    cloud = do_passthrough(cloud, filter_axis, axis_min, axis_max)
     
     filter_axis = 'y'
     axis_min = -7.0
     axis_max = 5.5
-    cloud = filter.do_passthrough(cloud, filter_axis, axis_min, axis_max)
+    cloud = do_passthrough(cloud, filter_axis, axis_min, axis_max)
 
     cloud_new = pcl_helper.pcl_to_ros(cloud) #PCL을 ROS 메시지로 변경     
     pub.publish(cloud_new)
