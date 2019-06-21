@@ -22,7 +22,7 @@
   * [다운샘플링-PCL-Cpp \(70%\)](Beginner/Part01-Chapter02-Downsampling-PCL-Cpp.md)
   * [다운샘플링-PCL-Python  \(50%\)](Beginner/Part01-Chapter02-Downsampling-PCL-Python.md)
   * [업샘플링-PCL-Cpp  \(70%\)](Beginner/Part01-Chapter02-Upsampling-PCL-Cpp.md)
-  * [ROS 실습 \(10%\)](Beginner/Part01-Chapter02-Practice.md)
+  * [ROS 실습 \(90%\)](Beginner/Part01-Chapter02-Practice.md)
 * [관심 영역 설정  \(70%\)](Beginner/Part01-Chapter03.md)
   * [PCL-Cpp  \(70%\)](Beginner/Part01-Chapter03-PCL-Cpp.md)
   * [PCL-Python  \(70%\)](Beginner/Part01-Chapter03-PCL-Python.md)
