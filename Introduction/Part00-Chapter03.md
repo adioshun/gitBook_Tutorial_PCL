@@ -103,7 +103,23 @@ $ rosrun pcl_ros bag_to_pcd lobby_lidar.bag /velodyne_points ./lobby_pcd
 * [ROS bags-TO-Avi.ipynb](https://gist.github.com/anonymous/fb1e98efe187b2a35b6d91fb5df9e83b)
 
 
-해당 bag파일이 
+해당 bag파일의 정보를 확인 하시려면 `rosbag info lobby_lidar.bag`를 실행 하시면 됩니다. 
+
+```
+path:        lobby_lidar.bag
+version:     2.0
+duration:    59.1s
+start:       Jun 20 2019 15:16:11.16 (1561011371.16)
+end:         Jun 20 2019 15:17:10.28 (1561011430.28)
+size:        334.6 MB
+messages:    587
+compression: none [294/294 chunks]
+types:       sensor_msgs/PointCloud2 [1158d486dd51d683ce2f1be655c3c181]
+topics:      /velodyne_points   587 msgs    : sensor_msgs/PointCloud2
+```
+
+여기서 중요한것은 마지막 줄의 **topics**입니다. ROS에서는 모든 메시지를 **토픽(topic)**이라고 지칭 합니다. 
+
 
 ---
 
