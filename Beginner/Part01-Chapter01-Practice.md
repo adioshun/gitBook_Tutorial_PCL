@@ -7,7 +7,6 @@ ROS에서는 메시지를 토픽(topic)이라고 지칭 합니다. 아래 예제
 ```python 
 #!/usr/bin/env python3
 # coding: utf-8
-
 import rospy
 from sensor_msgs.msg import PointCloud2
 import sensor_msgs.point_cloud2 as pc2
@@ -17,8 +16,8 @@ import pcl_helper
 
 
 def callback(input_ros_msg):
-    cloud = pcl_helper.ros_to_pcl(input_ros_msg)    
-    
+    cloud = pcl_helper.ros_to_pcl(input_ros_msg)
+
     # 실행 코드 부분 
     print(cloud)
 
@@ -27,10 +26,10 @@ def callback(input_ros_msg):
 
 if __name__ == "__main__":
     rospy.init_node('tutorial', anonymous=True)
+    rospy.Subscriber('/velodyne_points', PointCloud2, callback)
 
-    rospy.Subscriber('velodyne_points', PointCloud2, callback)
     pub = rospy.Publisher("/velodyne_points_new", PointCloud2, queue_size=1)
-   
+    
     rospy.spin()
 ```
 
