@@ -3,7 +3,7 @@
 
 실습에서는 **PCL-Python 기반 Voxelization**에서 정의한 `do_voxel_grid_downssampling()`를 사용하여 수신된 Raw데이터를 복셀화 하여 출력 해보도록 하겠습니다. 
 
-기본 구조는 
+기본 구조는 이전챕터에서 살펴본 [ROS 기반 I/O]와 동일 합니다. 
 
 
 ```python 
