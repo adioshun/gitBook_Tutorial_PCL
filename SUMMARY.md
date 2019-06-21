@@ -17,7 +17,7 @@
   * [PCL-Cpp \(70%\)](Beginner/Part01-Chapter01-PCL-Cpp.md)
   * [PCL-Python \(70%\)](Beginner/Part01-Chapter01-PCL-Python.md)
   * [Open3D-Python \(70%\)](Beginner/Part01-Chapter01-Open3D-Python.md)
-  * [ROS 실습 \(0%\)](Beginner/Part01-Chapter01-Practice.md)
+  * [ROS 실습 \(90%\)](Beginner/Part01-Chapter01-Practice.md)
 * [샘플링 \(70%\)](Beginner/Part01-Chapter02.md)
   * [다운샘플링-PCL-Cpp \(70%\)](Beginner/Part01-Chapter02-Downsampling-PCL-Cpp.md)
   * [다운샘플링-PCL-Python  \(50%\)](Beginner/Part01-Chapter02-Downsampling-PCL-Python.md)
