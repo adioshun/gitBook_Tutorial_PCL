@@ -10,8 +10,11 @@
 !pip freeze | grep pcl 
 ```
 
-    Python 2.7.15rc1
-    python-pcl==0.3
+    Python 2.7.12
+    /usr/local/lib/python2.7/dist-packages/pip/_vendor/requests/__init__.py:83: RequestsDependencyWarning: Old version of cryptography ([1, 2, 3]) may cause slowdown.
+      warnings.warn(warning, RequestsDependencyWarning)
+    [33mDEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.[0m
+    python-pcl==0.3.0rc1
 
 
 
@@ -34,34 +37,37 @@ print(cloud)
 
 
 ```python
-seg = cloud.make_segmenter_normals(ksearch=50)
-seg.set_optimize_coefficients(True)
-seg.set_model_type(pcl.SACMODEL_NORMAL_PLANE) #SACMODEL_PLANE
-seg.set_method_type(pcl.SAC_RANSAC)
-seg.set_distance_threshold(0.01)
-seg.set_normal_distance_weight(0.01)
-seg.set_max_iterations(1000)
-indices, coefficients = seg.segment()
-```
-
-
-```python
-print('Model coefficients: ' + str(coefficients[0]) + ' ' + str(
+def do_ransac_plane_normal_segmentation(point_cloud, input_max_distance):
+    segmenter = point_cloud.make_segmenter_normals(ksearch=50)
+    segmenter.set_optimize_coefficients(True)
+    segmenter.set_model_type(pcl.SACMODEL_NORMAL_PLANE)  #pcl_sac_model_plane
+    segmenter.set_normal_distance_weight(0.1)
+    segmenter.set_method_type(pcl.SAC_RANSAC) #pcl_sac_ransac
+    segmenter.set_max_iterations(100)
+    segmenter.set_distance_threshold(input_max_distance) #0.03)  #max_distance
+    indices, coefficients = segmenter.segment()
+    
+    print('Model coefficients: ' + str(coefficients[0]) + ' ' + str(
         coefficients[1]) + ' ' + str(coefficients[2]) + ' ' + str(coefficients[3]))
+    
+    print('Model inliers: ' + str(len(indices)))
+    for i in range(0, 5):#range(0, len(indices)):
+        print(str(indices[i]) + ', x: ' + str(cloud[indices[i]][0]) + ', y : ' +
+              str(cloud[indices[i]][1]) + ', z : ' + str(cloud[indices[i]][2]))
+
+    inliers = point_cloud.extract(indices, negative=False)
+    outliers = point_cloud.extract(indices, negative=True)
+
+    return indices, inliers, outliers
 ```
-
-    Model coefficients: 2.84193629341e-05 -0.000706289487425 0.999999761581 -0.776011049747
-
 
 
 ```python
-print('Model inliers: ' + str(len(indices)))
-for i in range(0, 5):#range(0, len(indices)):
-    print(str(indices[i]) + ', x: ' + str(cloud[indices[i]][0]) + ', y : ' +
-          str(cloud[indices[i]][1]) + ', z : ' + str(cloud[indices[i]][2]))
+indices, inliers, outliers= do_ransac_plane_normal_segmentation(cloud,0.05 )
 ```
 
-    Model inliers: 47249
+    Model coefficients: 0.00566672021523 0.000429861887824 0.999983847141 -0.776584267616
+    Model inliers: 48547
     1027, x: 0.914367496967, y : -2.25295114517, z : 0.774702429771
     1028, x: 0.910148262978, y : -2.25295114517, z : 0.774702429771
     1029, x: 0.905929028988, y : -2.25295114517, z : 0.774702429771
@@ -83,5 +89,5 @@ inliers_cloud.from_array(inliers)
 
 
 ```python
-pcl.save(inliers_cloud, 'RANSAC_plane_true.pcd.pcd') 
+pcl.save(inliers_cloud, 'RANSAC_plane_true123.pcd.pcd') 
 ```
