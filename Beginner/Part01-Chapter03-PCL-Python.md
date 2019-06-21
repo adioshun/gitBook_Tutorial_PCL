@@ -1,4 +1,4 @@
-# PCL-Python 기반 ROI 추출 
+# PCL-Python 기반 관심영역 설정 
 
 ## 1. passthrough Filter
 

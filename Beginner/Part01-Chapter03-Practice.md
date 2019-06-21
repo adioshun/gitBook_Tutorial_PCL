@@ -1,3 +1,11 @@
+# ROS 기반 관심영역 설정 (PCL-Python)
+
+
+실습에서는 **PCL-Python 기반 관심영역 설정**에서 정의한 `do_passthrough()`를 사용하여 수신된 Raw데이터에서 관심영역 설정 하여 출력 해보도록 하겠습니다. 
+
+관심 영역은 중앙 로비 부분 이며 상하좌우는 모두 제거 하였습니다. 기본 구조는 이전챕터에서 살펴본 [ROS 기반 I/O]와 동일 합니다.
+
+
 ```python 
 #!/usr/bin/env python3
 # coding: utf-8
@@ -36,12 +44,6 @@ def callback(input_ros_msg):
     axis_min = -7.0
     axis_max = 5.5
     cloud = filter.do_passthrough(cloud, filter_axis, axis_min, axis_max)
-    
-    filter_axis = 'z'
-    axis_min = -1.2
-    axis_max = 10.0
-    cloud = filter.do_passthrough(cloud, filter_axis, axis_min, axis_max)
-
 
     cloud_new = pcl_helper.pcl_to_ros(cloud) #PCL을 ROS 메시지로 변경     
     pub.publish(cloud_new)

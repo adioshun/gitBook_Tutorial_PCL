@@ -1,4 +1,4 @@
-# PCL-Cpp 기반 ROI 추출 
+# PCL-Cpp 기반 관심영역 설정 
 
 ## 1. PassThrough 
 
