@@ -10,13 +10,6 @@
 !pip freeze | grep pcl 
 ```
 
-    Python 2.7.12
-    /usr/local/lib/python2.7/dist-packages/pip/_vendor/requests/__init__.py:83: RequestsDependencyWarning: Old version of cryptography ([1, 2, 3]) may cause slowdown.
-      warnings.warn(warning, RequestsDependencyWarning)
-    [33mDEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won't be maintained after that date. A future version of pip will drop support for Python 2.7.[0m
-    python-pcl==0.3.0rc1
-
-
 
 ```python
 import pcl
