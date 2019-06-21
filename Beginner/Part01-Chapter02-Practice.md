@@ -1,8 +1,9 @@
-# ROS 기반 Voxelization
+# ROS 기반 Voxelization (PCL-Python)
 
 
 실습에서는 **PCL-Python 기반 Voxelization**에서 정의한 `do_voxel_grid_downssampling()`를 사용하여 수신된 Raw데이터를 복셀화 하여 출력 해보도록 하겠습니다. 
 
+기본 구조는 
 
 
 ```python 
@@ -64,6 +65,9 @@ if __name__ == "__main__":
 
 
 결과값 
+
+![](https://i.imgur.com/KhPckr2.png)
+
 ```
 ('Input :', <PointCloud of 18466 points>)
 ('Output :', <PointCloud of 10131 points>)
@@ -72,9 +76,12 @@ if __name__ == "__main__":
 ('Output :', <PointCloud of 10121 points>)
 ```
 
+시각적인 차이는 크지 않습니다. 하지만 출력되는 점군의 수는 18,000개에서 10,000개로 다운 샘플링 되어 있는걸 확인 할수 있습니다. 
 
 ---
-# [with ROS](https://github.com/rjw57/pcl_fuse/tree/master/src)
+# [ROS 기반 Voxelization (PCL-Cpp)](https://github.com/rjw57/pcl_fuse/tree/master/src)
+
+> 실행 확인 되지 않은 코드 입니다. 참고로만 활용 바랍니다. 
 
 ```cpp
 
@@ -131,10 +138,10 @@ int main (int argc, char** argv)
     ros::NodeHandle nh;
     
     // Create a ROS subscriber for the input point cloud
-    ros::Subscriber sub = nh.subscribe("/camera/depth/points", 1, cloud_cb);
+    ros::Subscriber sub = nh.subscribe("/velodyne_points", 1, cloud_cb);
     
     // Create a ROS publisher for the output point cloud
-    pub = nh.advertise<sensor_msgs::PointCloud2>("/fused_points", 1);
+    pub = nh.advertise<sensor_msgs::PointCloud2>("/velodyne_points_new", 1);
     
     // Spin
     ros::spin ();
