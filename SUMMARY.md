@@ -30,7 +30,7 @@
 * [노이즈 제거  \(70%\)](Beginner/Part01-Chapter04.md)
   * [PCL-Cpp  \(70%\)](Beginner/Part01-Chapter04-PCL-Cpp.md)
   * [PCL-Python  \(50%\)](Beginner/Part01-Chapter04-PCL-Python.md)
-  * [ROS 실습 \(10%\)](Beginner/Part01-Chapter04-Practice.md)
+  * [ROS 실습 \(90%\)](Beginner/Part01-Chapter04-Practice.md)
 * [바닥제거 \(RANSAC\)  \(70%\)](Beginner/Part01-Chapter05.md)
   * [PCL-Cpp  \(70%\)](Beginner/Part01-Chapter05-PCL-Cpp.md)
   * [PCL-Python  \(70%\)](Beginner/Part01-Chapter05-PCL-Python.md)
