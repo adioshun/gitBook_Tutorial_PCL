@@ -69,7 +69,11 @@
 ## Part 3 \(고급\)
 
 * [README](Advanced/README.md)
-* [개요](Advanced/INTRO.md)
+* [PointGAN을 이용한 딥러닝 학습 데이터 생성](Advanced/PointGAN.md)
+* [Multi 3D을 이용한 딥러닝 자율주행 탐지 기술](Advanced/Multi3D.md) 
+* [VoxelNet을 이용한 딥러닝 자율주행 분류 기술](Advanced/PointGAN.md)
+
+
 
 ## Snippets
 
