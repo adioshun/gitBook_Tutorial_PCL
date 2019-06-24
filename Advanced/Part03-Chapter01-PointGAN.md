@@ -2,6 +2,7 @@
 
 > pointGAN : https://github.com/fxia22/pointGAN
 
+> https://github.com/hunjung-lim/awesome-vehicle-datasets/blob/master/Object/shpaenet/README.md
 
 ## 1. 설치 
 
@@ -34,7 +35,11 @@ python3 train_gan.py
 
 
 
+## 3. 생성 
 
+```
+python3 show_gan.py --model gan/modelG_3.pth
+```
 
 
 
