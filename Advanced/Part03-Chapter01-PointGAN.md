@@ -22,36 +22,23 @@ $ bash download.sh #download dataset
 
 
 
-## 2. 학습 
-
-
-### 2.1 학습에 사용할 테이터를 포맷 맞게 저장 
-
-
-### 2.2 
+## 2. 모델 생성 
 
 ```
-vi synsetoffset2category.txt 
-human 777777
-```
-
-`train_gan.py` L136주석처리 
-```
-# print('[%d: %d/%d] train lossD: %f lossG: %f' %(epoch, i, num_batch, lossD.data[0], lossG.data[0]))
 $ python3 show_gan.py --model gan/modelG_10.pth # choose your own model
-
-
 ```
 
+>필요시 주석 처리 `print('[%d: %d/%d] train lossD: %f lossG: %f' %(epoch, i, num_batch, lossD.data[0], lossG.data[0]))
+`
 
 
-
-## 3. 생성 
+## 3. 데이터 생성 
 
 ```
 python3 show_gan.py --model gan/modelG_3.pth
-#gen = PointGen(num_points = 2500)#2048) 
 ```
+
+> 필요시 수정 `gen = PointGen(num_points = 2500)`
 
 
 
