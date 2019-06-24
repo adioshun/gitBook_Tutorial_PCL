@@ -84,6 +84,7 @@
 * [PCL-Python-Helper \(10%\)](Snippets/PCL-Python-helper.md)
 * [Concatenating two clouds \(90%\)](Snippets/Concatenating-two-clouds-PCL-Cpp.md)
 * [Using a matrix to transform a point cloud \(80%\)](Snippets/Using-a-matrix-to-transform-a-point-cloud.md)
+* [Lidar Data Augmentation](Snippets/Lidar-Data-Augmentation.md)
 
 ## Appendix
 
