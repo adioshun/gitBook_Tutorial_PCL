@@ -1,8 +1,6 @@
 # Point GAN을 이용한 학습 데이터 생성 
 
-> pointGAN : https://github.com/fxia22/pointGAN
 
-> 학습 데이터 설명 https://github.com/hunjung-lim/awesome-vehicle-datasets/blob/master/Object/shpaenet/README.md
 
 ## 1. 설치 
 
@@ -55,6 +53,7 @@ python3 show_gan.py --model gan/modelG_3.pth
 
 --- 
 
-# Autoencoder for Point Clouds을 이용한 학습 데이터 생성 (0%)
+- [pointGAN](https://github.com/fxia22/pointGAN)
 
-> https://github.com/charlesq34/pointnet-autoencoder 
+- [ShapeNet 학습 데이터](https://github.com/hunjung-lim/awesome-vehicle-datasets/blob/master/Object/shpaenet/README.md)
+
