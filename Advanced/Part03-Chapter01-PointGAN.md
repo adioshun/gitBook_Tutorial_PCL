@@ -2,7 +2,7 @@
 
 > pointGAN : https://github.com/fxia22/pointGAN
 
-> https://github.com/hunjung-lim/awesome-vehicle-datasets/blob/master/Object/shpaenet/README.md
+> 학습 데이터 설명 https://github.com/hunjung-lim/awesome-vehicle-datasets/blob/master/Object/shpaenet/README.md
 
 ## 1. 설치 
 
