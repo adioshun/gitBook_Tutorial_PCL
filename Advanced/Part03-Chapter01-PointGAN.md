@@ -50,6 +50,7 @@ $ python3 show_gan.py --model gan/modelG_10.pth # choose your own model
 
 ```
 python3 show_gan.py --model gan/modelG_3.pth
+#gen = PointGen(num_points = 2500)#2048) 
 ```
 
 
