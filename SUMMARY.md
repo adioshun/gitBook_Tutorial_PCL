@@ -74,6 +74,7 @@
   * [AutoEncoder](Advanced/Part03-Chapter01-AutoEncoder.md)
 * [딥러닝 기반 샘플링 기법 \(0%\)](Advanced/Part03-Chapter02.md)
   * [DenseLidarNet](Advanced/Part03-Chapter02-DenseLidarNet.md)
+  * [Point Cloud Upsampling Network](Advanced/Part03-Chapter02-PUNet.md)
 * [딥러닝 기반 자율주행 탐지 기술 \(0%\)](Advanced/Part03-Chapter03.md)
   * [Multi3D](Advanced/Part03-Chapter03-Multi3D.md)
 * [딥러닝 기반 자율주행 분류 기술 \(0%\)](Advanced/Part03-Chapter04.md)
