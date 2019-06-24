@@ -18,18 +18,29 @@ $ cd pointGAN
 
 $ bash build.sh #build C++ code for visualization
 $ bash download.sh #download dataset
-$ python3 train_gan.py
-$ python3 show_gan.py --model gan/modelG_10.pth # choose your own model
-
 ```
+
 
 
 ## 2. 학습 
 
+
+### 2.1 학습에 사용할 테이터를 포맷 맞게 저장 
+
+
+### 2.2 
+
+```
+vi synsetoffset2category.txt 
+human 777777
+```
+
 `train_gan.py` L136주석처리 
 ```
 # print('[%d: %d/%d] train lossD: %f lossG: %f' %(epoch, i, num_batch, lossD.data[0], lossG.data[0]))
-python3 train_gan.py
+$ python3 show_gan.py --model gan/modelG_10.pth # choose your own model
+
+
 ```
 
 
