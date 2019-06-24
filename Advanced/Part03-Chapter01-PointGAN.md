@@ -23,6 +23,15 @@ $ python3 show_gan.py --model gan/modelG_10.pth # choose your own model
 ```
 
 
+## 2. 학습 
+
+`train_gan.py` L136주석처리 
+```
+# print('[%d: %d/%d] train lossD: %f lossG: %f' %(epoch, i, num_batch, lossD.data[0], lossG.data[0]))
+python3 train_gan.py
+```
+
+
 
 
 
