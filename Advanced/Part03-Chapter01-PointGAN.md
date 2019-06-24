@@ -6,7 +6,7 @@
 ## 1. 설치 
 
 ```
-$ sudo apt-get install python-opencv
+$ sudo apt-get install python3-opencv python3-tk
 $ pip3 install http://download.pytorch.org/whl/cu80/torch-0.1.11.post5-cp27-none-linux_x86_64.whl 
 $ pip3 install torchvision progressbar2
 
