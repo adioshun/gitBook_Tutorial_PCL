@@ -45,7 +45,7 @@ python3 show_gan.py --model gan/modelG_3.pth
 
 
 
-
+![](Part03-Chapter01-PointGAN.gif)
 
 
 
