@@ -70,6 +70,7 @@
 
 * [README](Advanced/README.md)
 * [PointGAN을 이용한 딥러닝 학습 데이터 생성 \(0%\)](Advanced/PointGAN.md)
+* [Virtual Lidar Net을 이용한 업샘플링 (0%)](Advanced/Virtual-Lidar-Net.md)
 * [Multi 3D을 이용한 딥러닝 자율주행 탐지 기술 \(0%\)](Advanced/Multi3D.md)
 * [VoxelNet을 이용한 딥러닝 자율주행 분류 기술 \(0%\)](Advanced/PointGAN.md)
 
