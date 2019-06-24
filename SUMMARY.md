@@ -71,14 +71,13 @@
 * [README](Advanced/README.md)
 * [딥러닝 기반 학습 데이터 생성 \(0%\)](Advanced/Part03-Chapter01.md)
   * [PointGAN](Advanced/Part03-Chapter01-PointGAN.md)
-  * [AutoEncoder](Advanced/Part03-Chapter01-AutoEncoder.md)  
-* [딥러닝 기반 샘플링 기법 (0%)](Advanced/Part03-Chapter02.md)
-  * [DenseLidarNet](Advanced/Part03-Chapter02-DenseLidarNet.md]
+  * [AutoEncoder](Advanced/Part03-Chapter01-AutoEncoder.md)
+* [딥러닝 기반 샘플링 기법 \(0%\)](Advanced/Part03-Chapter02.md)
+  * [DenseLidarNet](Advanced/Part03-Chapter02-DenseLidarNet.md)
 * [딥러닝 기반 자율주행 탐지 기술 \(0%\)](Advanced/Part03-Chapter03.md)
   * [Multi3D](Advanced/Part03-Chapter03-Multi3D.md)
 * [딥러닝 기반 자율주행 분류 기술 \(0%\)](Advanced/Part03-Chapter04.md)
   * [VoxelNet](Advanced/Part03-Chapter04-VoxelNet.md)
-
 
 ## Snippets
 
