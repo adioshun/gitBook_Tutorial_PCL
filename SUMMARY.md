@@ -70,8 +70,8 @@
 
 * [README](Advanced/README.md)
 * [딥러닝 기반 학습 데이터 생성 \(0%\)](Advanced/Part03-Chapter01.md)
-  * [PointGAN](Advanced/Part03-Chapter01-PointGAN.md)
-  * [AutoEncoder](Advanced/Part03-Chapter01-AutoEncoder.md)
+  * [PointGAN \(90%\)](Advanced/Part03-Chapter01-PointGAN.md)
+  * [AutoEncoder \(0%\)](Advanced/Part03-Chapter01-AutoEncoder.md)
 * [딥러닝 기반 샘플링 기법 \(0%\)](Advanced/Part03-Chapter02.md)
   * [DenseLidarNet](Advanced/Part03-Chapter02-DenseLidarNet.md)
   * [Point Cloud Upsampling Network](Advanced/Part03-Chapter02-PUNet.md)
