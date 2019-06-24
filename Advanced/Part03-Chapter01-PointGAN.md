@@ -41,4 +41,6 @@ $ python show_gan.py --model gan/modelG_10.pth # choose your own model
 
 --- 
 
-Autoencoder for Point Clouds : https://github.com/charlesq34/pointnet-autoencoder 
+# Autoencoder for Point Clouds을 이용한 학습 데이터 생성 (0%)
+
+> https://github.com/charlesq34/pointnet-autoencoder 
