@@ -34,6 +34,8 @@ self.dump_dir = '/tmp/DenseLidarNet'
 $ python code/scripts/init_state_dict.py -> init_state_dict.py
 $ python train.py -tp1 /tmp/DenseLidarNet/lidar_pts -tp2 /tmp/DenseLidarNet/tf_lidar_pts -tp3 /tmp/DenseLidarNet/bbox_info -vp1 /tmp/DenseLidarNet/lidar_pts -vp2 /tmp/DenseLidarNet/tf_lidar_pts -vp3 /tmp/DenseLidarNet/bbox_info
 
+$ python train.py -e
+
 ```
 
 
