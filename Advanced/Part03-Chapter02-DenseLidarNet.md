@@ -36,6 +36,40 @@ $ python train.py -tp1 /tmp/DenseLidarNet/lidar_pts -tp2 /tmp/DenseLidarNet/tf_l
 
 ```
 
+
+## 에러- 추후 해결 
+
+```python 
+def customdataparallel(self,zipped_input):
+	# Distributes the model in multiple gpus	
+	replicas = torch.nn.parallel.replicate(self.net,self.gpus)
+	
+	# Distribute the input equally to all gpus
+	outputs = torch.nn.parallel.parallel_apply(replicas,zipped_input)
+
+	# Gather the output in one device			
+	return torch.nn.parallel.gather(outputs,self.gather_device)
+
+	
+```
+
+
+```python 
+def customdataparallel(self,zipped_input):
+	# Distributes the model in multiple gpus
+	
+	replicas = torch.nn.parallel.replicate(self.net,self.gpus)
+	
+	# Distribute the input equally to all gpus
+	if len(replicas) == len(zipped_input): 
+		outputs = torch.nn.parallel.parallel_apply(replicas,zipped_input)
+		# Gather the output in one device			
+		return torch.nn.parallel.gather(outputs,self.gather_device)
+	else:
+		return ??? #len(replicas) == len(zipped_input)가 아닐경우 에러 발생 
+```
+
+
 ---
 
 - [[코드] DenseLidarNet](https://github.com/345ishaan/DenseLidarNet)
