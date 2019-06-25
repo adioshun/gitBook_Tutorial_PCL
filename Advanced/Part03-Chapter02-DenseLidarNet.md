@@ -37,7 +37,9 @@ $ python train.py -tp1 /tmp/DenseLidarNet/lidar_pts -tp2 /tmp/DenseLidarNet/tf_l
 ```
 
 
-## 에러
+## 에러 처리 
+
+train.py원본 코드를 
 
 ```python 
 def train(self, epoch):
@@ -64,7 +66,7 @@ def train(self, epoch):
 
 	
 ```
-
+아래와 같이 수정 
 
 ```python 
 def train(self, epoch):
