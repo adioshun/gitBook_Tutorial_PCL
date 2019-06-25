@@ -12,7 +12,7 @@ Generating Dense Lidar Data using cues from monocular image and sparse lidar dat
 python 2.7
 pip install torch==0.4.1 -f https://download.pytorch.org/whl/cu80/stable
 pip install https://download.pytorch.org/whl/torchvision-0.1.6-py2-none-any.whl
-pip install tqdm h5py
+pip install tqdm h5py ipdb
 ```
 
 ## 학습 데이터 생성 (KITTI)
