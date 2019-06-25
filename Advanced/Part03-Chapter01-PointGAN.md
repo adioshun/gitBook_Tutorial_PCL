@@ -1,6 +1,6 @@
 # Point GAN을 이용한 학습 데이터 생성 
 
-
+> ubuntu 18, python3.6.7
 
 ## 1. 설치 
 
