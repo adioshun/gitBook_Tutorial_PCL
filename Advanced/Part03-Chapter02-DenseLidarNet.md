@@ -37,36 +37,59 @@ $ python train.py -tp1 /tmp/DenseLidarNet/lidar_pts -tp2 /tmp/DenseLidarNet/tf_l
 ```
 
 
-## 에러- 추후 해결 
+## 에러
 
 ```python 
-def customdataparallel(self,zipped_input):
-	# Distributes the model in multiple gpus	
-	replicas = torch.nn.parallel.replicate(self.net,self.gpus)
+def train(self, epoch):
 	
-	# Distribute the input equally to all gpus
-	outputs = torch.nn.parallel.parallel_apply(replicas,zipped_input)
-
-	# Gather the output in one device			
-	return torch.nn.parallel.gather(outputs,self.gather_device)
+	train_loss = []
+	self.net.train()
+	
+	for batch_idx,(voxel_features,voxel_mask,voxel_indices, chamfer_gt) in enumerate(self.train_dataloader):
+		zipped_input = self.prepare_gpu_input(voxel_features, voxel_mask, voxel_indices)		
+			
+		hallucinations = self.customdataparallel(zipped_input)
+		chamfer_gt = torch.FloatTensor(chamfer_gt)
+		loss = self.criterion(hallucinations, Variable(chamfer_gt).cuda(self.gather_device))
+		train_loss += [loss.data[0]/chamfer_gt.size(0)] #For pytorch <= 0.5
+		#train_loss += [loss.data/chamfer_gt.size(0)]
+		if batch_idx % self.args.print_freq == 0:
+			progress_stats = '(train) Time: {0} Epoch: [{1}][{2}/{3}]\t' 'Loss {net_loss:.4f}\t'.format(time.ctime()[:-8], epoch, batch_idx, len(self.train_dataloader), net_loss=loss.data[0])
+			print(progress_stats)
+		self.optimizer.zero_grad()
+		
+		loss.backward()
+		self.optimizer.step()
+	return train_loss
 
 	
 ```
 
 
 ```python 
-def customdataparallel(self,zipped_input):
-	# Distributes the model in multiple gpus
+def train(self, epoch):
 	
-	replicas = torch.nn.parallel.replicate(self.net,self.gpus)
+	train_loss = []
+	self.net.train()
 	
-	# Distribute the input equally to all gpus
-	if len(replicas) == len(zipped_input): 
-		outputs = torch.nn.parallel.parallel_apply(replicas,zipped_input)
-		# Gather the output in one device			
-		return torch.nn.parallel.gather(outputs,self.gather_device)
-	else:
-		return ??? #len(replicas) == len(zipped_input)가 아닐경우 에러 발생 
+	for batch_idx,(voxel_features,voxel_mask,voxel_indices, chamfer_gt) in enumerate(self.train_dataloader):
+		zipped_input = self.prepare_gpu_input(voxel_features, voxel_mask, voxel_indices)		
+		if len(zipped_input) == 2:
+			hallucinations = self.customdataparallel(zipped_input)
+			chamfer_gt = torch.FloatTensor(chamfer_gt)
+			loss = self.criterion(hallucinations, Variable(chamfer_gt).cuda(self.gather_device))
+			train_loss += [loss.data[0]/chamfer_gt.size(0)] #For pytorch <= 0.5
+			#train_loss += [loss.data/chamfer_gt.size(0)]
+			if batch_idx % self.args.print_freq == 0:
+				progress_stats = '(train) Time: {0} Epoch: [{1}][{2}/{3}]\t' 'Loss {net_loss:.4f}\t'.format(time.ctime()[:-8], epoch, batch_idx, len(self.train_dataloader), net_loss=loss.data[0])
+				print(progress_stats)
+			self.optimizer.zero_grad()
+			
+			loss.backward()
+			self.optimizer.step()
+		else: 
+			return train_loss
+	return train_loss
 ```
 
 
