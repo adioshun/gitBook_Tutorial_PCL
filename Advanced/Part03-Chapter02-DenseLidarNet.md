@@ -94,7 +94,29 @@ def train(self, epoch):
 		else: 
 			return train_loss
 	return train_loss
+
+def validate(self):
+	val_loss = []
+	self.net.eval()
+	for batch_idx,(voxel_features,voxel_mask,voxel_indices, chamfer_gt) in enumerate(self.val_dataloader):
+		zipped_input = self.prepare_gpu_input(voxel_features, voxel_mask, voxel_indices)
+		if len(zipped_input) == 2:
+			xyz_output = self.customdataparallel(zipped_input)
+			#hallucinations = self.customdataparallel(zipped_input) #typing error?
+			chamfer_gt = torch.FloatTensor(chamfer_gt)
+			loss = self.criterion(xyz_output, Variable(chamfer_gt).cuda(self.gather_device))
+			val_loss += [loss.data[0]/chamfer_gt.size(0)]
+			if batch_idx % self.args.print_freq == 0:
+				#progress_stats = '(val) Time: {0} Epoch: [{1}][{2}/{3}]\t' 'Loss {loss:.4f}\t'.format(time.ctime()[:-8], epoch, batch_idx, len(self.val_dataloader), loss=loss.data[0])
+				epoch = 0
+				progress_stats = '(val) Time: {0} Epoch: [{1}][{2}/{3}]\t' 'Loss {loss:.4f}\t'.format(time.ctime()[:-8], epoch, batch_idx, len(self.val_dataloader), loss=loss.data[0])
+				print(progress_stats)
+		else:
+			return val_loss
+	return val_loss
+
 ```
+
 
 
 ---
