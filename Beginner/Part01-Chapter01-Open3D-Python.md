@@ -51,11 +51,13 @@ open3d.write_point_cloud("pc2pcd.pcd", pc)
 import open3d
 import numpy as np
 
-pc_array = np.asarray(pc.points)
+# Open3D to numpy
+pcd_load = read_point_cloud("../../TestData/sync.pcd")
+pc_array = np.asarray(pcd_load.points)
 print("pc Type : {}".format(type(pc)))
 print("pc_array Type : {}".format(type(pc_array)))
 
-#numpy를 pcd로 저장
+# numpy to Open3D
 pc_new = open3d.PointCloud()
 pc_new.points = open3d.Vector3dVector(pc_array)
 open3d.write_point_cloud("pc2pcd.pcd", pc_new)
