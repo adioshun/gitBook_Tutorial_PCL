@@ -46,16 +46,16 @@ def do_ransac_plane_segmentation(pcl_data,pcl_sac_model_plane,pcl_sac_ransac,max
     return seg
 
 
-def  extract_cloud_objects_and_cloud_table(pcl_data,ransac_segmentation):
+def  extract_inlier_outlier(pcl_data,ransac_segmentation):
     '''
     :param pcl_data:
     :param ransac_segmentation:
     :return: cloud table and cloud object
     '''
     inliers, coefficients = ransac_segmentation.segment()
-    inlier = pcl_data.extract(inliers, negative=False)
-    cloud_objects = pcl_data.extract(inliers, negative=True)
-    return cloud_table,cloud_objects
+    inlier_object = pcl_data.extract(inliers, negative=False)
+    outlier_object = pcl_data.extract(inliers, negative=True)
+    return inlier_object,outlier_object
 
 
 
@@ -63,8 +63,15 @@ def  extract_cloud_objects_and_cloud_table(pcl_data,ransac_segmentation):
 
 
 ```python
-inliers, outliers = do_ransac_plane_segmentation(cloud, 0.01)
+# RANSAC Plane Segmentation
+ransac_segmentation = do_ransac_plane_segmentation(cloud,pcl.SACMODEL_PLANE,pcl.SAC_RANSAC,0.01)
+
+# Extract inliers and outliers
+inlier, outliner = extract_inlier_outlier(cloud,ransac_segmentation )
+
 ```
+
+---
 
 ## do_ransac_plane_normal_segmentation
 
@@ -126,4 +133,29 @@ pcl.save(inliers_cloud, 'RANSAC_plane_true123.pcd.pcd')
 ```
 
 --- 
+
+SACMODEL
+
+```
+   48     SACMODEL_PLANE,
+   49     SACMODEL_LINE,
+   50     SACMODEL_CIRCLE2D,
+   51     SACMODEL_CIRCLE3D,
+   52     SACMODEL_SPHERE,
+   53     SACMODEL_CYLINDER,
+   54     SACMODEL_CONE,
+   55     SACMODEL_TORUS,
+   56     SACMODEL_PARALLEL_LINE,
+   57     SACMODEL_PERPENDICULAR_PLANE,
+   58     SACMODEL_PARALLEL_LINES,
+   59     SACMODEL_NORMAL_PLANE,
+   60     SACMODEL_NORMAL_SPHERE,
+   61     SACMODEL_REGISTRATION,
+   62     SACMODEL_REGISTRATION_2D,
+   63     SACMODEL_PARALLEL_PLANE,
+   64     SACMODEL_NORMAL_PARALLEL_PLANE,
+   65     SACMODEL_STICK
+```
+
+
 
