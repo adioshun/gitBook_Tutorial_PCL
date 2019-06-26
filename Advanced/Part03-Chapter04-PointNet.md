@@ -41,7 +41,7 @@ Open3D 활용 분야
 
 - [[설명] On point clouds Semantic Segmentation](http://www.open3d.org/index.php/2019/01/16/on-point-clouds-semantic-segmentation/?fbclid=IwAR1zYJfqJxwFarNKp7rBkLEjmhzHEuFQiTv2Yo9vmly2AFRZmii8oBnMM0k)
 
-- [[코드] Semantic3D semantic segmentation with Open3D and PointNet++](https://github.com/IntelVCL/Open3D-PointNet2-Semantic3D), [[결과]](http://www.semantic3d.net/view_method_detail.php?method=PointNet2_Demo) : 본 튜토리얼에서 다루고 있는 코드, [참고코드]를 활용하여서 작성됨. 
+- [[코드] Semantic3D semantic segmentation with Open3D and PointNet++](https://github.com/IntelVCL/Open3D-PointNet2-Semantic3D), [[결과]](http://www.semantic3d.net/view_method_detail.php?method=PointNet2_Demo) : [참고코드]를 활용하여 Open3D로 작성된 코드  
 
 - [[참고코드] PointNet2 for semantic segmentation of 3d points clouds](https://github.com/mathieuorhan/pointnet2_semantic), [[결과]](http://www.semantic3d.net/view_method_detail.php?method=pointnetpp_sem) : [원본코드]를 활용하여서 작성된 코드 
 
