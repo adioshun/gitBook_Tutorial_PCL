@@ -28,9 +28,9 @@ $
 ```
 
 
-### In the docker 
+### 설정 수정(In the docker )
 
-1. 설정 수정 `config.py`
+1. `config.py`
 
 ```
 # for dataset dir
@@ -44,6 +44,10 @@ __C.GPU_USE_COUNT = len(__C.GPU_AVAILABLE.split(','))
 __C.GPU_MEMORY_FRACTION = 1
 
 ```
+1. `kitti_eval/launch_test.sh`
+
+
+
 
 ### train 
 
@@ -64,8 +68,20 @@ python3 parse_log.py predictions
 # predictions.jpg 생성 
 ```
 
+### Evaluate
 
+```
+$ python3 test.py -n default #학습된 결과물 활용 
+$ python3 test.py -n pre_trained_car #사전 학습된 결과물 활용 `save_model/pre_trained_car`
+```
 
+- 결과 저장 폴더 : `predictions/data`
+
+### 결과 확인 
+
+```
+./kitti_eval/evaluate_object_3d_offline ./../data/dataset/validation/label_2/ ./prediction
+```
 
 ---
 
