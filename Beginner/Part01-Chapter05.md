@@ -60,3 +60,5 @@ RANSAC의 장점은 모델 파라미터에 대해 강건한 예측수행이 가�
 ---
 
 <a name="1">[1]</a> "Random Sample Consensus: A Paradigm for Model Fitting with Application to Image Analysis and Automated Cartography", 1981 by Martin A. Fischler and Robert C. Bolles
+
+Efficient Online Segmentation for Sparse 3D Laser Scans, 2016 [[코드]](https://github.com/PRBonn/depth_clustering)
