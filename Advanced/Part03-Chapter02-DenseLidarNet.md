@@ -122,3 +122,8 @@ def validate(self):
 ---
 
 - [[코드] DenseLidarNet](https://github.com/345ishaan/DenseLidarNet)
+
+---
+
+
+main.py의 `#transforms.Lambda(lambda x: logPolar_transform(x)),`를 주석 처리시 문제점 ?
