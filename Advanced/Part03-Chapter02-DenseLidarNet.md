@@ -25,7 +25,7 @@ self.kitti_calib_dir = '/media/adioshun/data/datasets/training/calib/'
 self.kitti_label_dir = '/media/adioshun/data/datasets/training/label_2/'
 self.kitti_lidar_dir = '/media/adioshun/data/datasets/training/velodyne'
 
-self.dump_dir = '/tmp/DenseLidarNet'
+self.dump_dir = '../../data/'
 ```
 
 
