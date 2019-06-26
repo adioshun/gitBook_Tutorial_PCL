@@ -30,21 +30,35 @@ print(cloud)
 
 
 ```python
-def do_ransac_plane_segmentation(point_cloud, max_distance = 0.01):
+def do_ransac_plane_segmentation(pcl_data,pcl_sac_model_plane,pcl_sac_ransac,max_distance):
+    '''
+    Create the segmentation object
+    :param pcl_data: point could data subscriber
+    :param pcl_sac_model_plane: use to determine plane models
+    :param pcl_sac_ransac: RANdom SAmple Consensus
+    :param max_distance: Max distance for apoint to be considered fitting the model
+    :return: segmentation object
+    '''
+    seg = pcl_data.make_segmenter()
+    seg.set_model_type(pcl_sac_model_plane)
+    seg.set_method_type(pcl_sac_ransac)
+    seg.set_distance_threshold(max_distance)
+    return seg
 
-  segmenter = point_cloud.make_segmenter()
 
-  segmenter.set_model_type(pcl.SACMODEL_PLANE)
-  segmenter.set_method_type(pcl.SAC_RANSAC)
-  segmenter.set_distance_threshold(max_distance)
+def  extract_cloud_objects_and_cloud_table(pcl_data,ransac_segmentation):
+    '''
+    :param pcl_data:
+    :param ransac_segmentation:
+    :return: cloud table and cloud object
+    '''
+    inliers, coefficients = ransac_segmentation.segment()
+    inlier = pcl_data.extract(inliers, negative=False)
+    cloud_objects = pcl_data.extract(inliers, negative=True)
+    return cloud_table,cloud_objects
 
-  #obtain inlier indices and model coefficients
-  inlier_indices, coefficients = segmenter.segment()
 
-  inliers = point_cloud.extract(inlier_indices, negative = False)
-  outliers = point_cloud.extract(inlier_indices, negative = True)
 
-  return inliers, outliers
 ```
 
 
@@ -110,3 +124,6 @@ inliers_cloud.from_array(inliers)
 ```python
 pcl.save(inliers_cloud, 'RANSAC_plane_true123.pcd.pcd') 
 ```
+
+--- 
+

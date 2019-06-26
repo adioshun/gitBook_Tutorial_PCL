@@ -25,6 +25,10 @@ def do_statistical_outlier_filtering(pcl_data,mean_k,tresh):
 
     
 cloud = do_statistical_outlier_filtering(cloud,10,0.001)
+        # number of neighboring points of 10
+        # standard deviation threshold of 0.001
+
+
     
 ```
 
