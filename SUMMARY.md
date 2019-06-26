@@ -89,7 +89,9 @@
 * [Concatenating two clouds \(90%\)](Snippets/Concatenating-two-clouds-PCL-Cpp.md)
 * [Using a matrix to transform a point cloud \(80%\)](Snippets/Using-a-matrix-to-transform-a-point-cloud.md)
 * [Lidar Data Augmentation](Snippets/Lidar-Data-Augmentation.md)
-* [ROS-to-pcd_pickle_numpy](Snippets/ROS-to-X.md)
+* [ROS-to-X](Snippets/ROS-to-X.md)
+* [Bird-Eye-View](Snippets/Bird-Eye-View.md)
+* [Panorama-View](Snippets/Panorama-View.md)
 
 ## Appendix
 
