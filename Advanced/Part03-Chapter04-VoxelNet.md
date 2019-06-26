@@ -52,11 +52,12 @@ __C.GPU_MEMORY_FRACTION = 1
 ### train 
 
 ```
-python3 train.py --alpha 1 --beta 10
+python3 train.py --vis true
 ```
 
 - log 저장 위치  : `log/default` #Tensorboard 지원 
 - validation results : `predictions/{epoch number}/data`
+- validation results(이미지) : `predictions/{epoch number}/vis` # --vis true 사용시 (기본 false)
 - model 저장 위치 : `save_model/default`
 - 학습된 model 저장 위치 :`save_model/pre_trained_car`
 
@@ -71,11 +72,12 @@ python3 parse_log.py predictions
 ### Evaluate
 
 ```
-$ python3 test.py -n default #학습된 결과물 활용 
-$ python3 test.py -n pre_trained_car #사전 학습된 결과물 활용 `save_model/pre_trained_car`
+$ python3 test.py -n default --vis True#학습된 결과물 활용 
+$ python3 test.py -n pre_trained_car --vis True#사전 학습된 결과물 활용 `save_model/pre_trained_car`
 ```
 
 - 결과 저장 폴더 : `predictions/data`
+- 결과 저장 폴더(이미지) : `predictions/vis`# --vis true 사용시 (기본 false)
 
 ### 결과 확인 
 
