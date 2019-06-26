@@ -1,10 +1,12 @@
+# VoxelNet 을 이용한 분류 기술 
 
 
+## 1. 개요 
 
 
+---
 
-- voxelnet
-
+## 2. 설치 (Docker 기반) 
 
 ### 데이터 준비 
 
@@ -28,9 +30,13 @@ $ docker run --runtime=nvidia -it --privileged --network=host -v /tmp/.X11-unix:
 ```
 
 
+---
+
+## 3. 실행 
+
 ### 설정 수정(In the docker )
 
-1. `config.py`
+- `config.py`
 
 ```
 # for dataset dir
@@ -44,7 +50,12 @@ __C.GPU_USE_COUNT = len(__C.GPU_AVAILABLE.split(','))
 __C.GPU_MEMORY_FRACTION = 1
 
 ```
-1. `kitti_eval/launch_test.sh`
+
+- `kitti_eval/launch_test.sh`
+
+```
+
+```
 
 
 
