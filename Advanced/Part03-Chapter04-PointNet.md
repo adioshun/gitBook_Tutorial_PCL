@@ -3,23 +3,6 @@
 [![Alt text](https://img.youtube.com/vi/QNVJEI_g4rw/0.jpg)](https://www.youtube.com/watch?v=QNVJEI_g4rw)
 
 
-
-
-수행 단계 
-- pre-processing
-- custom TensorFlow op integration
-- post-processing
-- visualization
-
-
-
-Open3D 활용 분야 
-
-- Point cloud data loading, writing, and visualization. 
-- Data preprocessing,(voxel-based downsampling)
-- Point cloud interpolation(fast nearest neighbor search for label interpolation) 
-
-
 활용 데이터넷 
 - 학습 : Semantic3D 
 - 추론 : Semantic3D + KITTI 
@@ -32,10 +15,23 @@ During both training and inference, PointNet++ is fed with fix-sized cropped poi
 - 기존 : This is achieved by 3-nearest neighbors search (called ThreeNN)--- 
 - 변경 : Open3D uses FLANN to build KDTrees for fast retrieval of nearest neighbors, which can be used to accelerate the ThreeNN op.
 
+---
+
+## 1. 수행 절차 
+
+### 1.1 Post processing: accelerating label interpolation
+
+
+|![](http://www.open3d.org/wordpress/wp-content/uploads/images/sparse.png)|![](http://www.open3d.org/wordpress/wp-content/uploads/images/dense.png)|
+|-|-|
+|Inference on sparse pointcloud (KITTI)|Inference results after interpolation|
 
 
 
 
+The sparse labels need to be interpolated to generate labels for all input points. This interpolation can be achieved with nearest neighbor search using open3d.KDTreeFlann and majority voting, similar to what we did above in the ThreeNN op.
+
+> 보간(interpolation)작업은 전체 소요 시간의 90%를 차지하고, 1FPS의 속도를 보인다. 해결을 위해 [custom TensorFlow C++ op InterploateLabel](https://github.com/intel-isl/Open3D-PointNet2-Semantic3D/blob/0de2ffe85e57f3dc8e06882731062b6a44721342/tf_ops/tf_interpolate.cpp#L118)를 적용하여 10+FPS속도 향상을 보였다. 
 
 
 
