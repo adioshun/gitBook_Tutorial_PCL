@@ -24,7 +24,7 @@
 
 ```
 $ docker pull adioshun/voxelnet
-$ 
+$ docker run --runtime=nvidia -it --privileged --network=host -v /tmp/.X11-unix:/tmp/.X11-unix --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -e DISPLAY -v /media/{DATA_DIR}/datasets:/dataset --name 'voxelnet' adioshun/voxelnet /bin/bash
 ```
 
 
