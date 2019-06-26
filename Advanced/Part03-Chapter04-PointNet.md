@@ -6,17 +6,31 @@
 
 
 수행 단계 
-1) pre-processing, 2) custom TensorFlow op integration, 3) post-processing and 4) visualization
+- pre-processing
+- custom TensorFlow op integration
+- post-processing
+- visualization
 
 
 
 Open3D 활용 분야 
 
-(1) Point cloud data loading, writing, and visualization. Open3D provides efficient implementations of various point cloud manipulation methods (2) Data preprocessing, in particular, voxel-based downsampling (3) Point cloud interpolation, in particular, fast nearest neighbor search for label interpolation. 
+- Point cloud data loading, writing, and visualization. 
+- Data preprocessing,(voxel-based downsampling)
+- Point cloud interpolation(fast nearest neighbor search for label interpolation) 
 
 
+활용 데이터넷 
+- 학습 : Semantic3D 
+- 추론 : Semantic3D + KITTI 
 
 
+During both training and inference, PointNet++ is fed with fix-sized cropped point clouds within boxes, we set the box size to be 60m x 20m x Inf, with the Z-axis allowing all values. During inference with KITTI, we set the region of interest to be 30m in front and behind the car, 10m to the left and right of the car center to fit the box size. This allows the PointNet++ model to only predict one sample per frame.
+
+
+차별점 : In PointNet++’s set abstraction layer, the original points are subsampled, and features of the subsampled points must be propagated to all of the original points by interpolation
+- 기존 : This is achieved by 3-nearest neighbors search (called ThreeNN)--- 
+- 변경 : Open3D uses FLANN to build KDTrees for fast retrieval of nearest neighbors, which can be used to accelerate the ThreeNN op.
 
 
 
