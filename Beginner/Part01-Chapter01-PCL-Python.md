@@ -84,7 +84,7 @@ print("pc_array Type : {}".format(type(pc_array)))
 
 # Numpy to PC 
 pc_new = pcl.PointCloud()
-pc_new.from_array(pc_array) # 2.생성 방법과 동일 
+pc_new.from_array(pc_array) # 2.생성 방법과 동일 #dtype=np.float32
 
 
 # Indices to PC
