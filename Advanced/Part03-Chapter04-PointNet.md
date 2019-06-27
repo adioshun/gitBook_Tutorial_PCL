@@ -49,6 +49,15 @@ python3, tensorflow 1.2 (1.8권장??), open3d 0.6+
 
 ubuntu 16.04, cuda 9.0 선호??
 
+```
+wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.0.176-1_amd64.deb
+sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
+sudo dpkg -i cuda-repo-ubuntu1604_9.0.176-1_amd64.deb 
+sudo apt-get update
+sudo apt-get install cuda-9-0
+
+```
+
 ### 2.1 Docker 
 
 ### 2.2 Code 
