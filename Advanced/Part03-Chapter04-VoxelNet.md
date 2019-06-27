@@ -3,6 +3,7 @@
 
 ## 1. 개요 
 
+https://adioshun.gitbooks.io/paper-3d-object-detection-and-tracking/content/2017-voxelnet-end-to-end-learning-for-point-cloud-based-3d-object-detection.html
 
 ---
 

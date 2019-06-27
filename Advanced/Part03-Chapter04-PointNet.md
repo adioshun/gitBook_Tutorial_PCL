@@ -1,7 +1,14 @@
 # PointNet++ 을 이용한 분류 기술 
 
+
+
 [![Alt text](https://img.youtube.com/vi/QNVJEI_g4rw/0.jpg)](https://www.youtube.com/watch?v=QNVJEI_g4rw)
 
+## 1. 개요 
+
+https://adioshun.gitbooks.io/paper-3d-object-detection-and-tracking/content/2017-pointnet-deep-learning-on-point-sets-for-3d-classification-and-segmentation.html
+
+## 2. 설치 
 
 활용 데이터넷 
 - 학습 : Semantic3D 
