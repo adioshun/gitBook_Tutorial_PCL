@@ -38,6 +38,10 @@ The sparse labels need to be interpolated to generate labels for all input point
 
 ## 2. Install 
 
+python3, tensorflow 1.2 (1.8권장), open3d 0.6+
+
+ubuntu 16.04, cuda 9.0 선호??
+
 ### 2.1 Docker 
 
 ### 2.2 Code 
