@@ -34,13 +34,23 @@ The sparse labels need to be interpolated to generate labels for all input point
 > 보간(interpolation)작업은 전체 소요 시간의 90%를 차지하고, 1FPS의 속도를 보인다. 해결을 위해 [custom TensorFlow C++ op InterploateLabel](https://github.com/intel-isl/Open3D-PointNet2-Semantic3D/blob/0de2ffe85e57f3dc8e06882731062b6a44721342/tf_ops/tf_interpolate.cpp#L118)를 적용하여 10+FPS속도 향상을 보였다. 
 
 
+---
 
-install 
+## 2. Install 
+
+### 2.1 Docker 
+
+### 2.2 Code 
+
+build TF ops. You’ll need CUDA and CMake 3.8+.
 
 ```
-which gcc
-gcc --version
-sudo apt install gcc-7
+cd tf_ops
+mkdir build
+cd build
+cmake -DCMAKE_C_COMPILER=/usr/bin/gcc ..
+make
+
 ```
 
 
