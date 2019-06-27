@@ -95,7 +95,7 @@ $ python3 test.py -n pre_trained_car --vis True#사전 학습된 결과물 활�
 ```
 ./kitti_eval/evaluate_object_3d_offline ./../data/dataset/validation/label_2/ ./prediction
 ```
-
+![](https://i.imgur.com/L1UM4bO.png)
 ---
 
 - [an unofficial inplementation of VoxelNet in TensorFlow](https://github.com/qianguih/voxelnet)
