@@ -35,7 +35,13 @@ The sparse labels need to be interpolated to generate labels for all input point
 
 
 
+install 
 
+```
+which gcc
+gcc --version
+sudo apt install gcc-7
+```
 
 
 ```
