@@ -38,7 +38,13 @@ The sparse labels need to be interpolated to generate labels for all input point
 
 
 
+```
+cd ./dataset
+ln -s /media/adioshun/data/datasets/semantic3D/ ./semantic_raw
 
+
+
+```
 
 
 
