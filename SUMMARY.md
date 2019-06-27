@@ -82,6 +82,7 @@
   * [PointNet](Advanced/Part03-Chapter04-PointNet.md)
   * [VoxelNet \(50%\)](Advanced/Part03-Chapter04-VoxelNet.md)
   * [YOLO3D](Advanced/Part03-Chapter04-YOLO3D.md)
+  * [SqueezeSeg](Advanced/Part03-Chapter04-SqueezeSeg.md)
   * [butNet](Advanced/Part03-Chapter04-butNet.md)
 
 ## Snippets
