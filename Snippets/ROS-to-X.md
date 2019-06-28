@@ -4,11 +4,29 @@
 > 개인적으로 pickle 파일 저장 추천
 
 
+* [ROS bags-TO-Image.ipynb](https://gist.github.com/anonymous/4857f8920c9fc901121a429ead32a7db)
+* [ROS bags-TO-Point Clods.ipynb](https://gist.github.com/anonymous/e675ea14113252be321320be62248034)
+* [ROS bags-TO-Avi.ipynb](https://gist.github.com/anonymous/fb1e98efe187b2a35b6d91fb5df9e83b)
+
+
+
+
+
+
 
 
 
 
 ## 2. ROS-to-PCD
+
+bag파일에서 pcd파일을 추출 하시려면 아래의 명령어를 이용 하면 됩니다. 
+
+```
+$ rosrun pcl_ros bag_to_pcd lobby_lidar.bag /velodyne_points ./lobby_pcd
+# rosrun pcl_ros bag_to_pcd <input_file.bag> / <output_directory> 
+```
+
+또는 
 
 ```python 
 
