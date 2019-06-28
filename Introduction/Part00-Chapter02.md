@@ -2,12 +2,14 @@
 
 앞에서 살펴 보았듯이 현재 PCL, PCL-python, Open3D, cilantro, pyPCD, Laspy, PCLpy 등 포인트 클라우드를 처리를 위한 많은 라이브러리 들이 있습니다. 개발 환경과 특성에 맞는 것을 골라 설치 하면 됩니다. 
 
-본 튜토리얼에서는 PCL-C++, PCL-Python, Open3D-Python을 주로 사용하므로 이에 대한 설치 방법만 간단히 정리 하였습니다. 
+본 튜토리얼에서는 PCL-C++, PCL-Python, Open3D-Python을 주로 사용하므로 이에 대한 설치 방법만 정리 하였습니다. 
+
+또는, 위 라이브러리가 모두 설치되어 있는 Docker 이미지를 만들어 놓았습니다.  
 
 
 ## PCL-C++ 설치 방법 
 
-### 1.1 apt-get 이용한 설치 
+### Package 설치 
 
 ```python
 sudo apt-get update && sudo apt-get install -y software-properties-common git
@@ -18,7 +20,7 @@ sudo apt-get install -y libpcl-dev #ubuntu 16 (libpcl-dev 1.7.2)
 sudo apt-get install -y libpcl-dev #ubuntu 18
 ```
 
-### 소스 설치 
+### Source 설치 
 
 
 ```python
@@ -53,7 +55,7 @@ sudo checkinstall -D make install #sudo make install대신 실행 추천
 
 ```
 
-### 설치 확 테스트
+### 설치 확인 
 
 ```
 
@@ -80,7 +82,7 @@ sudo ln -s /usr/lib/x86_64-linux-gnu/libvtkCommonCore-6.2.so /usr/lib/libvtkproj
 * Cython &gt;=0.25.2
 
 
-### pip 설치
+### Package 설치
 
 ```
 pip install python-pcl
@@ -98,7 +100,7 @@ $ pip install python-pcl --no-cache-dir
 # You need to reinstall python-pcl when you want to upgrade PointCloudLibrary
 ```
 
-### 소스 설치
+### Source 설치
 
 ```python
 pip3 install cython==0.25.2 && pip3 install numpy
@@ -115,7 +117,7 @@ sudo python3 setup.py install
 
 ## 3. Open3D
 
-### pip 설치 
+### Package 설치 
 
 ```python
 
@@ -133,13 +135,12 @@ python3 -m pip install --user open3d-python
 #sudo apt-get install xorg-dev 
 ```
 
-### Conda 설치 
-
 ```python 
+#conda
 conda install -c open3d-admin open3d
 ```
 
-### 소스 설치
+### Source 설치
 
 ```python
 apt-get install cmake 
@@ -179,25 +180,33 @@ Ubuntu 16, ROS, PCL-python, Open3D, Jupyter 등이 설치된 Docker를 다운 �
 
 ## 설치 및 실행
 
-도커 이미지 받기 : `$ docker push adioshun/pcl_to_all:20181122`
+배포 페이지 : https://hub.docker.com/r/adioshun/pcl_to_all/
 
-도커 실행 : `$ docker run -it --net=host --volume /workspace:/workspace --name 'pcl_to_all' adioshun/pcl_to_all:20181122 /bin/bash`
+```
+# 도커 이미지 받기 
+$ docker push adioshun/pcl_to_all:20181122
 
-- `--net=host` : Host PC에서 ROS메시지를 받아 시각화 작업시 필요
-- `--volume` : jupyter의 기본 작업 폴더로 Host PC와의 폴더 동기화를 위해 필요
+#도커 실행 
+$ docker run -it --net=host --volume /workspace:/workspace --name 'pcl_to_all' adioshun/pcl_to_all:20181122 /bin/bash
+## --net=host : Host PC에서 ROS메시지를 받아 시각화 작업시 필요
+## --volume : jupyter의 기본 작업 폴더로 Host PC와의 폴더 동기화를 위해 필요
 
-컨테이너 실행 : `$ docker start pcl_to_all`
+# 컨테이너 실행 
+$ docker start pcl_to_all
 
-실행 확인(Option) : `$ docker ps -a`
+# 도커 접속 
+$ docker exec -it pcl_to_all bash
+```
 
-도커 접속 : `$ docker exec -it pcl_to_all bash`
 
-## Docker 내 실행
+Docker 내 쥬피터가 설치 되어 있습니다. 
 
-쥬피터 실행 : `jupyter notebook --allow-root`
+```
+# 쥬피터 실행 
+$ jupyter notebook --allow-root
 
-웹프라우져 접속 : http://localhost:8888 (접속 암호 : ubuntu)
-
+# 웹프라우져 접속 : http://localhost:8888 (접속 암호 : ubuntu)
+```
 
 
 
