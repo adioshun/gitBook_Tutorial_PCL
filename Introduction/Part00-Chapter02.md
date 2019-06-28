@@ -86,7 +86,6 @@ sudo ln -s /usr/lib/x86_64-linux-gnu/libvtkCommonCore-6.2.so /usr/lib/libvtkproj
 
 ```
 pip install python-pcl
-#pip install python-pcl -vvvv
 
 #삭제 
 pip uninstall python-pcl
@@ -94,7 +93,7 @@ pip uninstall python-pcl
 #업그레이드 
 pip install -U python-pcl
 
-#재설치 
+# 재설치 
 $ pip uninstall python-pcl
 $ pip install python-pcl --no-cache-dir
 # You need to reinstall python-pcl when you want to upgrade PointCloudLibrary
@@ -127,7 +126,7 @@ sudo apt-get install -y libglu1-mesa-dev libgl1-mesa-glx libglew-dev libglfw3-de
 sudo apt-get install -y python3-pip 
 pip3 install open3d-python
 # or
-pip install --user open3d-python
+pip3 install --user open3d-python
 # or
 python3 -m pip install --user open3d-python
 
