@@ -1,14 +1,14 @@
 # 개요 
 
 
-새로운 프로젝트를 진행 하면서 Point cloud Library(PCL)를 처음 접하게 되었습니다. 3D 데이터의 처리를 위해서는 필수적인 Library인데 개발자 홈페이지를 제외 하고는 정리 되어 있는 문서나 질문/의견을 교류 할 수 있는 곳 적어 개념을 이해하거나 적용 하는데 많은 어려움이 있었습니다. 
+새로운 프로젝트를 진행 하면서 Point cloud Library(PCL)를 처음 접하게 되었습니다. 3D 데이터의 처리를 위해서는 필수적인 Library인데 개발자 홈페이지를 제외 하고는 정리 되어 있는 문서나 질문/의견을 교류 할 수 있는 곳이 적어 초반에 많은 어려움이 있었습니다. 
 
 프로젝트 1년차가 종료 되어 가는 시점에서 그동안 익혔던 내용 및 코드를 정리하고, 이 분야를 시작하시려는 분들에게 조금이나마 도움이 되고자 Tutorial을 작성 하게 되었습니다. 
 
 
 - 기본 내용은 PCL 홈페이지의 [[PCL문서]](http://pointclouds.org/documentation/tutorials/)와 [[Udacity강좌]](https://github.com/udacity/RoboND-Perception-Exercises)를 중심으로 하였습니다. 
 
-- 그 외 참고한 여러 자료들은 *[References]*페이지에 별도 업데이트 하도록 하겠습니다. 
+- 그 외 참고한 여러 자료들은 *[References](references.md)*페이지에 별도 업데이트 하도록 하겠습니다. 
 
 - PCL에 대한 정보 공유나 궁금한점은 **[[페이스북 PCL Research Group KR]](https://www.facebook.com/groups/165198587522918/)**에 올려 주세요. 
 
@@ -26,7 +26,7 @@
 
 중급에서는 PCL에서 제공하는 기능들을 기반으로 Clustering, Classification, Octree, Registration를 다루고 있습니다. 
 
-고급에서는 PCL 딥러닝을 연계 하여 학습 데이터 생성등에 쓰이는 PointGAN, 분류에 쓰이는 SECOND 등을 다루고 있습니다. 
+고급에서는 최근 트랜드인 딥러닝을 이용하여 초급/중급에서 살펴본 샘플링, Classification 등을 Deep Neural Network를 이용하여 구현해 보려 합니다. 
 
 
 
@@ -44,7 +44,7 @@
 
 실습 초/중급에서는 Velodyne Puck 16ch 라이다를 이용하여 실제로 수집한 데이터에서 위 이론내용과 코드들을 활용하여 재실자 탐지를 진행 합니다. 
 
-실습 고급에서는 KITTI 학습 데이터를 이용하여 차량 탐지를 진행 합니다. 
+실습 고급에서는 KITTI 및 오픈데이터셋을 이용 이용하여 차량 탐지를 목적으로 진행 합니다. 
 
 
 

@@ -1,7 +1,7 @@
 # Summary
 
 * [INTRO](README.md)
-* [작성 계획](Plan.md)
+* [작성 계획\_Tips](Plan.md)
 
 ## Part 0 \(개요\)
 
@@ -101,7 +101,7 @@
 * [시각화](Appendix/Visualization.md)
 * [시각화툴](Appendix/Visualization-Tools.md)
 * [Annotation툴](Appendix/Annotation-Tools.md)
-* [Point Cloud Libraries](Appendix/Libraries.md)
+* [Point Cloud Libraries \(0%\)](Appendix/Libraries.md)
 * [데이터셋](Appendix/Datasets.md)
 * [참고 자료](references.md)
 
