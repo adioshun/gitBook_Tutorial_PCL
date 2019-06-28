@@ -3,7 +3,12 @@
 
 ## Point cloud 란? 
 
-점군(Point cloud)은 Lidar 센서, RGB-D센서 등 으로 수집되는 데이터를 의미 합니다. 여기서 점군이란 3차원 공간상에 퍼져 있는 여러 점(Point)의 집합(set cloud)을 의미 합니다. 
+포인트 클라우드(Point cloud) Lidar 센서, RGB-D센서 등 으로 수집되는 데이터를 의미 합니다. 이러한 센서들은 아래 그림처럼 물체에 빛/신호를 보내서 돌아 오는 시간을 기록하여 각 빛/신호당 거리 정보를 계산 하고 하나의 포인트(점)을 생성 합니다. 
+
+![](http://www.irobotnews.com/news/photo/201705/10629_24038_64.png)
+
+
+포인트 클라우드 3차원 공간상에 퍼져 있는 여러 포인트(Point)의 집합(set cloud)을 의미 합니다. 
 
 |![](https://i.imgur.com/8kEIXdA.png)|![](https://i.imgur.com/fQrysOa.png)|
 |-|-|
