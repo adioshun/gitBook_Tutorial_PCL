@@ -1,9 +1,13 @@
-# 설치 
+#  Point cloud Library 설치 
+
+앞에서 살펴 보았듯이 현재 PCL, PCL-python, Open3D, cilantro, pyPCD, Laspy, PCLpy 등 포인트 클라우드를 처리를 위한 많은 라이브러리 들이 있습니다. 개발 환경과 특성에 맞는 것을 골라 설치 하면 됩니다. 
+
+본 튜토리얼에서는 PCL-C++, PCL-Python, Open3D-Python을 주로 사용하므로 이에 대한 설치 방법만 간단히 정리 하였습니다. 
 
 
-## 1. PCL 설치 방법 
+## PCL-C++ 설치 방법 
 
-### apt-get 이용한 설치 
+### 1.1 apt-get 이용한 설치 
 
 ```python
 sudo apt-get update && sudo apt-get install -y software-properties-common git
