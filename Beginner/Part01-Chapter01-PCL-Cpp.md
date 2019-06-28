@@ -1,7 +1,7 @@
 # PCL-Cpp 기반 I/O
 
 
-PCL에서는 점군 입출력을 위해서 1개의 템플릿 클래스와 4개의 구조체를 지원 하고 있습니다. 자세한 내용은 [[이곳]](https://www.twblogs.net/a/5c27931ebd9eee16b3dbc3eb)을 참고 하시면 됩니다. 
+PCL-Cpp에서는 점군 입출력을 위해서 템플릿 클래스나 구조체를 활용 할 수 있습니다. 자세한 내용은 [[이곳]](https://www.twblogs.net/a/5c27931ebd9eee16b3dbc3eb)을 참고 하시면 됩니다. 
 
 ```cpp
 // template
@@ -117,7 +117,7 @@ main (int argc, char** argv)
 
 ---
 
-## [Replace each other ](https://blog.csdn.net/qq_16481211/article/details/85332763#pclPCLPointCloud2_80)
+## 3. [상호 변환](https://blog.csdn.net/qq_16481211/article/details/85332763#pclPCLPointCloud2_80)
 
 ```cpp
 // Converting pcl::PCLPointCloud2 to pcl::PointCloud and reverse
