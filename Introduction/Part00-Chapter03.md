@@ -126,8 +126,8 @@ roscore, rosbag이 실행된 터미널 창 외에 새로운 터미널을 실행 
 명령어는 아래와 같습니다. 
 
 ```
-rviz
-rviz -d lidar.rviz
+$ rviz
+$ rviz -d lidar.rviz
 ```
 - '-d`옵션은 설정 파일을 이용하여 rviz를 실행 한것입니다. 
 
@@ -138,7 +138,7 @@ rviz -d lidar.rviz
 |-|-|
 
 
-실행시 `rviz` 명령어로만 실행 하였다면 아무것도 보이지 않을것입니다. 어떤 메시지를 시각화 할지를 왼쪽 판넬에서 지정해 주어야 합니다. 
+실행시 `$ rviz` 명령어로만 실행 하였다면 아무것도 보이지 않을것입니다. 어떤 메시지를 시각화 할지를 왼쪽 판넬에서 지정해 주어야 합니다. 
 - Global Option - Fixed Frame : velodyne 입력 
 - Pointcloud2 - Topic : /velodyne_points 선택 
  - Pointcloud2가 없다면 : 하단 Add - By display type - pointcloud2 - Ok 
