@@ -18,7 +18,7 @@ Point Cloud는 기본적으로는 x,y,z 세개의 정보로만 표현 가능하�
 > 참고로 일부 문서에서는 Lidar등에서 수집되는 데이터를 **unordered** Point cloud로 RGB-D 등에서 수집되는 데이터를 **Ordered** Point cloud로 표기 하는 경우도 있습니다. 이는 `N x 3` Numpy 배열에서 N의 순서(order)가 물체를 표현하는데 영향을 미치기 때문입니다. 
 
 
-## Point Cloud와 이미지 데이터 
+## 이미지 데이터와 Point Cloud
 
 |이미지 데이터|Point Cloud Data |
 |-|-|
@@ -37,18 +37,31 @@ Point Cloud는 기본적으로는 x,y,z 세개의 정보로만 표현 가능하�
 
 Point cloud Library란 Point cloud 처리를 위한 라이브러리입니다. 
 
+
 일반적으로 Point cloud 라이브러리들은 Point cloud의 파일 저장, 읽기, 잡음제거, 정합, 군집화, 분류, Feature계산 등의 기능을 제공합니다. 
+
 - pcl_filters : 3D 점군 데이터에서 이상값과 노이즈 제거 등의 필터링
+
 - pcl_features : 점군 데이터로부터 3D 특징 추정 (feature estimation) 을 위한 수많은 자료 구조와 방법들 
+
 - pcl_keypoints : Keypoint (or interest point) 을 검출하는 알고리즘 구현 (BRISK, Harris Corner, NARF, SIFT, SUSAN 등)
+
 - pcl_registration : 여러 데이터셋을 합쳐 큰 모델로 만드는 registration 작업 (ICP 등)
+
 - pcl_kdtree : 빠른 최근거리 이웃을 탐색하는 FLANN 라이브러리를 사용한 kdtree 자료 구조
+
 - pcl_octree : 점군 데이터로부터 계층 트리 구조를 구성하는 방법
+
 - pcl_segmentation : 점군으로부터 클러스터들로 구분하는 알고리즘들
+
 - pcl_sample_consensus : 선, 평면, 실린더 등의 모델 계수 추정을 위한 RANSAC 등의 알고리즘들
+
 - pcl_surface : 3D 표면 복원 기법들 (meshing, convex hulls, Moving Least Squares 등)
+
 - pcl_range_image : range image (or depth map) 을 나타내고 처리하는 방법
+
 - pcl_io : OpenNI 호환 depth camera 로부터 점군 데이터를 읽고 쓰는 방법
+
 - pcl_visualization : 3D 점군 데이터를 처리하는 알고리즘의 결과를 시각화
 
 현재 PCL, PCL-python, Open3D, cilantro, pyPCD, Laspy, PCLpy 등의 라이브러리들이 사용되고 있습니다. 일반적으로 PCL하면 2011년 Radu Bogdan Rusu, Steve Cousins에 의해 공개된 [Library](http://pointclouds.org/)를 나타내기도 합니다. 
@@ -60,15 +73,17 @@ Point cloud Library란 Point cloud 처리를 위한 라이브러리입니다.
 
 ## Point Cloud Data(PCD) Format 
 
-Point Cloud은 `*. asc` , `*. cl3` , `*. clr` , `*. fls` , `*. fws` , `*. las` , `*. ptg` , `*. pts` , `*. ptx` , `*. txt` , `*. pcd` , `*. xyz` 등의 여러 데이터 포맷을 사용 가능합니다. 
+Point Cloud은 `*. asc` , `*. cl3` , `*. clr` , `*. fls` , `*. fws` , `*. las` , `*. ptg` , `*. pts` , `*. ptx` , `*. txt` , `*. pcd` , `*. xyz` 등의 여러 데이터 포맷으로 사용 가능합니다. 
 
 
-단순히 x,y,z정보만을 가진 `*.txt` 포맷을 이용하여도 되고, 여러 헤더 정보와 x,y,z를 가진 `*. pcd`포맷을 이용하여도 3D 물체 표현에는 영향을 미치지 않습니다. 
+단순히 x,y,z정보만을 가진 `*.txt` 포맷을 이용하여도 되고, 헤더 정보와 x,y,z를 가진 `*. pcd`포맷을 이용하기도 합니다. 
 
-일반적으로 사용된는 `*. pcd`포맷은 Header와 Data 섹션을 가지고 있습니다. 
-- a human-readable header that defines the number, size, dimensionality and data type of the point cloud;
-- a data section which can be in ASCII or a binary, non-human-readable format.
 
+일반적으로 사용된는 `*. pcd`포맷은 Header와 Data 세션으로 나누어 집니다. 
+
+- Header : 전체 포인트 수, 데이터 타입, 크기 등의 정보 
+
+- Data : x,y,z 또는 x,y,z + 추가정보 
 
 ```
 # .PCD v.7 - Point Cloud Data file format
@@ -90,10 +105,9 @@ DATA ascii
 ...
 ```
 
-주위깊게 보아야 할부분은 FIELDS가 `x,y,z,rgb`로 데이터 역시 `N x 4`Numpy 색상 정보를 포함하고 있습니다. 다른 `*.pcd`는 rgb가 없이 사용될수 있습니다. 
+주위깊게 보아야 할부분은 FIELDS가 `x,y,z,rgb`로 추가 정보로 색상 정보를 가지고 있습니다. 다른 `*.pcd`는 FIELDS가 `x,y,z,`로 rgb가 없이 사용될수 있습니다.
 
-
-> 자세한 `*.pcd`파일 포맷에 대한 정보는 [[여기]](http://pointclouds.org/documentation/tutorials/pcd_file_format.php)에서 얻을수 있습니다. 
+> 이 둘을 구분 하지 않고 `load_XYZRGB`로 파읽을 읽고, `save_XYZ`로 저장 한다면 색상 정보를 잃어버리게 되므로 조심 해야 합니다. 자세한 `*.pcd`파일 포맷에 대한 정보는 [[여기]](http://pointclouds.org/documentation/tutorials/pcd_file_format.php)에서 얻을수 있습니다. 
 
 
 ---
