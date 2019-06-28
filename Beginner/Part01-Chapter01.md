@@ -32,6 +32,4 @@ Python의 경우 numpy 형태로 변화하여 학습 알고리즘 라이브러�
 
 ---
 
-
-
-[PyPCD I/O 쥬피터](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Beginner/Part01-Chapter01-pyPCD.ipynb)
+- [PyPCD I/O 쥬피터](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Beginner/Part01-Chapter01-pyPCD.ipynb)
