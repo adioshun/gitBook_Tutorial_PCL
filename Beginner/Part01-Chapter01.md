@@ -3,7 +3,6 @@
 
 본 챕터에서는 각 라이브러리들을 이용한 기본적 파일 읽기, 생성, 쓰기, 변환, 정보 출력 등에 대하여 살펴 보겠습니다. 
 
-
 당연한 내용들이라 부가 설명을 쓰기도 어색하네요. 
 
 ## 1. 읽기 
@@ -24,7 +23,7 @@ PCD파일을 읽어 메모리 상에 저장 합니다.
 
 ## 4. 변환 
 
-Python의 경우 numpy 형태로 변화하여 학습 알고리즘 라이브러리(ex. sklearn)에 적용 가능합니다. 이를 위하여 PCD형태를 Numpy 형태로 변환 합니다. 
+Python의 경우 numpy 형태로 변화하여 학습 알고리즘 라이브러리(ex. sklearn)에 적용 가능합니다. 이를 위하여 PCD를 Numpy로 변환 합니다. 
 
 ## 5. 정보 출력 
 
@@ -33,6 +32,6 @@ Python의 경우 numpy 형태로 변화하여 학습 알고리즘 라이브러�
 
 ---
 
-txt to pcd : https://blog.csdn.net/qq_22170875/article/details/90140851
+
 
 [PyPCD I/O 쥬피터](https://github.com/adioshun/gitBook_Tutorial_PCL/blob/master/Beginner/Part01-Chapter01-pyPCD.ipynb)
