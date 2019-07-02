@@ -7,7 +7,7 @@
 - Chapter 2 : 작업 부하를 줄이기 위한 Downsampling : VoxelGrid filter
 - Chapter 3 : 대상 영역 선정을 위한 RoI 설정 : PassThrough filter
 - Chapter 4 : 센서 잡음 제거를 위한 Outlier제거 : Statistical/Conditional/Radius Outlier removal
-- Chapter 5 : 바닦 세그멘테이션 및 제거 : RANSAC 
+- Chapter 5 : 바 세그멘테이션 및 제거 : RANSAC 
 
 
 
@@ -20,9 +20,27 @@
 |[Udacity Sample (`table.top`)](https://github.com/udacity/RoboND-Perception-Exercises/raw/master/Exercise-1/tabletop.pcd)|[PCL Tutorial sample(`table_scene_lms400.pcd`)](https://raw.github.com/PointCloudLibrary/data/master/tutorials/table_scene_lms400.pcd ) |
 |Chapter 3,5|Chapter 2,4|
 
-
-
-
-
-
 ---
+
+* [파일 생성 및 입출력 \(70%\)](Beginner/Part01-Chapter01.md)
+    * [PCL-Cpp \(70%\)](Beginner/Part01-Chapter01-PCL-Cpp.md)
+    * [PCL-Python \(70%\)](Beginner/Part01-Chapter01-PCL-Python.md)
+    * [Open3D-Python \(70%\)](Beginner/Part01-Chapter01-Open3D-Python.md)
+    * [ROS 실습 \(90%\)](Beginner/Part01-Chapter01-Practice.md)
+* [샘플링 \(70%\)](Beginner/Part01-Chapter02.md)
+    * [다운샘플링-PCL-Cpp \(70%\)](Beginner/Part01-Chapter02-Downsampling-PCL-Cpp.md)
+    * [다운샘플링-PCL-Python \(50%\)](Beginner/Part01-Chapter02-Downsampling-PCL-Python.md)
+    * [업샘플링-PCL-Cpp \(70%\)](Beginner/Part01-Chapter02-Upsampling-PCL-Cpp.md)
+    * [ROS 실습 \(90%\)](Beginner/Part01-Chapter02-Practice.md)
+* [관심 영역 설정 \(70%\)](Beginner/Part01-Chapter03.md)
+    * [PCL-Cpp \(70%\)](Beginner/Part01-Chapter03-PCL-Cpp.md)
+    * [PCL-Python \(70%\)](Beginner/Part01-Chapter03-PCL-Python.md)
+    * [ROS 실습 \(90%\)](Beginner/Part01-Chapter03-Practice.md)
+* [노이즈 제거 \(70%\)](Beginner/Part01-Chapter04.md)
+    * [PCL-Cpp \(70%\)](Beginner/Part01-Chapter04-PCL-Cpp.md)
+    * [PCL-Python \(50%\)](Beginner/Part01-Chapter04-PCL-Python.md)
+    * [ROS 실습 \(90%\)](Beginner/Part01-Chapter04-Practice.md)
+* [바닥제거 \(RANSAC\) \(70%\)](Beginner/Part01-Chapter05.md)
+    * [PCL-Cpp \(70%\)](Beginner/Part01-Chapter05-PCL-Cpp.md)
+    * [PCL-Python \(70%\)](Beginner/Part01-Chapter05-PCL-Python.md)
+    * [ROS 실습 \(90%\)](Beginner/Part01-Chapter05-Practice.md)
