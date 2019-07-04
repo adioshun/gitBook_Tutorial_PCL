@@ -151,7 +151,8 @@ main (int argc, char** argv)
 ```
 
 
-```
+```python
+"""
 target_link_libraries(<executableTargetName>, <lib1>, <lib2>, ... <libN>)
 
 
@@ -160,6 +161,7 @@ Example:
 add_executable(foo src/foo.cpp)
 add_library(moo src/moo.cpp)
 target_link_libraries(foo moo)  -- This links foo against libmoo.so
+"""
 ```
 
 
