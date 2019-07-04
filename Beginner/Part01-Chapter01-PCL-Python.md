@@ -50,6 +50,10 @@ a[:, 0] = 1             # set x coordinates to 1
 print(p[3])             # prints (1.0, 0.0, 0.0)
 
 
+#방법 5 for ROS
+new_cloud = pcl.PointCloud()
+new_cloud.from_array(new_data)
+new_cloud = pcl_helper.XYZ_to_XYZRGB(new_cloud,[255,255,255])
 
 
 ```
