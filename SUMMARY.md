@@ -86,6 +86,7 @@
 
 ## Snippets
 
+* [PCL-Snippets](https://adioshun.gitbooks.io/pcl_snippet/content/)
 * [PCL-Python-Helper \(10%\)](Snippets/PCL-Python-helper.md)
 * [Lidar Data Augmentation](Snippets/Lidar-Data-Augmentation.md)
 
