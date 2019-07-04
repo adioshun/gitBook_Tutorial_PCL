@@ -7,6 +7,12 @@ ROS에서는 메시지를 토픽(topic)이라고 지칭 합니다. 아래 예제
 ![](https://i.imgur.com/XWfezjK.png)
 
 
+---
+
+## 1. PCL-Python & ROS
+
+
+
 ```python 
 #!/usr/bin/env python3
 # coding: utf-8
@@ -51,9 +57,9 @@ $ rviz -d lidar_new_topic.rviz
 
 ---
 
-# PCL-C++& ROS
+## 2. PCL-Cpp & ROS
 
-## 1. msg 송수신     
+### 2.1 msg 송수신     
 
 
    
