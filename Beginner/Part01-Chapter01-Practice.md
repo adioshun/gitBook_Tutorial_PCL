@@ -147,7 +147,21 @@ main (int argc, char** argv)
   add_executable(roscpp_pcl_example src/roscpp_pcl_example.cpp)
   target_link_libraries(roscpp_pcl_example ${catkin_LIBRARIES})
   
+  
 ```
+
+
+```
+target_link_libraries(<executableTargetName>, <lib1>, <lib2>, ... <libN>)
+
+
+Example:
+
+add_executable(foo src/foo.cpp)
+add_library(moo src/moo.cpp)
+target_link_libraries(foo moo)  -- This links foo against libmoo.so
+```
+
 
 ###### package.xml
 
