@@ -167,6 +167,8 @@ target_link_libraries(foo moo)  -- This links foo against libmoo.so
 
 ###### package.xml
 
+> 변경없이 기본 생성 파일 사용 
+
 ```xml
   <build_depend>roscpp</build_depend>
   <build_depend>pcl_conversions</build_depend>
