@@ -41,8 +41,8 @@ First filter is the PCL’s Statistical Outlier Removal filter. in this filter f
 [RGB-D센서](https://github.com/mkhuthir/RoboND-Perception-Project/blob/master/README.md) : Mean K = 3, x = 0.00001
 
 ---
-## 2. Radious Outlier Removal
+## 2. [Radious Outlier Removal](https://github.com/strawlab/python-pcl/blob/master/examples/official/Filtering/remove_outliers.py)
+
+> 현재 Radius based 방식은 정상 동작 하지 않는다고 합니다. 파라미터를 바꾸어도 결과가 '0'이라고 하네요. [[참고]](https://github.com/strawlab/python-pcl/issues/211) - 2018.06.11
 
 
-
-> [추후 추가](https://github.com/strawlab/python-pcl/blob/master/examples/official/Filtering/remove_outliers.py)

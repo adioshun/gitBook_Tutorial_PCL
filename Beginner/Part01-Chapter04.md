@@ -9,7 +9,7 @@
 - Radius based : 거리 정보 활용 
 
 
-> **[중요]** 현재 Radius based 방식은 정상 동작 하지 않는다고 합니다. 파라미터를 바꾸어도 결과가 '0'이라고 하네요. [[참고]](https://github.com/strawlab/python-pcl/issues/211) - 2018.06.11
+
 
 
 ## StatisticalOutlierRemoval filter
