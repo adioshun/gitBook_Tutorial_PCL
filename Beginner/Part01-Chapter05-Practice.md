@@ -1,5 +1,8 @@
 # ROS 실습 - 바닥제거 (PCL-Python)
 
+
+[![Alt text](https://img.youtube.com/vi/6Z_drBX6Mn8/0.jpg)](https://www.youtube.com/watch?v=6Z_drBX6Mn8)
+
 실습에서는 **PCL-Python 기반 바닥제거**에서 정의한 `do_ransac_plane_normal_segmentation()`를 사용하여 수신된 데이터에서 바닥을 제거 하여 출력 해보도록 하겠습니다. 
 
 > 실습에 사용되는 Lidar는 16채널로 점군이 sparse합니다. 따라서 바닥이 면으로 표현 되지 않고 타워형의 링으로 표현 됩니다. 

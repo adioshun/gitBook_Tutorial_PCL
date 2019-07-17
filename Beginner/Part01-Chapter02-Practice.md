@@ -1,5 +1,7 @@
 # ROS 기반 Voxelization (PCL-Python)
 
+[![Alt text](https://img.youtube.com/vi/Q8XwsTQfsHk/0.jpg)](https://www.youtube.com/watch?v=Q8XwsTQfsHk)
+
 
 실습에서는 **PCL-Python 기반 Voxelization**에서 정의한 `do_voxel_grid_downssampling()`를 사용하여 수신된 Raw데이터를 복셀화 하여 출력 해보도록 하겠습니다. 
 

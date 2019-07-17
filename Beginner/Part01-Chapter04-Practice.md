@@ -1,5 +1,8 @@
 # ROS 실습 - 노이즈 제거 
 
+
+[![Alt text](https://img.youtube.com/vi/2DZRY71ZbJU/0.jpg)](https://www.youtube.com/watch?v=2DZRY71ZbJU)
+
 실습에서는 **PCL-Python 기반 노이즈 제거**에서 정의한 `do_statistical_outlier_filtering()`를 사용하여 수신된 Raw데이터에서 노이즈를 제 하여 출력 해보도록 하겠습니다. 
 
 파라미터에 따라서 원거리 점군도 노이즈로 인식 하여 제거 될수 있습니다. 기본 구조는 이전챕터에서 살펴본 [ROS 기반 I/O]와 동일 합니다.
