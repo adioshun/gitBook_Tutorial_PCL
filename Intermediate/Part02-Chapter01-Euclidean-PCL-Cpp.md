@@ -87,3 +87,7 @@ $ pcl_viewer cloud_cluster_6.pcd
 |![](https://i.imgur.com/j6HoJBy.png)|![](https://i.imgur.com/4ZXd2eu.png)|![](https://i.imgur.com/6WVsQwo.png)|
 |-|-|-|
 |원본(`RANSAC_plane_true.pcd`)|결과(`cloud_cluster_0.pcd`)|결과(`cloud_cluster_6.pcd`)|
+
+---
+
+- [Adaptive clustering](https://github.com/yzrobot/adaptive_clustering): `Online learning for human classification in 3D LiDAR-based tracking(2017)` 에서 활용한 Euclidean clustering 기법 
