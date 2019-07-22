@@ -51,16 +51,7 @@ $ git clone https://github.com/PointCloudLibrary/pcl.git
 $ cd pcl && mkdir release && cd release
 $ cmake -DCMAKE_BUILD_TYPE=None -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_GPU=ON -DBUILD_apps=ON -DBUILD_examples=ON -DCMAKE_INSTALL_PREFIX=/usr ..
 $ make -j8
-$ sudo make install
-
-# or 
-git clone https://github.com/PointCloudLibrary/pcl.git
-cd pcl
-mkdir build && cd build
-cmake ..
-make
-sudo checkinstall -D make install #sudo make install대신 실행 추천 
-#apt-get install checkinstall
+$ sudo make install #sudo checkinstall -D make install #apt-get install checkinstall
 
 
 $ sudo apt-get install ros-kinetic-pcl-conversions ros-kinect-pcl-ros
