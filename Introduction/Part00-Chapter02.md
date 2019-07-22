@@ -7,9 +7,9 @@
 또는, 위 라이브러리가 모두 설치되어 있는 Docker 이미지를 만들어 놓았습니다.  
 
 
-## PCL-C++ 설치 방법 
+## 1. PCL-C++ 설치 방법 
 
-### Package 설치 
+### 1.1 Package 설치 
 
 ```python
 sudo apt-get update && sudo apt-get install -y software-properties-common git
@@ -20,7 +20,7 @@ sudo apt-get install -y libpcl-dev #ubuntu 16 (libpcl-dev 1.7.2)
 sudo apt-get install -y libpcl-dev #ubuntu 18
 ```
 
-### Source 설치 
+### 1.2 Source 설치 
 
 
 ```python
@@ -34,6 +34,7 @@ libpcap-dev \
 libboost-all-dev \
 libproj-dev \
 && sudo rm -rf /var/lib/apt/lists/*
+#apt-get install git build-essential linux-libc-dev cmake cmake-gui libusb-1.0-0-dev libusb-dev libudev-dev mpi-default-dev openmpi-bin openmpi-common libflann1.8 libflann-dev libeigen3-dev libboost-all-dev libvtk5.10-qt4 libvtk5.10 libvtk5-dev libqhull* libgtest-dev freeglut3-dev pkg-config libxmu-dev libxi-dev mono-complete qt-sdk openjdk-8-jdk openjdk-8-jre
 
 # ubuntu 16 (checked)
 wget https://github.com/PointCloudLibrary/pcl/archive/pcl-1.8.1.tar.gz
@@ -44,7 +45,15 @@ mkdir build && cd build
 cmake .. # with enhanced compiler optimizations `cmake -DCMAKE_BUILD_TYPE=Release ..`
 make -j2
 sudo make -j2 install
-# or (확인 안됨)
+
+# or 
+$ git clone https://github.com/PointCloudLibrary/pcl.git
+$ cd pcl && mkdir release && cd release
+$ cmake -DCMAKE_BUILD_TYPE=None -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_GPU=ON -DBUILD_apps=ON -DBUILD_examples=ON -DCMAKE_INSTALL_PREFIX=/usr ..
+$ make -j8
+$ sudo make install
+
+# or 
 git clone https://github.com/PointCloudLibrary/pcl.git
 cd pcl
 mkdir build && cd build
@@ -53,6 +62,8 @@ make
 sudo checkinstall -D make install #sudo make install대신 실행 추천 
 #apt-get install checkinstall
 
+
+$ sudo apt-get install ros-kinetic-pcl-conversions ros-kinect-pcl-ros
 ```
 
 
