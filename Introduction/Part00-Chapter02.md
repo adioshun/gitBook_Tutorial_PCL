@@ -22,6 +22,7 @@ sudo apt-get install -y libpcl-dev #ubuntu 18
 
 ### 1.2 Source 설치 
 
+#### A. 사전 패키지 설치 
 
 ```python
 # 필수 설치 
@@ -34,7 +35,11 @@ sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends libfl
  """
  linux-libc-dev cmake cmake-gui libusb-1.0-0-dev libusb-dev libudev-dev mpi-default-dev openmpi-bin openmpi-common libflann1.8 libflann-dev libeigen3-dev libboost-all-dev libvtk5.10-qt4 libvtk5.10 libvtk5-dev libqhull* libgtest-dev freeglut3-dev pkg-config libxmu-dev libxi-dev mono-complete qt-sdk openjdk-8-jdk openjdk-8-jre
  """
+```
 
+#### B. tar 압축 파일로 설치 
+
+```python 
 # ubuntu 16 (checked)
 wget https://github.com/PointCloudLibrary/pcl/archive/pcl-1.8.1.tar.gz
 tar zvfx pcl-1.8.1.tar.gz
@@ -44,20 +49,25 @@ mkdir build && cd build
 cmake .. # with enhanced compiler optimizations `cmake -DCMAKE_BUILD_TYPE=Release ..`
 make -j2
 sudo make -j2 install
+```
 
-# or 
+#### C. git 으로 설치 
+
+ ```python  
 $ git clone https://github.com/PointCloudLibrary/pcl.git
 $ cd pcl && mkdir release && cd release
 $ cmake -DCMAKE_BUILD_TYPE=None -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_GPU=ON -DBUILD_apps=ON -DBUILD_examples=ON -DCMAKE_INSTALL_PREFIX=/usr ..
 $ make -j8
 $ sudo make install #sudo checkinstall -D make install #apt-get install checkinstall
+```
 
+#### D. 사후 패키지 설치 
 
+```python 
 $ sudo apt-get install ros-kinetic-pcl-conversions ros-kinect-pcl-ros
 ```
 
-
-### 설치 확인 
+### 1.3 설치 확인 
 
 ```
 
