@@ -63,7 +63,7 @@ $ git clone https://github.com/PointCloudLibrary/pcl.git
 $ cd pcl && mkdir release && cd release
 $ cmake -DCMAKE_BUILD_TYPE=None -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_GPU=ON -DBUILD_apps=ON -DBUILD_examples=ON -DCMAKE_INSTALL_PREFIX=/usr ..
 $ make -j8
-$ sudo make install #sudo checkinstall -D make install #apt-get install checkinstall
+$ sudo make install
 ```
 
 #### D. 사후 패키지 설치 
