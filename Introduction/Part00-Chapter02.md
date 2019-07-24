@@ -24,17 +24,16 @@ sudo apt-get install -y libpcl-dev #ubuntu 18
 
 
 ```python
-sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends \
-make cmake build-essential git \
-libeigen3-dev \
-libflann-dev \
-libusb-1.0-0-dev \
-libvtk6-qt-dev \
-libpcap-dev \
-libboost-all-dev \
-libproj-dev \
-&& sudo rm -rf /var/lib/apt/lists/*
-#apt-get install git build-essential linux-libc-dev cmake cmake-gui libusb-1.0-0-dev libusb-dev libudev-dev mpi-default-dev openmpi-bin openmpi-common libflann1.8 libflann-dev libeigen3-dev libboost-all-dev libvtk5.10-qt4 libvtk5.10 libvtk5-dev libqhull* libgtest-dev freeglut3-dev pkg-config libxmu-dev libxi-dev mono-complete qt-sdk openjdk-8-jdk openjdk-8-jre
+# 필수 설치 
+sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends make cmake cmake-gui build-essential git libeigen3-dev libflann-dev libusb-1.0-0-dev libboost-all-dev && sudo rm -rf /var/lib/apt/lists/*
+
+# 추가 설치 
+sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends libflann1.8 libusb-dev libvtk6-qt-dev libpcap-dev libproj-dev linux-libc-dev libudev-dev mpi-default-dev openmpi-bin openmpi-common 
+ libvtk5.10-qt4 libvtk5.10 libvtk5-dev libqhull* libgtest-dev freeglut3-dev pkg-config libxmu-dev libxi-dev mono-complete qt-sdk openjdk-8-jdk openjdk-8-jre
+  
+ """
+ linux-libc-dev cmake cmake-gui libusb-1.0-0-dev libusb-dev libudev-dev mpi-default-dev openmpi-bin openmpi-common libflann1.8 libflann-dev libeigen3-dev libboost-all-dev libvtk5.10-qt4 libvtk5.10 libvtk5-dev libqhull* libgtest-dev freeglut3-dev pkg-config libxmu-dev libxi-dev mono-complete qt-sdk openjdk-8-jdk openjdk-8-jre
+ """
 
 # ubuntu 16 (checked)
 wget https://github.com/PointCloudLibrary/pcl/archive/pcl-1.8.1.tar.gz
