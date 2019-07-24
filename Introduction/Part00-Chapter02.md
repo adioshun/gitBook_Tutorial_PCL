@@ -76,10 +76,10 @@ $ sudo apt-get install ros-kinetic-pcl-conversions ros-kinect-pcl-ros
 
 ```
 
-cd ~ && mkdir pcl-test && cd pcl-test
+$ cd ~ && mkdir pcl-test && cd pcl-test
 
-wget https://gist.githubusercontent.com/adioshun/319d6a1326d33fa42cdd56833c3ef560/raw/e10d3502ddcd871f9d6b7b57d176b17d52de5571/CMakeLists.txt 
-wget https://gist.githubusercontent.com/adioshun/319d6a1326d33fa42cdd56833c3ef560/raw/e10d3502ddcd871f9d6b7b57d176b17d52de5571/main.cpp
+$ wget https://gist.githubusercontent.com/adioshun/319d6a1326d33fa42cdd56833c3ef560/raw/e10d3502ddcd871f9d6b7b57d176b17d52de5571/CMakeLists.txt 
+$ wget https://gist.githubusercontent.com/adioshun/319d6a1326d33fa42cdd56833c3ef560/raw/e10d3502ddcd871f9d6b7b57d176b17d52de5571/main.cpp
 mkdir build && cd build
 cmake .. && make && ./pcl-test
 # Error
