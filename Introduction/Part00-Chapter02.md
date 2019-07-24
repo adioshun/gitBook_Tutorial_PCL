@@ -42,7 +42,7 @@ $ sudo rm -rf /var/lib/apt/lists/*
 
 ```
 
-#### B. tar 압축 파일로 설치 
+#### B. tar파일 다운으로 설치 
 
 ```python 
 # ubuntu 16 (checked)
@@ -56,7 +56,7 @@ make -j2
 sudo make -j2 install
 ```
 
-#### C. git 으로 설치 
+#### C. git 으로 소스 설치 
 
  ```python  
 $ git clone https://github.com/PointCloudLibrary/pcl.git
