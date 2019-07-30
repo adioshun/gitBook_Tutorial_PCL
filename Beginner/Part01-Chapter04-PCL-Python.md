@@ -28,13 +28,16 @@ cloud = do_statistical_outlier_filtering(cloud,10,0.001)
         # number of neighboring points of 10
         # standard deviation threshold of 0.001
 
-
+    """
+    입력 cloud포맷 : pcl_xyz 
+    pcl_xyz = pcl_helper.XYZRGB_to_XYZ(pcl_xyzrgb)    
+    pcl_xyz = do_statistical_outlier_filtering(pcl_xyz,10, 0.001)    
+    pcl_xyzrgb = pcl_helper.XYZ_to_XYZRGB(pcl_xyz,[255,255,255]) 
     
+    pcl_xyzrgb시 : TypeError: __cinit__() takes exactly 1 positional argument (0 given) 에러 
+    """
 ```
 
-    입력 cloud포맷 : pcl_xyz 
-    pcl_xyz = pcl_helper.XYZRGB_to_XYZ(pcl_xyzrgb)
-    pcl_xyzrgb시 : TypeError: __cinit__() takes exactly 1 positional argument (0 given) 에러 
 
 First filter is the PCL’s Statistical Outlier Removal filter. in this filter for each point in the point cloud, it computes the distance to all of its neighbors, and then calculates a mean distance. By assuming a Gaussian distribution, all points whose mean distances are outside of an interval defined by the global distances mean+standard deviation are considered to be outliers and removed from the point cloud.
 
