@@ -1,10 +1,8 @@
 # 개요 
 
+3D 데이터 처리를 위해 Point cloud Library(PCL)는 필수적인 툴 중 하나인데 생각외로 개발자 홈페이지를 제외 하고는 정리 되어 있는 문서나 질문/의견을 교류 할 수 있는 곳이 적어 흐름을 이해 하는데 어려움이 있었습니다. 
 
-새로운 프로젝트를 진행 하면서 Point cloud Library(PCL)를 처음 접하게 되었습니다. 3D 데이터의 처리를 위해서는 필수적인 Library인데 개발자 홈페이지를 제외 하고는 정리 되어 있는 문서나 질문/의견을 교류 할 수 있는 곳이 적어 초반에 많은 어려움이 있었습니다. 
-
-프로젝트 1년차가 종료 되어 가는 시점에서 그동안 익혔던 내용 및 코드를 정리하고, 이 분야를 시작하시려는 분들에게 조금이나마 도움이 되고자 Tutorial을 작성 하게 되었습니다. 
-
+그동안 익혔던 내용 및 코드를 정리하고 다른분들에게 조금이라도 도움이 되고자 Tutorial을 작성 하게 되었습니다. 
 
 - 기본 내용은 PCL 홈페이지의 [[PCL문서]](http://pointclouds.org/documentation/tutorials/)와 [[Udacity강좌]](https://github.com/udacity/RoboND-Perception-Exercises)를 중심으로 하였습니다. 
 
