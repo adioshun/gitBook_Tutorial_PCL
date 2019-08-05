@@ -8,9 +8,9 @@ Point cloud Library(PCL)는 LIDAR나 RGB-D센서의 3D 데이터 처리를 위�
 
 - 그 외 참고한 여러 자료들은 *[References](references.md)*페이지에 별도 업데이트 하도록 하겠습니다. 
 
-- PCL에 대한 정보 공유나 궁금한점은 **[[페이스북 PCL Research Group KR]](https://www.facebook.com/groups/165198587522918/)**에 올려 주세요. 
+- PCL에 대한 정보 공유나 궁금한점은 [[페이스북 PCL Research Group KR]](https://www.facebook.com/groups/165198587522918/)에 올려 주세요. 
 
-- Tutorial은 [초안(Gitbook)](https://adioshun.gitbooks.io/pcl-tutorial/content/), [백업(Github)](https://github.com/adioshun/gitBook_Tutorial_PCL), [최종본(Wikidocs)](https://wikidocs.net/book/827)에 동시 저장되어 있습니다. 
+- Tutorial은 [초안(Gitbook)](https://adioshun.gitbooks.io/pcl-tutorial/content/), [백업(Github)](https://github.com/adioshun/gitBook_Tutorial_PCL), [최종본(Wikidocs)](https://pcl.gitbook.io/tutorial)에 동시 저장되어 있습니다. 
 
 
 # 문서 구성 및 내용 
