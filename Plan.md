@@ -55,7 +55,3 @@ youtube 삽입 방법
 ```
 [![Alt text](https://img.youtube.com/vi/영상ID/0.jpg)](https://www.youtube.com/watch?v=영상ID)
 ```
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v4.0"></script>
-<div class="fb-comments" data-href="https://github.com/adioshun/gitBook_Tutorial_PCL" data-width="" data-numposts="5"></div>
