@@ -2,7 +2,7 @@
 
 Point cloud Library(PCL)는 LIDAR나 RGB-D센서의 3D 데이터 처리를 위해 필수적인 툴 중 하나이니다. 하지만 개발자 홈페이지를 제외 하고는 정리 되어 있는 문서나 질문/의견을 교류 할 수 있는 곳이 적은 것 같습니다. 
 
-그동안 익혔던 내용 및 코드를 정리하고 다른분들에게 조금이라도 도움이 되고자 Tutorial을 작성 하게 되었습니다. 
+그동안 익혔던 내용 및 코드도 정리하고 다른분들에게 조금이라도 도움이 되고자 Tutorial형식으로 작성 하게 되었습니다. 
 
 - 기본 내용은 PCL 홈페이지의 [[PCL문서]](http://pointclouds.org/documentation/tutorials/)와 [[Udacity강좌]](https://github.com/udacity/RoboND-Perception-Exercises)를 중심으로 하였습니다. 
 
