@@ -247,12 +247,7 @@ def viz_mayavi(points, vals="distance"):
 ## 실행 코드 with BBox
 
 ```python 
-
-
 import numpy as np
-a = np.load("/workspace/tutorial/PointNet_v3_frustumnet/official/train/test.npy")
-
-
 from mayavi import mlab
 
 try:
@@ -286,34 +281,7 @@ def draw_lidar(pc, color=None, fig=None, bgcolor=(0,0,0), pts_scale=1, pts_mode=
     mlab.plot3d([0, axes[1,0]], [0, axes[1,1]], [0, axes[1,2]], color=(0,1,0), tube_radius=None, figure=fig)
     mlab.plot3d([0, axes[2,0]], [0, axes[2,1]], [0, axes[2,2]], color=(0,0,1), tube_radius=None, figure=fig)
 
-    # draw fov (todo: update to real sensor spec.)
-    """
-    fov=np.array([  # 45 degree
-        [20., 20., 0.,0.],
-        [20.,-20., 0.,0.],
-    ],dtype=np.float64)
-    
-    mlab.plot3d([0, fov[0,0]], [0, fov[0,1]], [0, fov[0,2]], color=(1,1,1), tube_radius=None, line_width=1, figure=fig)
-    mlab.plot3d([0, fov[1,0]], [0, fov[1,1]], [0, fov[1,2]], color=(1,1,1), tube_radius=None, line_width=1, figure=fig)
-    
-    # draw square region
-    TOP_Y_MIN=-20
-    TOP_Y_MAX=20
-    TOP_X_MIN=0
-    TOP_X_MAX=40
-    TOP_Z_MIN=-2.0
-    TOP_Z_MAX=0.4
-    
-    x1 = TOP_X_MIN
-    x2 = TOP_X_MAX
-    y1 = TOP_Y_MIN
-    y2 = TOP_Y_MAX
-    mlab.plot3d([x1, x1], [y1, y2], [0,0], color=(0.5,0.5,0.5), tube_radius=0.1, line_width=1, figure=fig)
-    mlab.plot3d([x2, x2], [y1, y2], [0,0], color=(0.5,0.5,0.5), tube_radius=0.1, line_width=1, figure=fig)
-    mlab.plot3d([x1, x2], [y1, y1], [0,0], color=(0.5,0.5,0.5), tube_radius=0.1, line_width=1, figure=fig)
-    mlab.plot3d([x1, x2], [y2, y2], [0,0], color=(0.5,0.5,0.5), tube_radius=0.1, line_width=1, figure=fig)
-    """
-    #mlab.orientation_axes()
+
     mlab.view(azimuth=180, elevation=70, focalpoint=[ 12.0909996 , -1.04700089, -2.03249991], distance=62.0, figure=fig)
     return fig
 
@@ -351,32 +319,6 @@ def draw_gt_boxes3d(gt_boxes3d, fig, color=(1,1,1), line_width=1, draw_text=True
     return fig
 
 
-#KITTI 포맷 
-#Cyclist -1 -1 -10 / 676.600000 163.950000 688.980000 193.930000 / 1.711274 0.519638 1.734255 /4.509659 1.092125 46.151784/ -1.549531/ -1.269780
-#Cyclist -1 -1 -10 / box2d[0],box2d[1],box2d[2],box2d[3] / h,w,l,/ tx,ty,tz,/ry,/score
-"""
-Pedestrian 0.00 0 -0.20 / 712.40 143.00 810.73 307.92 /1.89 0.48 1.20 1.84 1.47 8.41 0.01
-
-1 type Describes the type of object
-'Car', 'Van', 'Truck','Pedestrian', 'Person_sitting', 'Cyclist', 'Tram','Misc' or 'DontCare'
-1 truncated Float from 0 (non-truncated) to 1 (truncated), where truncated refers to the object leaving image boundaries
-1 occluded Integer (0,1,2,3) indicating occlusion state:
-0 = fully visible, 1 = partly occluded
-2 = largely occluded, 3 = unknown
-1 alpha Observation angle of object, ranging [-pi..pi]
-
-4 bbox 2D bounding box of object in the image (0-based index):
-contains left, top, right, bottom pixel coordinates
-
-3 dimensions 3D object dimensions: height, width, length (in meters)
-
-3 location 3D object location x,y,z in camera coordinates (in meters)
-
-1 rotation_y Rotation ry around Y-axis in camera coordinates [-pi..pi]
-
-1 score Only for results: Float, indicating confidence in detection, needed for p/r curves, higher is better.
-"""
-
 def get_3d_box(box_size, heading_angle, center):
     ''' Calculate 3D bounding box corners from its parameterization.
 
@@ -413,18 +355,11 @@ center = [4.509659, 1.092125, 46.151784]
 
 box3d_from_label = get_3d_box(box_size, heading_angle, center)
 
-fig_lidar = draw_lidar(a[0])
+input = np.load("./test.npy")
+fig_lidar = draw_lidar(input)
 fig = draw_gt_boxes3d([box3d_from_label], fig_lidar)
 
 mlab.show()
-
-
-
-
 ```
-
-
-
----
 
 
