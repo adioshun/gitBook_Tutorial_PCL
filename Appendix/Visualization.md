@@ -189,12 +189,20 @@ def random_color_gen():
 
 # Mayavi 이용 
 
-> [Mayavi 홈페이지](http://docs.enthought.com/mayavi/mayavi/), [Plot with Mayavi in Jupyter notebook on Docker for Mac](https://taku-y.github.io/mac-docker-jupyter-mayavi.html), [공식 설치 가이드 /w Jupyter](http://docs.enthought.com/mayavi/mayavi/installation.html#installing-with-pip)
+
+
+## 0. [설치](http://docs.enthought.com/mayavi/mayavi/installation.html#installing-with-pip)
+
+```python 
+# python3 권장 
+$ pip3 install mayavi
+$ pip3 install PyQt5
+```
+> [Plot with Mayavi in Jupyter notebook on Docker for Mac](https://taku-y.github.io/mac-docker-jupyter-mayavi.html)
 
 
 
-
-Test code
+## 1. Test code
 ```python
 from mayavi import mlab
 mlab.init_notebook()
@@ -202,7 +210,7 @@ s = mlab.test_plot3d()
 s
 ```
 
-실행 코드 
+## 2. 실행 코드 
 
 ```python
 # ==============================================================================
@@ -236,12 +244,7 @@ def viz_mayavi(points, vals="distance"):
 ```
 
 
-
----
-
-# 3D Bounding box 
-
-## Mayavi 이용 
+## 실행 코드 with BBox
 
 ```python 
 
