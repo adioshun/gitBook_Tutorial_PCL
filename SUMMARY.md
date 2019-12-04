@@ -92,7 +92,7 @@
 
 ## Appendix
 
-* [시각화](Appendix/Visualization.md)
+* [시각화Code](Appendix/Visualization.md)
 * [시각화툴](Appendix/Visualization-Tools.md)
 * [Annotation툴](Appendix/Annotation-Tools.md)
 * [Point Cloud Libraries \(0%\)](Appendix/Libraries.md)
