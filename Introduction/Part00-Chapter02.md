@@ -17,7 +17,7 @@ sudo add-apt-repository ppa:v-launchpad-jochen-sprickerhof-de/pcl -y && sudo apt
 
 sudo apt-get install -y libpcl-all #ubnutu 14
 sudo apt-get install -y libpcl-dev #ubuntu 16 (libpcl-dev 1.7.2)
-sudo apt-get install -y libpcl-dev #ubuntu 18
+sudo apt-get install -y libpcl-dev #ubuntu 18 (PCL 1.8)
 ```
 
 ### 1.2 Source 설치 
@@ -102,18 +102,9 @@ sudo ln -s /usr/lib/x86_64-linux-gnu/libvtkCommonCore-6.2.so /usr/lib/libvtkproj
 ### Package 설치
 
 ```
-pip install python-pcl
-
-#삭제 
-pip uninstall python-pcl
-
-#업그레이드 
-pip install -U python-pcl
-
-# 재설치 
-$ pip uninstall python-pcl
-$ pip install python-pcl --no-cache-dir
-# You need to reinstall python-pcl when you want to upgrade PointCloudLibrary
+sudo add-apt-repository ppa:sweptlaser/python3-pcl #Python3 Only??
+sudo apt update
+sudo apt install python3-pcl
 ```
 
 ### Source 설치
