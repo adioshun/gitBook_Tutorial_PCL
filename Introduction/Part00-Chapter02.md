@@ -22,6 +22,13 @@ sudo apt-get install -y libpcl-dev #ubuntu 16 (libpcl-dev 1.7.2)
 sudo apt-get install -y libpcl-dev #ubuntu 18 (PCL 1.8)
 ```
 
+
+
+
+
+
+
+
 ### 1.2 Source 설치 
 
 #### A. 사전 패키지 설치 
@@ -65,7 +72,8 @@ $ git clone https://github.com/PointCloudLibrary/pcl.git
 $ cd pcl && mkdir release && cd release
 $ cmake -DCMAKE_BUILD_TYPE=None -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_GPU=ON -DBUILD_apps=ON -DBUILD_examples=ON -DCMAKE_INSTALL_PREFIX=/usr ..
 $ make -j8
-$ sudo make install
+$ 
+sudo make install
 ```
 
 #### D. 사후 패키지 설치 
@@ -75,20 +83,38 @@ $ sudo apt-get install ros-kinetic-pcl-conversions ros-kinect-pcl-ros
 ```
 
 ### 1.3 설치 확인 
+```python 
+$cd ~ && mkdir pcl-test && cd pcl-test
+$vi CMakeLists.txt
+  """
+  cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
+  project(pcl-test)
+  find_package(PCL 1.2 REQUIRED)
 
+  include_directories(${PCL_INCLUDE_DIRS})
+  link_directories(${PCL_LIBRARY_DIRS})
+  add_definitions(${PCL_DEFINITIONS})
+
+  add_executable(pcl-test main.cpp)
+  target_link_libraries(pcl-test ${PCL_LIBRARIES})
+
+  SET(COMPILE_FLAGS "-std=c++11")
+  add_definitions(${COMPILE_FLAGS})
+  """
+$vi main.cpp
+  """
+  #include <iostream>
+
+  int main() {
+      std::cout << "hello, world!" << std::endl;
+      return (0);
+  }
+  """
+$mkdir build && cd build
+$cmake .. 
+$make 
+$./pcl-test
 ```
-
-$ cd ~ && mkdir pcl-test && cd pcl-test
-
-$ wget https://gist.githubusercontent.com/adioshun/319d6a1326d33fa42cdd56833c3ef560/raw/e10d3502ddcd871f9d6b7b57d176b17d52de5571/CMakeLists.txt 
-$ wget https://gist.githubusercontent.com/adioshun/319d6a1326d33fa42cdd56833c3ef560/raw/e10d3502ddcd871f9d6b7b57d176b17d52de5571/main.cpp
-mkdir build && cd build
-cmake .. && make && ./pcl-test
-# Error
-sudo ln -s /usr/lib/x86_64-linux-gnu/libproj.so.9.1.0 /usr/lib/x86_64-linux-gnu/libproj.so
-sudo ln -s /usr/lib/x86_64-linux-gnu/libvtkCommonCore-6.2.so /usr/lib/libvtkproj4.so
-```
-
 
 ---
 
