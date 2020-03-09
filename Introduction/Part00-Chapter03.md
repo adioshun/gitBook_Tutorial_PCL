@@ -147,3 +147,86 @@ $ rviz -d lidar.rviz
 - Pointcloud2 - Topic : /velodyne_points 선택 
  - Pointcloud2가 없다면 : 하단 Add - By display type - pointcloud2 - Ok 
 
+
+
+---
+
+## 4. PCL과 ROS 연동 
+
+```python 
+$cd ~/catkin_ws/src 
+$catkin_create_pkg pcl_cpp_tutorial pcl pcl_ros roscpp sensor_msgs
+```
+
+```cpp
+# ~/catkin_ws/src/pcl_cpp_tutorial/src/example.cpp
+#include <ros/ros.h>
+#include <sensor_msgs/PointCloud2.h>
+// PCL specific includes
+#include <pcl/ros/conversions.h>
+#include <pcl/point_cloud.h>
+#include <pcl/point_types.h>
+
+ros::Publisher pub;
+
+void 
+cloud_cb (const sensor_msgs::PointCloud2ConstPtr& input)
+{
+  // ... do data processing
+
+  sensor_msgs::PointCloud2 output;
+  // Publish the data
+  pub.publish (output);
+}
+
+int
+main (int argc, char** argv)
+{
+  // Initialize ROS
+  ros::init (argc, argv, "my_pcl_tutorial");
+  ros::NodeHandle nh;
+
+  // Create a ROS subscriber for the input point cloud
+  ros::Subscriber sub = nh.subscribe ("input", 1, cloud_cb);
+
+  // Create a ROS publisher for the output point cloud
+  pub = nh.advertise<sensor_msgs::PointCloud2> ("output", 1);
+
+  // Spin
+  ros::spin ();
+}
+```
+
+```python 
+$vi CMakeLists.txt  #마지막에 아래 두줄 추가 
+ """
+ add_executable(example src/example.cpp)
+ target_link_libraries(example ${catkin_LIBRARIES}) 
+ """
+$catkin_make --directory ~/catkin_ws --pkg pcl_cpp_tutorial 
+rosrun my_pcl_tutorial example input:=/narrow_stereo_textured/points2
+```
+
+##### 에러 처리 
+```python 
+-- Could NOT find pcl (missing: pcl_DIR)
+-- Could not find the required component 'pcl'. The following CMake error indicates that you either need to install the package with the same name or change your environment so that it can be found.
+CMake Error at /opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake:83 (find_package):
+  Could not find a package configuration file provided by "pcl" with any of
+  the following names:
+
+    pclConfig.cmake
+    pcl-config.cmake
+---
+```
+1. pclConfig.cmake 위치 확인 `locate pclConfig.cmake`
+2. CMakeList.txt의 `find_package(..)`위에 `set (pcl_DIR "/usr/lib/x86_64-linux-gnu/cmake/pcl")` 추가 
+
+> `pclConfig.cmake`대신 `PCLConfig.cmake`이 존재시 소프트 링크 걸어 주기 
+> `$sudo ln -s PCLConfig.cmake pclConfig.cmake`
+
+
+
+
+
+
