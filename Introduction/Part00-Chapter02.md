@@ -72,8 +72,7 @@ $ git clone https://github.com/PointCloudLibrary/pcl.git
 $ cd pcl && mkdir release && cd release
 $ cmake -DCMAKE_BUILD_TYPE=None -DCMAKE_INSTALL_PREFIX=/usr -DBUILD_GPU=ON -DBUILD_apps=ON -DBUILD_examples=ON -DCMAKE_INSTALL_PREFIX=/usr ..
 $ make -j8
-$ 
-sudo make install
+$ sudo make install
 ```
 
 #### D. 사후 패키지 설치 
@@ -83,15 +82,17 @@ $ sudo apt-get install ros-kinetic-pcl-conversions ros-kinect-pcl-ros
 ```
 
 ### 1.3 설치 확인 
-
+```python 
 $cd ~ && mkdir pcl-test && cd pcl-test
-$vi CMakeLists.txt
+```
 
 ```python 
+# CMakeLists.txt
 ADD_EXECUTABLE (pcd_write_test pcd_write.cpp) # (<생성될 실행 파일명>   <생성시 사용할 소스코드> )
 ```
 
 ```python 
+# CMakeLists.txt
 #최소 요구 버젼 
 CMAKE_MINIMUM_REQUIRED (VERSION 2.8 FATAL_ERROR) 
 
@@ -127,11 +128,9 @@ ADD_EXECUTABLE (pcd_write_test pcd_write.cpp) # (<생성될 실행 파일명>   
 TARGET_LINK_LIBRARIES(pcd_write_test ${PCL_LIBRARIES})    #( <Target_이름> <라이브러리> <라이브러리> ... )
                                                     # 실행 파일생성하기에 앞서 링크 해야 하는 라이브러리와 실행 파일 링크 
 ```
-
-
-
-
+```python 
 $vi main.cpp
+```
 ```cpp
 #include <iostream>
 #include <pcl/io/pcd_io.h>
@@ -165,20 +164,19 @@ int
 }
 ```
 
-
+```python 
 $mkdir build && cd build
 $cmake .. 
 $make 
 $./pcd_write_test
-
-```
-Saved 5 data points to test_pcd.pcd.
-  0.352222 -0.151883 -0.106395
-  -0.397406 -0.473106 0.292602
-  -0.731898 0.667105 0.441304
-  -0.734766 0.854581 -0.0361733
-  -0.4607 -0.277468 -0.916762
-
+  """
+  Saved 5 data points to test_pcd.pcd.
+    0.352222 -0.151883 -0.106395
+    -0.397406 -0.473106 0.292602
+    -0.731898 0.667105 0.441304
+    -0.734766 0.854581 -0.0361733
+    -0.4607 -0.277468 -0.916762
+  """
 ```
 
 > [Using PCL in your own project](http://www.pointclouds.org/documentation/tutorials/using_pcl_pcl_config.php)
