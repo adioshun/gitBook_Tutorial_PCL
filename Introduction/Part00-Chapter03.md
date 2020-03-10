@@ -207,26 +207,9 @@ $catkin_make --directory ~/catkin_ws --pkg pcl_cpp_tutorial
 rosrun my_pcl_tutorial example input:=/narrow_stereo_textured/points2
 ```
 
-##### 에러 처리 
-```python 
--- Could NOT find pcl (missing: pcl_DIR)
--- Could not find the required component 'pcl'. The following CMake error indicates that you either need to install the package with the same name or change your environment so that it can be found.
-CMake Error at /opt/ros/melodic/share/catkin/cmake/catkinConfig.cmake:83 (find_package):
-  Could not find a package configuration file provided by "pcl" with any of
-  the following names:
-
-    pclConfig.cmake
-    pcl-config.cmake
----
-```
-1. pclConfig.cmake 위치 확인 `locate pclConfig.cmake`
-2. CMakeList.txt의 `find_package(..)`위에 `set (pcl_DIR "/usr/lib/x86_64-linux-gnu/cmake/pcl")` 추가 
-
-> `pclConfig.cmake`대신 `PCLConfig.cmake`이 존재시 소프트 링크 걸어 주기 
-> `$sudo ln -s PCLConfig.cmake pclConfig.cmake`
 
 
 
-
+> [에러처리](https://github.com/adioshun/gitBook_Cpp_Snippet/blob/master/compiler.md)
 
 
