@@ -83,37 +83,102 @@ $ sudo apt-get install ros-kinetic-pcl-conversions ros-kinect-pcl-ros
 ```
 
 ### 1.3 설치 확인 
-```python 
+
 $cd ~ && mkdir pcl-test && cd pcl-test
 $vi CMakeLists.txt
-  """
-  cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
-  project(pcl-test)
-  find_package(PCL 1.2 REQUIRED)
 
-  include_directories(${PCL_INCLUDE_DIRS})
-  link_directories(${PCL_LIBRARY_DIRS})
-  add_definitions(${PCL_DEFINITIONS})
+```python 
+ADD_EXECUTABLE (pcd_write_test pcd_write.cpp) # (<생성될 실행 파일명>   <생성시 사용할 소스코드> )
+```
 
-  add_executable(pcl-test main.cpp)
-  target_link_libraries(pcl-test ${PCL_LIBRARIES})
+```python 
+#최소 요구 버젼 
+CMAKE_MINIMUM_REQUIRED (VERSION 2.8 FATAL_ERROR) 
 
-  SET(COMPILE_FLAGS "-std=c++11")
-  add_definitions(${COMPILE_FLAGS})
-  """
+# 패키지 이름 
+PROJECT (Part00-Chapter02)          
+MESSAGE ( STATUS ${CMAKE_PROJECT_NAME} ) #( [<Type>] <메시지> )  
+
+# 변수 설정 
+SET(COMPILE_FLAGS "-std=c++11")  #SET ( <변수명> <값> )
+
+# 의존성 패키지
+FIND_PACKAGE (PCL 1.2 REQUIRED)  # 프로그램 실행시 필요한 패키지
+                                # 없을 경우 에러 발생 
+
+# 헤더 디렉토리 지정 (-I)
+INCLUDE_DIRECTORIES(
+    ${PCL_INCLUDE_DIRS}
+    )
+
+# 라이브러리 디렉토리 지정 (-L)   
+LINK_DIRECTORIES(${PCL_LIBRARY_DIRS})
+
+
+# 전처리기 매크로 추가 (-D)
+ADD_DEFINITIONS(${COMPILE_FLAGS})
+ADD_DEFINITIONS(${PCL_DEFINITIONS})
+
+
+# 생성할 실행 파일 옵션 
+ADD_EXECUTABLE (pcd_write_test pcd_write.cpp) # (<생성될 실행 파일명>   <생성시 사용할 소스코드> )
+
+# Target 링크 옵션 및 라이브러리 지정 (-l)
+TARGET_LINK_LIBRARIES(pcd_write_test ${PCL_LIBRARIES})    #( <Target_이름> <라이브러리> <라이브러리> ... )
+                                                    # 실행 파일생성하기에 앞서 링크 해야 하는 라이브러리와 실행 파일 링크 
+```
+
+
+
+
 $vi main.cpp
-  """
-  #include <iostream>
+```cpp
+#include <iostream>
+#include <pcl/io/pcd_io.h>
+#include <pcl/point_types.h>
 
-  int main() {
-      std::cout << "hello, world!" << std::endl;
-      return (0);
+int
+  main (int argc, char** argv)
+{
+  pcl::PointCloud<pcl::PointXYZ> cloud;
+
+  // Fill in the cloud data
+  cloud.width    = 5;
+  cloud.height   = 1;
+  cloud.is_dense = false;
+  cloud.points.resize (cloud.width * cloud.height);
+
+  for (std::size_t i = 0; i < cloud.points.size (); ++i)
+  {
+    cloud.points[i].x = 1024 * rand () / (RAND_MAX + 1.0f);
+    cloud.points[i].y = 1024 * rand () / (RAND_MAX + 1.0f);
+    cloud.points[i].z = 1024 * rand () / (RAND_MAX + 1.0f);
   }
-  """
+
+  pcl::io::savePCDFileASCII ("test_pcd.pcd", cloud);
+  std::cerr << "Saved " << cloud.points.size () << " data points to test_pcd.pcd." << std::endl;
+
+  for (std::size_t i = 0; i < cloud.points.size (); ++i)
+    std::cerr << "    " << cloud.points[i].x << " " << cloud.points[i].y << " " << cloud.points[i].z << std::endl;
+
+  return (0);
+}
+```
+
+
 $mkdir build && cd build
 $cmake .. 
 $make 
-$./pcl-test
+$./pcd_write_test
+
+```
+Saved 5 data points to test_pcd.pcd.
+  0.352222 -0.151883 -0.106395
+  -0.397406 -0.473106 0.292602
+  -0.731898 0.667105 0.441304
+  -0.734766 0.854581 -0.0361733
+  -0.4607 -0.277468 -0.916762
+
 ```
 
 > [Using PCL in your own project](http://www.pointclouds.org/documentation/tutorials/using_pcl_pcl_config.php)
