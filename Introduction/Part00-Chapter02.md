@@ -129,7 +129,7 @@ TARGET_LINK_LIBRARIES(pcd_write_test ${PCL_LIBRARIES})    #( <Target_이름> <�
                                                     # 실행 파일생성하기에 앞서 링크 해야 하는 라이브러리와 실행 파일 링크 
 ```
 ```python 
-$vi main.cpp
+$vi pcd_write.cpp
 ```
 ```cpp
 #include <iostream>
