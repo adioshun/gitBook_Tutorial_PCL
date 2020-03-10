@@ -85,14 +85,9 @@ $ sudo apt-get install ros-kinetic-pcl-conversions ros-kinect-pcl-ros
 ```python 
 $cd ~ && mkdir pcl-test && cd pcl-test
 ```
+`CMakeLists.txt` 파일 작성 
 
 ```python 
-# CMakeLists.txt
-ADD_EXECUTABLE (pcd_write_test pcd_write.cpp) # (<생성될 실행 파일명>   <생성시 사용할 소스코드> )
-```
-
-```python 
-# CMakeLists.txt
 #최소 요구 버젼 
 CMAKE_MINIMUM_REQUIRED (VERSION 2.8 FATAL_ERROR) 
 
@@ -128,9 +123,9 @@ ADD_EXECUTABLE (pcd_write_test pcd_write.cpp) # (<생성될 실행 파일명>   
 TARGET_LINK_LIBRARIES(pcd_write_test ${PCL_LIBRARIES})    #( <Target_이름> <라이브러리> <라이브러리> ... )
                                                     # 실행 파일생성하기에 앞서 링크 해야 하는 라이브러리와 실행 파일 링크 
 ```
-```python 
-$vi pcd_write.cpp
-```
+
+`pcd_write.cpp` 
+
 ```cpp
 #include <iostream>
 #include <pcl/io/pcd_io.h>
