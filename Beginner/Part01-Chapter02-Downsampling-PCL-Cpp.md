@@ -10,36 +10,41 @@
 #include <pcl/point_types.h>
 #include <pcl/filters/voxel_grid.h>
 
+//Downsampling a PointCloud using a VoxelGrid filter
+//http://pointclouds.org/documentation/tutorials/voxel_grid.php#voxelgrid
+
 int
 main (int argc, char** argv)
 {
   pcl::PCLPointCloud2::Ptr cloud (new pcl::PCLPointCloud2 ());
   pcl::PCLPointCloud2::Ptr cloud_filtered (new pcl::PCLPointCloud2 ());
 
+  // *.PCD 파일 읽기 (https://raw.github.com/PointCloudLibrary/data/master/tutorials/table_scene_lms400.pcd)
+    pcl::PCDReader reader;
+  reader.read ("table_scene_lms400.pcd", *cloud); 
 
-  pcl::PCDReader reader;
-  reader.read ("table_scene_lms400.pcd", *cloud); // Remember to download the file first!
 
-  std::cerr << "PointCloud before filtering: " << cloud->width * cloud->height  //cloud_filtered->points.size()
-       << " data points (" << pcl::getFieldsList (*cloud) << ")."<< std::endl;
+  // 읽은 table_scene_lms400.pcd 파일의 포인트수 출력
+  std::cerr << "PointCloud before filtering: " << cloud->width * cloud->height 
+       << " data points (" << pcl::getFieldsList (*cloud) << ").";
 
-  // Create the filtering object
+  // 오브젝트 생성 
   pcl::VoxelGrid<pcl::PCLPointCloud2> sor;
-  sor.setInputCloud (cloud);
-  sor.setLeafSize (0.01f, 0.01f, 0.01f); //The size of the body is 1 * 1 cm 
-  sor.filter (*cloud_filtered);
+  sor.setInputCloud (cloud);              //입력
+  sor.setLeafSize (0.01f, 0.01f, 0.01f); //leaf size  1cm 
+  sor.filter (*cloud_filtered);          //출력 
 
+  // 생성된 포인트클라우드 수 출력 
   std::cerr << "PointCloud after filtering: " << cloud_filtered->width * cloud_filtered->height 
-       << " data points (" << pcl::getFieldsList (*cloud_filtered) << ")."<< std::endl;
+       << " data points (" << pcl::getFieldsList (*cloud_filtered) << ").";
 
+  // 생성된 포인트클라우드 저장 
   pcl::PCDWriter writer;
   writer.write ("table_scene_lms400_downsampled.pcd", *cloud_filtered, 
          Eigen::Vector4f::Zero (), Eigen::Quaternionf::Identity (), false);
-  
 
   return (0);
 }
-
 ```
 
 
