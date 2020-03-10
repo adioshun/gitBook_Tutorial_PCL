@@ -116,6 +116,8 @@ $make
 $./pcl-test
 ```
 
+> [Using PCL in your own project](http://www.pointclouds.org/documentation/tutorials/using_pcl_pcl_config.php)
+
 ---
 
 ## 2. PCL-Python 설치 
