@@ -12,29 +12,43 @@
 #include <pcl/point_types.h>
 #include <pcl/filters/statistical_outlier_removal.h>
 
+//Downsampling a PointCloud using a VoxelGrid filter
+//http://pointclouds.org/documentation/tutorials/voxel_grid.php#voxelgrid
+
 int
 main (int argc, char** argv)
 {
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered (new pcl::PointCloud<pcl::PointXYZ>);
-  
-  pcl::io::loadPCDFile<pcl::PointXYZ> ("table_scene_lms400.pcd", *cloud);
-  std::cout << "Loaded : " << cloud->width * cloud->height << std::endl;
-  
-  // Create the filtering object
+
+  // *.PCD 파일 읽기 (https://raw.github.com/PointCloudLibrary/data/master/tutorials/table_scene_lms400.pcd)
+  pcl::PCDReader reader;
+  reader.read<pcl::PointXYZ> ("table_scene_lms400.pcd", *cloud);
+
+  // 포인트수 출력
+  std::cerr << "Cloud before filtering: " << std::endl;
+  std::cerr << *cloud << std::endl;
+
+  // 오브젝트 생성 
   pcl::StatisticalOutlierRemoval<pcl::PointXYZ> sor;
-  sor.setInputCloud (cloud);
-  sor.setMeanK (50);
-  sor.setStddevMulThresh (1.0);
-  sor.filter (*cloud_filtered);
+  sor.setInputCloud (cloud);            //입력 
+  sor.setMeanK (50);                    //분석시 고려한 이웃 점 수(50개)
+  sor.setStddevMulThresh (1.0);         //Outlier로 처리할 거리 정보 
+  sor.filter (*cloud_filtered);         // 필터 적용 
   
-  std::cout << "Filtered : " << cloud_filtered->width * cloud_filtered->height << std::endl;
-  pcl::io::savePCDFile<pcl::PointXYZ>("StatisticalOutlierRemoval.pcd", *cloud_filtered);
-  
+  // 생성된 포인트클라우드 수 출력 
+  std::cerr << "Cloud after filtering: " << std::endl;
+  std::cerr << *cloud_filtered << std::endl;
+
+  // 생성된 포인트클라우드(inlier) 저장 
+  pcl::PCDWriter writer;
+  writer.write<pcl::PointXYZ> ("table_scene_lms400_inliers.pcd", *cloud_filtered, false);
+
+  // 생성된 포인트클라우드(outlier) 저장 
   sor.setNegative (true);
   sor.filter (*cloud_filtered);
-  pcl::io::savePCDFile<pcl::PointXYZ>("StatisticalOutlierRemoval_Neg.pcd", *cloud_filtered);
-  
+  writer.write<pcl::PointXYZ> ("table_scene_lms400_outliers.pcd", *cloud_filtered, false);
+
   return (0);
 }
 
@@ -79,6 +93,8 @@ $ pcl_viewer StatisticalOutlierRemoval_Neg.pcd
 #include <pcl/point_types.h>
 #include <pcl/filters/radius_outlier_removal.h>
 
+//Downsampling a PointCloud using a VoxelGrid filter
+//http://pointclouds.org/documentation/tutorials/remove_outliers.php#remove-outliers
 
 int
  main (int argc, char** argv)
@@ -87,19 +103,26 @@ int
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
   pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered (new pcl::PointCloud<pcl::PointXYZ>);
 
-  pcl::io::loadPCDFile<pcl::PointXYZ> ("tabletop.pcd", *cloud);
+  // *.PCD 파일 읽기 (https://raw.github.com/PointCloudLibrary/data/master/tutorials/table_scene_lms400.pcd)
+  pcl::io::loadPCDFile<pcl::PointXYZ> ("table_scene_lms400.pcd", *cloud);
+
+  // 포인트수 출력
   std::cout << "Loaded " << cloud->width * cloud->height  << std::endl;
 
-
+  // 오프젝트 생성 
   pcl::RadiusOutlierRemoval<pcl::PointXYZ> outrem;
-  // build the filter
-  outrem.setInputCloud(cloud);
-  outrem.setRadiusSearch(0.8);
-  outrem.setMinNeighborsInRadius (2);
-  // apply filter
-  outrem.filter (*cloud_filtered);
+  outrem.setInputCloud(cloud);    //입력 
+  outrem.setRadiusSearch(0.8);    //탐색 범위 0.8
+  outrem.setMinNeighborsInRadius (2); //최소 보유 포인트 수 2개 
+  outrem.filter (*cloud_filtered);  // 필터 적용 
 
+  // 포인트수 출력
   std::cout << "Filtered " << cloud_filtered->width * cloud_filtered->height  << std::endl;
+
+  // 생성된 포인트클라우드(inlier) 저장 
+  pcl::PCDWriter writer;
+  writer.write<pcl::PointXYZ> ("table_scene_lms400_inliers.pcd", *cloud_filtered, false);
+
 
   return (0);
 }
