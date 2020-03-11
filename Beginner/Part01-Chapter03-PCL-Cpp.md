@@ -58,9 +58,9 @@ $ pcl_viewer tabletop.pcd
 $ pcl_viewer tabletop_passthrough.pcd 
 ```
 
-|![](https://i.imgur.com/tZzHIRS.png)|![](https://i.imgur.com/hpfXFql.png)|
-|-|-|
-|원본|결과|
+|![](https://i.imgur.com/tZzHIRS.png)|![](https://i.imgur.com/hpfXFql.png)|![](https://i.imgur.com/aPux8Az.png)|
+|-|-|-|
+|원본|결과|결과(Negative)|
 
 
 ---
