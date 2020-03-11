@@ -77,42 +77,49 @@ $ pcl_viewer tabletop_passthrough.pcd
 #include <pcl/point_types.h>
 #include <pcl/filters/conditional_removal.h>
 
+//Removing outliers using a Conditional or RadiusOutlier removal
+//http://pointclouds.org/documentation/tutorials/remove_outliers.php#remove-outliers
 
 int
  main (int argc, char** argv)
 {
 
-  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZ>);
-  pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_filtered (new pcl::PointCloud<pcl::PointXYZ>);
+  pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZRGB>);
+  pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud_filtered (new pcl::PointCloud<pcl::PointXYZRGB>);
 
-  pcl::io::loadPCDFile<pcl::PointXYZ> ("tabletop.pcd", *cloud);
+  // *.PCD 파일 읽기 (https://raw.githubusercontent.com/adioshun/gitBook_Tutorial_PCL/master/Beginner/sample/tabletop.pcd)
+  pcl::io::loadPCDFile<pcl::PointXYZRGB> ("tabletop.pcd", *cloud);
+
+  // 포인트수 출력
   std::cout << "Loaded " << cloud->width * cloud->height  << std::endl;
 
+  // 조건 정의 
+  pcl::ConditionAnd<pcl::PointXYZRGB>::Ptr range_cond (new pcl::ConditionAnd<pcl::PointXYZRGB> ());
+  range_cond->addComparison (pcl::FieldComparison<pcl::PointXYZRGB>::ConstPtr (new //조건 1 
+     pcl::FieldComparison<pcl::PointXYZRGB> ("z", pcl::ComparisonOps::GT, 0.0)));  //eg. z축으로 0.00보다 큰값(GT:Greater Than)
+  range_cond->addComparison (pcl::FieldComparison<pcl::PointXYZRGB>::ConstPtr (new //조건 2 
+     pcl::FieldComparison<pcl::PointXYZRGB> ("z", pcl::ComparisonOps::LT, 0.8)));  //eg. z축으로 0.08보다 작은값(LT:Less Than)
 
-  // build the condition
-  pcl::ConditionAnd<pcl::PointXYZ>::Ptr range_cond (new
-    pcl::ConditionAnd<pcl::PointXYZ> ());
+  //오프젝트 생성 
+  pcl::ConditionalRemoval<pcl::PointXYZRGB> condrem;
+  condrem.setInputCloud (cloud);        //입력 
+  condrem.setCondition (range_cond);    //조건 설정  
+  condrem.setKeepOrganized(true);       //
+  condrem.filter (*cloud_filtered);     //필터 적용 
 
-  range_cond->addComparison (pcl::FieldComparison<pcl::PointXYZ>::ConstPtr (new
-    pcl::FieldComparison<pcl::PointXYZ> ("z", pcl::ComparisonOps::GT, 0.0)));
-
-  range_cond->addComparison (pcl::FieldComparison<pcl::PointXYZ>::ConstPtr (new
-    pcl::FieldComparison<pcl::PointXYZ> ("z", pcl::ComparisonOps::LT, 0.8)));
-
-  // build the filter
-  pcl::ConditionalRemoval<pcl::PointXYZ> condrem;
-  condrem.setCondition (range_cond);
-  condrem.setInputCloud (cloud);
-  condrem.setKeepOrganized(true);
-  // apply filter
-  condrem.filter (*cloud_filtered);
-  
- 
+  // 포인트수 출력  
   std::cout << "Filtered " << cloud_filtered->width * cloud_filtered->height  << std::endl;
 
+  // 저장 
+  pcl::io::savePCDFile<pcl::PointXYZRGB>("tabletop_conditional.pcd", *cloud_filtered); //Default binary mode save
   return (0);
 }
 ```
+|![](https://i.imgur.com/tZzHIRS.png)|![](https://i.imgur.com/laPyTLC.png)|
+|-|-|
+|원본|결과|
+
+
 
 ---
 
