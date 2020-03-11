@@ -17,10 +17,10 @@ int
 main (int argc, char** argv)
 {
 
-  // Octree resolution - side length of octree voxels
-  float resolution = 0.01f;
+  //복셀 크기 설정(Set octree voxel resolution)
+  float resolution = 0.01f; //side length of octree voxels
 
-  // Instantiate octree-based point cloud change detection class
+  // Class 초기화 (Instantiate octree-based point cloud change detection class)
   pcl::octree::OctreePointCloudChangeDetector<pcl::PointXYZRGB> octree (resolution);
 
   // *.PCD 파일 읽기 (https://raw.githubusercontent.com/adioshun/gitBook_Tutorial_PCL/master/Intermediate/sample/RANSAC_plane_false.pcd)
@@ -31,7 +31,7 @@ main (int argc, char** argv)
   octree.setInputCloud (cloudA);
   octree.addPointsFromInputCloud ();
 
-  // Switch octree buffers: This resets octree but keeps previous tree structure in memory.
+  // 기존 트리 구조는 유지한상태로 Octree 초기화 (Switch octree buffers: This resets octree but keeps previous tree structure in memory.)
   octree.switchBuffers ();
 
   // *.PCD 파일 읽기 (https://raw.githubusercontent.com/adioshun/gitBook_Tutorial_PCL/master/Intermediate/sample/tabletop_passthrough.pcd)
@@ -55,6 +55,7 @@ main (int argc, char** argv)
               << cloudB->points[newPointIdxVector[i]].y << " "
               << cloudB->points[newPointIdxVector[i]].z << std::endl;
 
+  
 }
 
 ```
