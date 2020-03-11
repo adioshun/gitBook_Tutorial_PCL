@@ -16,7 +16,7 @@
 
 //Spatial Partitioning and Search Operations with Octrees
 //http://pointclouds.org/documentation/tutorials/octree.php#octree-search
-//Comments: Hunjung, Lim (hunjung.lim@hotmail.com)
+//Commnets : Hunjung, Lim (hunjung.lim@hotmail.com)
 
 int main()
 {
@@ -44,13 +44,14 @@ int main()
 	//searchPoint.x = 0.026256f;
   	//searchPoint.y = -1.464739f;
   	//searchPoint.z = 0.929567f;
-	
-	pcl::PointXYZRGB searchPoint = cloud->points[3000]; //기준점(searchPoint) 설정 방법 #2(3000번째 포인트)
+       
+	//기준점(searchPoint) 설정 방법 #2(3000번째 포인트)
+	pcl::PointXYZRGB searchPoint = cloud->points[3000]; 
 
      //기준점 좌표 출력 
      std::cout << "searchPoint :" << searchPoint.x << " " << searchPoint.y << " " << searchPoint.z  << std::endl;
    
-     //3.1. 기준점과 동일한 복셀내 존재 하는 하는 포인트 탐색(Voxel Neighbor Search)
+     //기준점과 동일한 복셀내 존재 하는 하는 포인트 탐색(Voxel Neighbor Search)
 	std::vector<int> pointIdxVec;  //결과물 포인트의 Index 저장(Save the result vector of the voxel neighbor search) 
 
 	if (octree.voxelSearch(searchPoint, pointIdxVec))
@@ -63,15 +64,14 @@ int main()
 		}		
 	}
 
-	//3.2.기준점에서 가까운 순서중 K번째까지의 포인트 탐색 (K nearest neighbor search)
-	//pcl::PointXYZRGB searchPoint2 = cloud->points[3000]; 
+	// 기준점에서 가까운 순서중 K번째까지의 포인트 탐색 (K nearest neighbor search)
 	int K = 50;   // 탐색할 포인트 수 설정 
 	std::vector<int> pointIdxNKNSearch; //Save the index result of the K nearest neighbor
 	std::vector<float> pointNKNSquaredDistance;  //Save the index result of the K nearest neighbor
 
 	if (octree.nearestKSearch(searchPoint, K, pointIdxNKNSearch, pointNKNSquaredDistance) > 0)
 	{   
-          //시각적 확인을 위하여 색상 변경 (0,0,0)
+          //시각적 확인을 위하여 색상 변경 (0,255,0)
 		for (size_t i = 0; i < pointIdxNKNSearch.size(); ++i){
 			cloud->points[pointIdxNKNSearch[i]].r = 0;
 			cloud->points[pointIdxNKNSearch[i]].g = 255;
@@ -82,8 +82,7 @@ int main()
      // 탐색된 점의 수 출력 
 	std::cout << "K = 50 nearest neighbors:" << pointIdxNKNSearch.size() << endl;
 
-	//3.3. 기준점에서 지정된 반경내 포인트 탐색 (Neighbor search within radius)
-	//pcl::PointXYZRGB searchPoint3 = cloud->points[1000]; //Set the lookup point
+	//기준점에서 지정된 반경내 포인트 탐색 (Neighbor search within radius)
 	float radius = 0.02; //탐색할 반경 설정(Set the search radius)
      std::vector<int> pointIdxRadiusSearch;  //Save the index of each neighbor
 	std::vector<float> pointRadiusSquaredDistance;  //Save the square of the Euclidean distance between each neighbor and the search point
@@ -104,8 +103,6 @@ int main()
      // 생성된 포인트클라우드 저장 
 	pcl::io::savePCDFile<pcl::PointXYZRGB>("Octree_AllinOne.pcd", *cloud);
 }
-
-
 
 ```
 
