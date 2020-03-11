@@ -76,7 +76,9 @@ $ pcl_viewer table_scene_lms400_downsampled.pcd
 ---
 ## UniformSampling
 
-The UniformSampling class creates a 3D voxel grid (think about a voxel grid as a set of tiny 3D boxes in space) over the input point cloud data. Then, in each voxel (i.e., 3D box), all the points present will be approximated (i.e., downsampled) with their centroid. This approach is a bit slower than approximating them with the center of the voxel, but it represents the underlying surface more accurately.
+Uniform sampling은 동작 방법은 동일하지만 결과값으로 인덱스(indices)를 출력하여 이후 식별자 정보등으로 활용 가능 
+
+> The UniformSampling class creates a 3D voxel grid (think about a voxel grid as a set of tiny 3D boxes in space) over the input point cloud data. Then, in each voxel (i.e., 3D box), all the points present will be approximated (i.e., downsampled) with their centroid. This approach is a bit slower than approximating them with the center of the voxel, but it represents the underlying surface more accurately.
 
 
 ```cpp
