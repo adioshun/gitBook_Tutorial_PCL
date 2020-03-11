@@ -18,7 +18,7 @@ main (int argc, char** argv)
 {
 
   // Octree resolution - side length of octree voxels
-  float resolution = 32.0f;
+  float resolution = 0.01f;
 
   // Instantiate octree-based point cloud change detection class
   pcl::octree::OctreePointCloudChangeDetector<pcl::PointXYZRGB> octree (resolution);
