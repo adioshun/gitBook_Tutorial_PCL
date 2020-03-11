@@ -16,7 +16,7 @@
 
 //Spatial Partitioning and Search Operations with Octrees
 //http://pointclouds.org/documentation/tutorials/octree.php#octree-search
-//Commnets : Hunjung, Lim (hunjung.lim@hotmail.com)
+//Comments: Hunjung, Lim (hunjung.lim@hotmail.com)
 
 int main()
 {
