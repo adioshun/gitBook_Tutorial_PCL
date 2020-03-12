@@ -19,6 +19,7 @@
   * [DBSCAN-PCL-Python \(0%\)](Part02-Chapter01-DBSCAN-PCL-Python.md)
   * [Region-Growing-PCL-Cpp \(50%\)](Part02-Chapter01-Region-Growing-PCL-Cpp.md)
   * [Min-Cut-PCL-Cpp \(50%\)](Part02-Chapter01-Min-Cut-PCL-Cpp.md)
+  * [Model-Outlier-Removal-PCL-Cpp \(50%\)](Part02-Chapter01-Model-Outlier-Removal-PCL-Cpp.md)
 * [포인트 탐색과 배경제거 \(60%\)](Part02-Chapter02.md)
   * [Search-Octree-PCL-Cpp  \(70%\)](Part02-Chapter02-Search-Octree-PCL-Cpp.md)
   * [Search-Octree-PCL-Python  \(70%\)](Part02-Chapter02-Search-Octree-PCL-Python.md)
