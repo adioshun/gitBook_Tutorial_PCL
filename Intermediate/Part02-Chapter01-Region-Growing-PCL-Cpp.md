@@ -66,7 +66,10 @@ main (int argc, char** argv)
   }
   std::cout << std::endl;
 
-  //pcl::PointCloud <pcl::PointXYZRGB>::Ptr colored_cloud = reg.getColoredCloud ();
+  pcl::PointCloud <pcl::PointXYZRGB>::Ptr colored_cloud = reg.getColoredCloud ();
+  pcl::io::savePCDFile<pcl::PointXYZRGB>("result_region_growing_segmentation.pcd", *colored_cloud);
+  
+  
   //pcl::visualization::CloudViewer viewer ("Cluster viewer");
   //viewer.showCloud(colored_cloud);
   //while (!viewer.wasStopped ())
@@ -75,6 +78,4 @@ main (int argc, char** argv)
 
   return (0);
 }
-
-
 ```
