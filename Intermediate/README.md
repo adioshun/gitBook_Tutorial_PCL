@@ -18,6 +18,7 @@
   * [Euclidean-PCL-Python \(0%\)](Part02-Chapter01-Euclidean-PCL-Python.md)
   * [DBSCAN-PCL-Python \(0%\)](Part02-Chapter01-DBSCAN-PCL-Python.md)
   * [Region-Growing-PCL-Cpp \(50%\)](Part02-Chapter01-Region-Growing-PCL-Cpp.md)
+  * [Region-Growing-RGB-PCL-Cpp \(50%\)](Part02-Chapter01-Region-Growing-RGB-PCL-Cpp.md)
   * [Min-Cut-PCL-Cpp \(50%\)](Part02-Chapter01-Min-Cut-PCL-Cpp.md)
   * [Model-Outlier-Removal-PCL-Cpp \(50%\)](Part02-Chapter01-Model-Outlier-Removal-PCL-Cpp.md)
   * [Progressive-Morphological-Filter-PCL-Cpp \(50%\)](Part02-Chapter01-Progressive-Morphological-Filter-PCL-Cpp.md)
