@@ -39,8 +39,6 @@
 
 * [README](Intermediate/README.md)
 * [군집화  \(70%\)](Intermediate/Part02-Chapter01.md)
-
-
   * [Euclidean-PCL-Cpp  \(70%\)](Intermediate/Part02-Chapter01-Euclidean-PCL-Cpp.md)
   * [Euclidean-PCL-Python \(0%\)](Intermediate/Part02-Chapter01-Euclidean-PCL-Python.md)
   * [Conditional-Euclidean-PCL-Cpp  \(50%\)](Intermediate/Part02-Chapter01-Conditional-Euclidean-PCL-Cpp.md)
