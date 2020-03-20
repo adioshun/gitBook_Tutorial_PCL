@@ -1,37 +1,5 @@
 # [Conditional Euclidean Clustering](http://pointclouds.org/documentation/tutorials/conditional_euclidean_clustering.php#conditional-euclidean-clustering)
 
-
-# Conditional Euclidean Clustering
-
-This tutorial describes how to use the  `pcl::ConditionalEuclideanClustering`  class: 
-- A segmentation algorithm that clusters points based on Euclidean distance and a user-customizable condition that needs to hold.
-
-This class uses the same greedy-like / region-growing / flood-filling approach that is used in  [Euclidean Cluster Extraction],  [Region growing segmentation]  and  [Color-based region growing segmentation]. 
-
-장점 : The advantage of using this class over the other classes is that the constraints for clustering (pure Euclidean, smoothness, RGB) are now customizable by the user. 
-
-단점 Some disadvantages include: 
-- no initial seeding system, 
-- no over- and under-segmentation control, 
-- and the fact that calling a conditional function from inside the main computational loop is less time efficient.
-
-
-# Theoretical Primer
-
-The  [Euclidean Cluster Extraction]  and  [Region growing segmentation]  tutorials already explain the region growing algorithm very accurately. 
-
-The only addition to those explanations is that the condition that needs to hold for a neighbor to be merged into the current cluster, can now be fully customized.
-
-As a cluster grows, it will evaluate the user-defined condition between points already inside the cluster and nearby candidate points. 
-
-The candidate points (nearest neighbor points) are found using a Euclidean radius search around each point in the cluster. 
-
-For each point within a resulting cluster, the condition needed to hold with at least one of its neighbors and NOT with all of its neighbors.
-
-The Conditional Euclidean Clustering class can also automatically filter clusters based on a size constraint. 
-
-The clusters classified as too small or too large can still be retrieved afterwards.
-
 ```cpp
 
 #include <pcl/point_types.h>
