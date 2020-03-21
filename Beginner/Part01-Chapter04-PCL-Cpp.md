@@ -12,8 +12,8 @@
 #include <pcl/point_types.h>
 #include <pcl/filters/statistical_outlier_removal.h>
 
-//Downsampling a PointCloud using a VoxelGrid filter
-//http://pointclouds.org/documentation/tutorials/voxel_grid.php#voxelgrid
+// Removing outliers using a StatisticalOutlierRemoval filter
+// http://pointclouds.org/documentation/tutorials/statistical_outlier.php#statistical-outlier-removal
 
 int
 main (int argc, char** argv)
@@ -93,8 +93,8 @@ $ pcl_viewer StatisticalOutlierRemoval_Neg.pcd
 #include <pcl/point_types.h>
 #include <pcl/filters/radius_outlier_removal.h>
 
-//Downsampling a PointCloud using a VoxelGrid filter
-//http://pointclouds.org/documentation/tutorials/remove_outliers.php#remove-outliers
+// Removing outliers using a Conditional or RadiusOutlier removal
+// http://pointclouds.org/documentation/tutorials/remove_outliers.php#remove-outliers
 
 int
  main (int argc, char** argv)
@@ -107,27 +107,53 @@ int
   pcl::io::loadPCDFile<pcl::PointXYZ> ("table_scene_lms400.pcd", *cloud);
 
   // 포인트수 출력
-  std::cout << "Loaded " << cloud->width * cloud->height  << std::endl;
+  std::cout << "Loaded : " << cloud->width * cloud->height  << std::endl;
 
   // 오프젝트 생성 
   pcl::RadiusOutlierRemoval<pcl::PointXYZ> outrem;
   outrem.setInputCloud(cloud);    //입력 
-  outrem.setRadiusSearch(0.8);    //탐색 범위 0.8
-  outrem.setMinNeighborsInRadius (2); //최소 보유 포인트 수 2개 
+  outrem.setRadiusSearch(0.01);    //탐색 범위 0.01
+  outrem.setMinNeighborsInRadius (10); //최소 보유 포인트 수 10개 
   outrem.filter (*cloud_filtered);  // 필터 적용 
 
   // 포인트수 출력
-  std::cout << "Filtered " << cloud_filtered->width * cloud_filtered->height  << std::endl;
+  std::cout << "Result :  " << cloud_filtered->width * cloud_filtered->height  << std::endl;
 
   // 생성된 포인트클라우드(inlier) 저장 
   pcl::PCDWriter writer;
-  writer.write<pcl::PointXYZ> ("table_scene_lms400_inliers.pcd", *cloud_filtered, false);
+  writer.write<pcl::PointXYZ> ("Radius_Outlier_Removal.pcd", *cloud_filtered, false);
 
+  // 생성된 포인트클라우드(outlier) 저장 
+  outrem.setNegative (true);
+  outrem.filter (*cloud_filtered);
+  writer.write<pcl::PointXYZ> ("Radius_Outlier_Removal_Neg.pcd", *cloud_filtered, false);
 
   return (0);
 }
 
 ```
+
+실행 & 결과
+```
+$ Loaded : 460400
+$ Result : 455495
+```
+
+
+시각화 & 결과
+
+```
+$ pcl_viewer table_scene_lms400.pcd 
+$ pcl_viewer Radius_Outlier_Removal.pcd 
+$ pcl_viewer Radius_Outlier_Removal_Neg.pcd 
+```
+
+
+
+|![](https://i.imgur.com/yn4JEuH.png)|![](https://i.imgur.com/eSJIQlT.png)|![](https://i.imgur.com/ZFwFOHh.png)|
+|-|-|-|
+|원본|결과|결과(SetNegarive)|
+
 
 ---
 
