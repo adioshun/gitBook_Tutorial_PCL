@@ -10,7 +10,7 @@
 
 ## 설치
 
-* 소스 : [https://root.cern.ch/cling-build-instructions](https://root.cern.ch/cling-build-instructions)
+* 소스 : [https://root.cern.ch/cling-build-instructions](https://root.cern.ch/cling-build-instructions) [[소스설치 스크립트]](https://github.com/Axel-Naumann/cling-all-in-one)
 * 바이너리 : [https://root.cern.ch/download/cling](https://root.cern.ch/download/cling)
 * 쥬피터 추가 : `jupyter-kernelspec install --user cling-cpp17` \#cling-cpp11, cling-cpp14, cling-cpp17도 가능
 
