@@ -39,16 +39,15 @@ $ conda install notebook -c conda-forge
 ---
 
 
-https://docs.google.com/presentation/d/1gEZkGk8NIfAzY8YiVbbv5LgJ54Ob0QnSqJSH83b6w-U/edit#slide=id.p19
-https://drive.google.com/drive/folders/0B3z2yMwAC21NaHgzMlFaWGczOG8
-https://blog.jupyter.org/interactive-workflows-for-c-with-jupyter-fe9b54227d92
-https://isocpp.org/blog/2017/11/jupyter-cling-interactive-cpp
-https://code-ballads.net/generated-notebooks/cpp/repl_cling/notebooks/3_Advices_And_Gotchas.html
-[https://github.com/vgvassilev/cling](https://github.com/vgvassilev/cling)
+- https://docs.google.com/presentation/d/1gEZkGk8NIfAzY8YiVbbv5LgJ54Ob0QnSqJSH83b6w-U/edit#slide=id.p19
+- https://drive.google.com/drive/folders/0B3z2yMwAC21NaHgzMlFaWGczOG8
+- https://blog.jupyter.org/interactive-workflows-for-c-with-jupyter-fe9b54227d92
+- https://isocpp.org/blog/2017/11/jupyter-cling-interactive-cpp
+- https://code-ballads.net/generated-notebooks/cpp/repl_cling/notebooks/3_Advices_And_Gotchas.html
+- [https://github.com/vgvassilev/cling](https://github.com/vgvassilev/cling)
+- [https://drive.google.com/drive/folders/0B3z2yMwAC21NaHgzMlFaWGczOG8?usp=sharing](https://drive.google.com/drive/folders/0B3z2yMwAC21NaHgzMlFaWGczOG8?usp=sharing)
 
-[https://drive.google.com/drive/folders/0B3z2yMwAC21NaHgzMlFaWGczOG8?usp=sharing](https://drive.google.com/drive/folders/0B3z2yMwAC21NaHgzMlFaWGczOG8?usp=sharing)
+- \[Advices and Gotchas when using cling and jupyter\]\([https://code-ballads.net/generated-notebooks/cpp/repl\_cling/notebooks/3\_Advices\_And\_Gotchas.html](https://code-ballads.net/generated-notebooks/cpp/repl_cling/notebooks/3_Advices_And_Gotchas.html)\)
 
-\[Advices and Gotchas when using cling and jupyter\]\([https://code-ballads.net/generated-notebooks/cpp/repl\_cling/notebooks/3\_Advices\_And\_Gotchas.html](https://code-ballads.net/generated-notebooks/cpp/repl_cling/notebooks/3_Advices_And_Gotchas.html)\)
-
-## How to use Point Cloud Library in cling interpreter?, [https://github.com/jolesinski/cling-pcl-tutorial](https://github.com/jolesinski/cling-pcl-tutorial)
+- How to use Point Cloud Library in cling interpreter?, [https://github.com/jolesinski/cling-pcl-tutorial](https://github.com/jolesinski/cling-pcl-tutorial)
 
