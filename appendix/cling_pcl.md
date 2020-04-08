@@ -23,6 +23,8 @@ $ jupyter-kernelspec install --user cling-cpp17
 
 ## 2. 테스트 
 
+### 2.1 print 
+
 ![](https://i.imgur.com/YKWnw9Q.png)
 
 ```cpp
@@ -47,6 +49,8 @@ pcl::io::loadPCDFile<pcl::PointXYZRGB> ("tabletop_passthrough.pcd", *cloud);
 std::cerr << "PointCloud before filtering: " << cloud->width * cloud->height << " data points (" << pcl::getFieldsList (*cloud) << ").";
 
 ```
+
+### 2.2 [시각화](https://github.com/jolesinski/cling-pcl-tutorial)
 
 ![](https://i.imgur.com/kdKsB34.png)
 
