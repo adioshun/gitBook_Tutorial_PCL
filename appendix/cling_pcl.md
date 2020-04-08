@@ -90,3 +90,5 @@ viewer.spin();
 .@ //Cancels the multiline input
 .printAST // (DEBUG ONLY) Turns on the printing of the compiler's abstract syntax tree (AST);
 ```
+
+> [Advices and Gotchas when using cling and jupyter](https://code-ballads.net/generated-notebooks/cpp/repl_cling/notebooks/3_Advices_And_Gotchas.html)
