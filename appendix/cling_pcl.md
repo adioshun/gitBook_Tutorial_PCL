@@ -48,6 +48,29 @@ std::cerr << "PointCloud before filtering: " << cloud->width * cloud->height << 
 
 ```
 
+![](https://i.imgur.com/kdKsB34.png)
+
+```cpp
+#pragma cling add_library_path("/usr/lib/x86_64-linux-gnu")
+#pragma cling load("libpcl_visualization.so") // .L /usr/local/lib/libpcl_visualization.so
+
+// Include dirs
+#pragma cling add_include_path("/usr/include/pcl-1.8") // .I /usr/local/include/pcl-1.8
+#pragma cling add_include_path("/usr/include/eigen3") // .I /usr/local/include/eigen3
+#pragma cling add_include_path("/usr/include/vtk-6.3") // .I /usr/include/vtk-6.2
+
+#include <pcl/visualization/pcl_visualizer.h>
+auto viewer = pcl::visualization::PCLVisualizer("test");
+
+viewer.setBackgroundColor(0,0,0);
+viewer.addCoordinateSystem(0.5);
+viewer.initCameraParameters();
+viewer.addSphere(pcl::PointXYZ{1,1,1}, 0.2, 0.3, 0.3, 0.0, "sphere");
+viewer.spin();
+
+
+```
+
 
 ## 3. [도움말 ](https://xeus-cling.readthedocs.io/en/latest/magics.html)
 
