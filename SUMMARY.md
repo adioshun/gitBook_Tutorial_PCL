@@ -105,6 +105,6 @@
 * [데이터셋](appendix/datasets.md)
 * [Cling\_PCL](appendix/cling_pcl.md)
 * [참고 자료](appendix/references.md)
-* [작성 계획\_Tips](plan.md)
-* [용어집](terms.md)
+* [작성 계획\_Tips](appendix/plan.md)
+* [용어집](appendix/terms.md)
 

@@ -2,7 +2,7 @@
 
 ## 1. 설치
 
-```python 
+```python
 # 사전 설치 
 $ sudo apt install zeromq #ubuntu 16
 $ sudo apt instal libzmq3-dev
@@ -15,15 +15,14 @@ $ pip3 install -e .
 
 # 쥬피터 등록 
 $ jupyter-kernelspec install --user cling-cpp17
-# 필요시 PATH등록 
+# 필요시 PATH등록
 ```
 
->  [소스 설치](https://root.cern.ch/cling-build-instructions) [[스크립트]](https://github.com/Axel-Naumann/cling-all-in-one)
+> [소스 설치](https://root.cern.ch/cling-build-instructions) [\[스크립트\]](https://github.com/Axel-Naumann/cling-all-in-one)
 
+## 2. 테스트
 
-## 2. 테스트 
-
-### 2.1 print 
+### 2.1 print
 
 ![](https://i.imgur.com/YKWnw9Q.png)
 
@@ -47,7 +46,6 @@ $ jupyter-kernelspec install --user cling-cpp17
 pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud (new pcl::PointCloud<pcl::PointXYZRGB>);
 pcl::io::loadPCDFile<pcl::PointXYZRGB> ("tabletop_passthrough.pcd", *cloud);
 std::cerr << "PointCloud before filtering: " << cloud->width * cloud->height << " data points (" << pcl::getFieldsList (*cloud) << ").";
-
 ```
 
 ### 2.2 [시각화](https://github.com/jolesinski/cling-pcl-tutorial)
@@ -71,10 +69,7 @@ viewer.addCoordinateSystem(0.5);
 viewer.initCameraParameters();
 viewer.addSphere(pcl::PointXYZ{1,1,1}, 0.2, 0.3, 0.3, 0.0, "sphere");
 viewer.spin();
-
-
 ```
-
 
 ## 3. [도움말 ](https://xeus-cling.readthedocs.io/en/latest/magics.html)
 
@@ -96,3 +91,4 @@ viewer.spin();
 ```
 
 > [Advices and Gotchas when using cling and jupyter](https://code-ballads.net/generated-notebooks/cpp/repl_cling/notebooks/3_Advices_And_Gotchas.html)
+

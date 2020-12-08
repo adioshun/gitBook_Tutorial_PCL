@@ -39,7 +39,7 @@ python3 show_gan.py --model gan/modelG_3.pth
 1. synsetoffset2category.txt에 `폳더명, Label명 추가` eg. `7777`, `human`
 2. `train_gan.py`의 `class_choice` 를 label명으로 수정 eg. `class_choice = ['human']`
 
-![](../../.gitbook/assets/part03-chapter01-pointgan.gif)
+![](../../.gitbook/assets/Part03-Chapter01-PointGAN.gif)
 
 * [pointGAN](https://github.com/fxia22/pointGAN)
 * [ShapeNet 학습 데이터](https://github.com/hunjung-lim/awesome-vehicle-datasets/blob/master/Object/shpaenet/README.md)

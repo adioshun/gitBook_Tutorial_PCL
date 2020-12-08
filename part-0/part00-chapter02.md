@@ -65,7 +65,7 @@ $ make -j8
 $ sudo make install
 ```
 
-#### D. 사후 패키지 설치
+#### D. 추가 패키지 설치
 
 ```python
 $ sudo apt-get install ros-kinetic-pcl-conversions ros-kinect-pcl-ros
