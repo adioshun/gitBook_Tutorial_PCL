@@ -57,6 +57,8 @@
   * [DetectChanges-PCL-Cpp  \(50%\)](part-2/part02-chapter02/part02-chapter02-detectchanges-pcl-cpp.md)
   * [DetectChanges-PCL-Python \(50%\)](part-2/part02-chapter02/part02-chapter02-detectchanges-pcl-python.md)
 * [특징 찾기 \(50%\)](part-2/part02-chapter03/README.md)
+  * [FPFH-PCL-Cpp](part-2/part02-chapter03/part02-chapter03-fpfh-pcl-cpp.md)
+  * [PFH-PCL-Cpp](part-2/part02-chapter03/part02-chapter03-pfh-pcl-cpp.md)
   * [Normal-PCL-Cpp \(70%\)](part-2/part02-chapter03/part02-chapter03-normal-pcl-cpp.md)
   * [Normal-PCL-Python \(80%\)](part-2/part02-chapter03/part02-chapter03-normal-pcl-python.md)
 * [분류 \(30%\)](part-2/part02-chapter04/README.md)
