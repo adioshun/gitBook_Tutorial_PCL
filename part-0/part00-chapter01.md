@@ -1,4 +1,4 @@
-# chapter01 : PCL & PCD란 \(100%\)
+# \[별첨\] PCL & PCD란 \(100%\)
 
 ## Point cloud 란?
 

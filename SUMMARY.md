@@ -6,7 +6,7 @@
 
 * [README](part-0/introduction.md)
 * [chapter00 : 3D 영상처리](part-0/part00-chapter00.md)
-* [chapter01 : PCL & PCD란 \(100%\)](part-0/part00-chapter01.md)
+* [\[별첨\] PCL & PCD란 \(100%\)](part-0/part00-chapter01.md)
 * [chapter02 : PCL 설치 \(100%\)](part-0/part00-chapter02.md)
 * [chapter03 : ROS 실습 준비\(100%\)](part-0/part00-chapter03.md)
 
