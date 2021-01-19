@@ -1,4 +1,4 @@
-# 관심 영역 설정  \(70%\)
+# \[별첨\] 관심 영역 설정  \(70%\)
 
 본 챕터에서는 point cloud 필터링 기법 중 관심 영역\(RoI:Region of Interesting\)을 추출하는 RoI Filtering에 대하여 다루고 있습니다.
 

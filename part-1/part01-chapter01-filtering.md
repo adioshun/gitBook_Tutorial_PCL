@@ -516,3 +516,5 @@ $ pcl_viewer StatisticalOutlierRemoval_Neg.pcd
 
 ![&#xADF8;&#xB9BC; 2.13 Conditional filter &#xACB0;&#xACFC;](https://user-images.githubusercontent.com/17797922/104990248-94d03c80-5a5f-11eb-9120-07f0c9be729c.png)
 
+> 포인트의 좌표 정보는 Cloudcompare나 ROS/Rviz 등의 시각화 툴을 이용하여 확인 할 수 있습니다.
+
