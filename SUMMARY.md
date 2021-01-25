@@ -20,6 +20,7 @@
   * [Open3D-Python \(70%\)](part-1/part01-chapter01/part01-chapter01-open3d-python.md)
   * [ROS 실습 \(90%\)](part-1/part01-chapter01/part01-chapter01-practice.md)
 * [Chapter02 : Filter](part-1/part01-chapter01-filtering.md)
+* [Chapter03 : Sample Consensus](part-1/part01-chapter01-sample-consensus.md)
 * [\[별첨\] 샘플링 \(70%\)](part-1/part01-chapter02/README.md)
   * [다운샘플링-PCL-Cpp \(70%\)](part-1/part01-chapter02/part01-chapter02-downsampling-pcl-cpp.md)
   * [다운샘플링-PCL-Python  \(50%\)](part-1/part01-chapter02/part01-chapter02-downsampling-pcl-python.md)
