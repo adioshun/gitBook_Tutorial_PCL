@@ -33,8 +33,8 @@
   * [PCL-Cpp \(70%\)](part01-chapter04/part01-chapter04-pcl-cpp.md)
   * [PCL-Python \(50%\)](part01-chapter04/part01-chapter04-pcl-python.md)
   * [ROS 실습 \(90%\)](part01-chapter04/part01-chapter04-practice.md)
-* [바닥제거 \(RANSAC\) \(70%\)](part01-chapter05/)
-  * [PCL-Cpp \(70%\)](part01-chapter05/part01-chapter05-pcl-cpp.md)
-  * [PCL-Python \(70%\)](part01-chapter05/part01-chapter05-pcl-python.md)
-  * [ROS 실습 \(90%\)](part01-chapter05/part01-chapter05-practice.md)
+* [바닥제거 \(RANSAC\) \(70%\)](../part-2/part01-chapter05/)
+  * [PCL-Cpp \(70%\)](../part-2/part01-chapter05/part01-chapter05-pcl-cpp.md)
+  * [PCL-Python \(70%\)](../part-2/part01-chapter05/part01-chapter05-pcl-python.md)
+  * [ROS 실습 \(90%\)](../part-2/part01-chapter05/part01-chapter05-practice.md)
 
