@@ -37,6 +37,7 @@
 ## Part 2 \(중급\)
 
 * [README](part-2/intermediate.md)
+* [Chapter01 : Kd-Tree/Octree Search](part-2/part02-chapte02-search.md)
 * [Chapter03 : Sample Consensus](part-2/part01-chapter01-sample-consensus.md)
 * [\[별첨\] 바닥제거 \(RANSAC\)  \(70%\)](part-2/part01-chapter05/README.md)
   * [PCL-Cpp  \(70%\)](part-2/part01-chapter05/part01-chapter05-pcl-cpp.md)
