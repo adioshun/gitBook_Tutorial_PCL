@@ -1,2 +1,2 @@
-# Chapter01 : Kd-Tree/Octree Search
+# Kd-Tree/Octree Search
 

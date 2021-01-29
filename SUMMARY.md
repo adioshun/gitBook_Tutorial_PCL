@@ -5,7 +5,7 @@
 ## Part 0 \(개요\)
 
 * [README](part-0/introduction.md)
-* [Chapter01 : 3D 영상처리](part-0/part00-chapter00.md)
+* [3D 영상처리](part-0/part00-chapter00.md)
 * [\[별첨\] PCL & PCD란 \(100%\)](part-0/part00-chapter01.md)
 * [chapter02 : PCL 설치 \(100%\)](part-0/part00-chapter02.md)
 * [chapter03 : ROS 실습 준비\(100%\)](part-0/part00-chapter03.md)
@@ -13,13 +13,13 @@
 ## Part 1 \(초급\)
 
 * [README](part-1/beginner.md)
-* [Chapter01 : PCL 기반 로봇 비젼](part-1/part01-chapter00-intro.md)
+* [PCL 기반 로봇 비젼](part-1/part01-chapter00-intro.md)
 * [\[별첨\] 파일 생성 및 입출력 \(70%\)](part-1/part01-chapter01/README.md)
   * [PCL-Cpp \(70%\)](part-1/part01-chapter01/part01-chapter01-pcl-cpp.md)
   * [PCL-Python \(70%\)](part-1/part01-chapter01/part01-chapter01-pcl-python.md)
   * [Open3D-Python \(70%\)](part-1/part01-chapter01/part01-chapter01-open3d-python.md)
   * [ROS 실습 \(90%\)](part-1/part01-chapter01/part01-chapter01-practice.md)
-* [Chapter02 : Filter](part-1/part01-chapter01-filtering.md)
+* [Filter](part-1/part01-chapter01-filtering.md)
 * [\[별첨\] 샘플링 \(70%\)](part-1/part01-chapter02/README.md)
   * [다운샘플링-PCL-Cpp \(70%\)](part-1/part01-chapter02/part01-chapter02-downsampling-pcl-cpp.md)
   * [다운샘플링-PCL-Python  \(50%\)](part-1/part01-chapter02/part01-chapter02-downsampling-pcl-python.md)
@@ -37,7 +37,7 @@
 ## Part 2 \(중급\)
 
 * [README](part-2/intermediate.md)
-* [Chapter01 : Kd-Tree/Octree Search](part-2/part02-chapte02-search.md)
+* [Kd-Tree/Octree Search](part-2/part02-chapte02-search.md)
 * [Chapter03 : Sample Consensus](part-2/part01-chapter01-sample-consensus.md)
 * [\[별첨\] 바닥제거 \(RANSAC\)  \(70%\)](part-2/part01-chapter05/README.md)
   * [PCL-Cpp  \(70%\)](part-2/part01-chapter05/part01-chapter05-pcl-cpp.md)
